@@ -1,0 +1,3 @@
+module.exports=[1296,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(72493);a.n(d("[project]/Documents/grocery-compare/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},35449,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(72493);a.n(d("[project]/Documents/grocery-compare/node_modules/next/dist/client/components/builtin/global-error.js"))},71923,a=>{"use strict";a.i(1296);var b=a.i(35449);a.n(b)},9297,a=>{a.n(a.i(71923))}];
+
+//# sourceMappingURL=0v1g_next_dist_client_components_builtin_global-error_019jetk.js.map
