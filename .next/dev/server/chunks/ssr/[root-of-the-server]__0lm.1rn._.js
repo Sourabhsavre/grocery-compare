@@ -16,7 +16,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$comp
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f40$supabase$2f$ssr$2f$dist$2f$module$2f$createServerClient$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/grocery-compare/node_modules/@supabase/ssr/dist/module/createServerClient.js [app-rsc] (ecmascript)");
 ;
 const supabaseUrl = ("TURBOPACK compile-time value", "https://vtdpxrqathrbdjetztvc.supabase.co");
-const supabaseKey = ("TURBOPACK compile-time value", "sb_publishable_eH7RcZjteYxHGokCZTPPfw_LQzR1Zgi");
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 const createClient = (cookieStore)=>{
     return (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f40$supabase$2f$ssr$2f$dist$2f$module$2f$createServerClient$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createServerClient"])(supabaseUrl, supabaseKey, {
         cookies: {
