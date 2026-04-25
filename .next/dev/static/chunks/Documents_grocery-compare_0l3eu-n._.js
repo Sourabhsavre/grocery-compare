@@ -26,29 +26,37 @@ var platformColors = {
     Zepto: {
         bg: "#8b5cf6",
         light: "rgba(139, 92, 246, 0.15)",
-        text: "#c4b5fd"
+        text: "#c4b5fd",
+        logo: "🟣 Zepto"
     },
     BigBasket: {
         bg: "#22c55e",
         light: "rgba(34, 197, 94, 0.15)",
-        text: "#86efac"
+        text: "#86efac",
+        logo: "🟢 BigBasket"
     },
     Blinkit: {
         bg: "#eab308",
         light: "rgba(234, 179, 8, 0.15)",
-        text: "#fde047"
+        text: "#fde047",
+        logo: "🟡 Blinkit"
     }
 };
-function getCheapest(prices) {
-    var min = Infinity, platform = null;
+function getPriceStats(prices) {
+    var min = Infinity, max = -Infinity, cheapestPlatform = null;
     var _iteratorNormalCompletion = true, _didIteratorError = false, _iteratorError = undefined;
     try {
         for(var _iterator = Object.entries(prices)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true){
             var _step_value = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f40$swc$2f$helpers$2f$esm$2f$_sliced_to_array$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["_"])(_step.value, 2), p = _step_value[0], v = _step_value[1];
             var val = v;
-            if (val.available && val.price < min) {
-                min = val.price;
-                platform = p;
+            if (val.available) {
+                if (val.price < min) {
+                    min = val.price;
+                    cheapestPlatform = p;
+                }
+                if (val.price > max) {
+                    max = val.price;
+                }
             }
         }
     } catch (err) {
@@ -65,7 +73,12 @@ function getCheapest(prices) {
             }
         }
     }
-    return platform;
+    return {
+        cheapestPlatform: cheapestPlatform,
+        min: min,
+        max: max,
+        savings: max !== -Infinity && max > min ? max - min : 0
+    };
 }
 function GroceryApp(param) {
     var _this = this;
@@ -84,7 +97,6 @@ function GroceryApp(param) {
     var filtered = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
         "GroceryApp.useMemo[filtered]": function() {
             var lowerSearch = search.toLowerCase();
-            // We will keep local fast search for basic queries
             var maxPrice = Infinity;
             var underMatch = lowerSearch.match(/under (\d+)/);
             if (underMatch) {
@@ -97,8 +109,8 @@ function GroceryApp(param) {
                     var matchCat = category === "All" || p.category === category;
                     var meetsPrice = true;
                     if (maxPrice !== Infinity) {
-                        var cheapest = getCheapest(p.prices);
-                        if (cheapest && p.prices[cheapest].price > maxPrice) {
+                        var stats = getPriceStats(p.prices);
+                        if (stats.cheapestPlatform && p.prices[stats.cheapestPlatform].price > maxPrice) {
                             meetsPrice = false;
                         }
                     }
@@ -254,30 +266,50 @@ function GroceryApp(param) {
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "glass hover-lift",
+                className: "glass-panel hover-lift",
                 style: {
                     maxWidth: 1100,
-                    margin: '24px auto',
-                    padding: '32px',
-                    borderRadius: '24px'
+                    margin: '32px auto',
+                    padding: '40px',
+                    position: 'relative',
+                    overflow: 'hidden'
                 },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
+                            position: 'absolute',
+                            top: '-50%',
+                            left: '-20%',
+                            width: '100%',
+                            height: '200%',
+                            background: 'radial-gradient(circle, rgba(108,58,232,0.1) 0%, transparent 70%)',
+                            pointerEvents: 'none'
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                        lineNumber: 106,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
                             display: 'flex',
                             alignItems: 'center',
-                            gap: '16px',
-                            marginBottom: '16px'
+                            gap: '20px',
+                            marginBottom: '24px',
+                            position: 'relative',
+                            zIndex: 1
                         },
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
-                                    fontSize: '48px'
+                                    fontSize: '56px',
+                                    filter: 'drop-shadow(0 0 10px rgba(0,212,170,0.5))'
                                 },
+                                className: "pulse-anim",
                                 children: "🛒"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                lineNumber: 105,
+                                lineNumber: 109,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -285,47 +317,51 @@ function GroceryApp(param) {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                         className: "gradient-text",
                                         style: {
-                                            fontSize: '36px',
+                                            fontSize: '48px',
                                             fontWeight: 800,
                                             margin: 0,
-                                            paddingBottom: '4px'
+                                            paddingBottom: '8px',
+                                            letterSpacing: '-1px'
                                         },
                                         children: "GroceryCompare AI"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 111,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         style: {
                                             color: '#94a3b8',
-                                            fontSize: '16px',
-                                            margin: 0
+                                            fontSize: '18px',
+                                            margin: 0,
+                                            fontWeight: 500
                                         },
-                                        children: "Smart search, budget assistant, and real-time price comparison"
+                                        children: "India's Smartest Grocery Price Comparison"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                        lineNumber: 108,
+                                        lineNumber: 112,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                lineNumber: 106,
+                                lineNumber: 110,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                        lineNumber: 104,
+                        lineNumber: 108,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
                             display: 'flex',
-                            gap: '16px',
+                            gap: '20px',
                             flexWrap: 'wrap',
-                            marginTop: '24px'
+                            marginTop: '32px',
+                            position: 'relative',
+                            zIndex: 1
                         },
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -334,18 +370,19 @@ function GroceryApp(param) {
                                     position: 'relative',
                                     minWidth: '300px'
                                 },
+                                className: "glow-effect",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         style: {
                                             position: 'absolute',
-                                            left: '16px',
-                                            top: '14px',
-                                            fontSize: '20px'
+                                            left: '20px',
+                                            top: '18px',
+                                            fontSize: '22px'
                                         },
                                         children: "🔍"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                        lineNumber: 115,
+                                        lineNumber: 119,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -359,48 +396,52 @@ function GroceryApp(param) {
                                         placeholder: "Try 'healthy snacks under 50' or 'milk'",
                                         style: {
                                             width: '100%',
-                                            padding: '16px 120px 16px 48px',
-                                            borderRadius: '16px',
-                                            background: 'rgba(15, 23, 42, 0.5)',
+                                            padding: '20px 140px 20px 56px',
+                                            borderRadius: '20px',
+                                            background: 'rgba(15, 23, 42, 0.6)',
                                             border: '1px solid var(--border-color)',
                                             color: 'white',
-                                            fontSize: '16px',
+                                            fontSize: '18px',
                                             outline: 'none',
-                                            transition: 'border-color 0.2s',
-                                            fontFamily: 'inherit'
+                                            transition: 'all 0.3s ease',
+                                            fontFamily: 'inherit',
+                                            backdropFilter: 'blur(10px)'
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                        lineNumber: 116,
+                                        lineNumber: 120,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: handleSmartSearch,
                                         disabled: isAILoading,
+                                        className: "hover-lift",
                                         style: {
                                             position: 'absolute',
-                                            right: '8px',
-                                            top: '8px',
-                                            bottom: '8px',
-                                            background: 'var(--secondary-color)',
+                                            right: '10px',
+                                            top: '10px',
+                                            bottom: '10px',
+                                            background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))',
                                             color: 'white',
                                             border: 'none',
-                                            padding: '0 16px',
-                                            borderRadius: '12px',
-                                            fontWeight: 600,
+                                            padding: '0 24px',
+                                            borderRadius: '14px',
+                                            fontWeight: 700,
                                             cursor: 'pointer',
-                                            fontFamily: 'inherit'
+                                            fontFamily: 'inherit',
+                                            fontSize: '16px',
+                                            textShadow: '0 1px 2px rgba(0,0,0,0.2)'
                                         },
                                         children: "Ask AI ✨"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                        lineNumber: 128,
+                                        lineNumber: 132,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                lineNumber: 114,
+                                lineNumber: 118,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -409,15 +450,17 @@ function GroceryApp(param) {
                                     return setCategory(e.target.value);
                                 },
                                 style: {
-                                    padding: '16px 24px',
-                                    borderRadius: '16px',
-                                    background: 'rgba(15, 23, 42, 0.5)',
+                                    padding: '20px 32px',
+                                    borderRadius: '20px',
+                                    background: 'rgba(15, 23, 42, 0.6)',
                                     border: '1px solid var(--border-color)',
                                     color: 'white',
-                                    fontSize: '16px',
+                                    fontSize: '18px',
                                     outline: 'none',
                                     cursor: 'pointer',
-                                    fontFamily: 'inherit'
+                                    fontFamily: 'inherit',
+                                    backdropFilter: 'blur(10px)',
+                                    fontWeight: 500
                                 },
                                 children: categories.map(function(c) {
                                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -425,25 +468,25 @@ function GroceryApp(param) {
                                         children: c
                                     }, c, false, {
                                         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                        lineNumber: 150,
+                                        lineNumber: 157,
                                         columnNumber: 36
                                     }, _this);
                                 })
                             }, void 0, false, {
                                 fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                lineNumber: 141,
+                                lineNumber: 147,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                        lineNumber: 113,
+                        lineNumber: 117,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                lineNumber: 103,
+                lineNumber: 105,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -461,178 +504,258 @@ function GroceryApp(param) {
                             flex: '1 1 600px'
                         },
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
-                                    color: '#94a3b8',
-                                    marginBottom: '20px',
-                                    fontSize: '15px'
+                                    display: 'flex',
+                                    justifyContent: 'space-between',
+                                    alignItems: 'center',
+                                    marginBottom: '24px'
                                 },
                                 children: [
-                                    filtered.length,
-                                    " products found"
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                        style: {
+                                            fontSize: '24px',
+                                            fontWeight: 700
+                                        },
+                                        children: "Top Products"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                        lineNumber: 167,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        style: {
+                                            color: '#00D4AA',
+                                            background: 'rgba(0, 212, 170, 0.1)',
+                                            padding: '6px 16px',
+                                            borderRadius: '20px',
+                                            fontSize: '14px',
+                                            fontWeight: 600
+                                        },
+                                        children: [
+                                            filtered.length,
+                                            " items"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                        lineNumber: 168,
+                                        columnNumber: 13
+                                    }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                lineNumber: 159,
+                                lineNumber: 166,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
                                     display: 'grid',
-                                    gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-                                    gap: '20px'
+                                    gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
+                                    gap: '24px'
                                 },
                                 children: filtered.map(function(product) {
-                                    var cheapest = getCheapest(product.prices);
+                                    var stats = getPriceStats(product.prices);
                                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "glass hover-lift",
+                                        className: "glass-panel hover-lift",
                                         style: {
-                                            overflow: 'hidden'
+                                            overflow: 'hidden',
+                                            display: 'flex',
+                                            flexDirection: 'column'
                                         },
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 style: {
-                                                    padding: '20px',
-                                                    borderBottom: '1px solid var(--border-color)',
+                                                    padding: '24px',
+                                                    borderBottom: '1px solid rgba(255,255,255,0.05)',
                                                     display: 'flex',
-                                                    alignItems: 'center',
-                                                    gap: '16px'
+                                                    alignItems: 'flex-start',
+                                                    gap: '20px',
+                                                    position: 'relative'
                                                 },
                                                 children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         style: {
-                                                            fontSize: '40px'
+                                                            fontSize: '50px',
+                                                            background: 'rgba(255,255,255,0.05)',
+                                                            borderRadius: '20px',
+                                                            padding: '12px'
                                                         },
                                                         children: product.image
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                        lineNumber: 167,
+                                                        lineNumber: 177,
                                                         columnNumber: 21
                                                     }, _this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        style: {
+                                                            flex: 1
+                                                        },
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                                 style: {
-                                                                    fontSize: '18px',
-                                                                    fontWeight: 600,
-                                                                    margin: '0 0 6px 0'
+                                                                    fontSize: '20px',
+                                                                    fontWeight: 700,
+                                                                    margin: '0 0 8px 0',
+                                                                    lineHeight: 1.2
                                                                 },
                                                                 children: product.name
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                                lineNumber: 169,
+                                                                lineNumber: 181,
                                                                 columnNumber: 23
                                                             }, _this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 style: {
-                                                                    fontSize: '12px',
-                                                                    background: 'rgba(255,255,255,0.1)',
-                                                                    padding: '4px 10px',
-                                                                    borderRadius: '12px'
+                                                                    display: 'flex',
+                                                                    gap: '8px',
+                                                                    flexWrap: 'wrap'
                                                                 },
-                                                                children: product.category
-                                                            }, void 0, false, {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                        style: {
+                                                                            fontSize: '12px',
+                                                                            background: 'rgba(108,58,232,0.2)',
+                                                                            color: '#c4b5fd',
+                                                                            padding: '4px 12px',
+                                                                            borderRadius: '12px',
+                                                                            fontWeight: 600
+                                                                        },
+                                                                        children: product.category
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                                        lineNumber: 183,
+                                                                        columnNumber: 25
+                                                                    }, _this),
+                                                                    stats.savings > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                        style: {
+                                                                            fontSize: '12px',
+                                                                            background: 'rgba(34,197,94,0.2)',
+                                                                            color: '#86efac',
+                                                                            padding: '4px 12px',
+                                                                            borderRadius: '12px',
+                                                                            fontWeight: 600
+                                                                        },
+                                                                        children: [
+                                                                            "Save ₹",
+                                                                            stats.savings
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                                        lineNumber: 185,
+                                                                        columnNumber: 27
+                                                                    }, _this)
+                                                                ]
+                                                            }, void 0, true, {
                                                                 fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                                lineNumber: 170,
+                                                                lineNumber: 182,
                                                                 columnNumber: 23
                                                             }, _this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                        lineNumber: 168,
+                                                        lineNumber: 180,
                                                         columnNumber: 21
                                                     }, _this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                lineNumber: 166,
+                                                lineNumber: 176,
                                                 columnNumber: 19
                                             }, _this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 style: {
-                                                    padding: '16px 20px'
+                                                    padding: '20px',
+                                                    flex: 1,
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
+                                                    gap: '12px'
                                                 },
                                                 children: Object.entries(product.prices).map(function(param) {
                                                     var _param = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f40$swc$2f$helpers$2f$esm$2f$_sliced_to_array$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["_"])(param, 2), platform = _param[0], data = _param[1];
                                                     var val = data;
-                                                    var isCheap = platform === cheapest;
+                                                    var isCheap = platform === stats.cheapestPlatform;
+                                                    var isExpensive = val.available && val.price === stats.max && stats.max > stats.min;
                                                     var c = platformColors[platform];
                                                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         style: {
                                                             display: 'flex',
                                                             justifyContent: 'space-between',
                                                             alignItems: 'center',
-                                                            padding: '10px 14px',
-                                                            borderRadius: '12px',
-                                                            marginBottom: '10px',
-                                                            background: isCheap ? c.light : 'rgba(15, 23, 42, 0.4)',
-                                                            border: "1px solid ".concat(isCheap ? c.bg : 'transparent')
+                                                            padding: '12px 16px',
+                                                            borderRadius: '16px',
+                                                            background: isCheap ? c.light : 'rgba(10, 14, 26, 0.4)',
+                                                            border: "1px solid ".concat(isCheap ? c.bg : isExpensive ? 'rgba(239,68,68,0.3)' : 'transparent'),
+                                                            transition: 'all 0.2s ease'
                                                         },
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 style: {
                                                                     display: 'flex',
                                                                     alignItems: 'center',
-                                                                    gap: '8px'
+                                                                    gap: '10px'
                                                                 },
                                                                 children: [
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                        style: {
-                                                                            width: '12px',
-                                                                            height: '12px',
-                                                                            borderRadius: '50%',
-                                                                            background: c.bg
-                                                                        }
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                                        lineNumber: 188,
-                                                                        columnNumber: 29
-                                                                    }, _this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                         style: {
-                                                                            fontSize: '15px',
-                                                                            fontWeight: 500
+                                                                            fontSize: '16px',
+                                                                            fontWeight: 600
                                                                         },
-                                                                        children: platform
+                                                                        children: c.logo
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                                        lineNumber: 189,
+                                                                        lineNumber: 209,
                                                                         columnNumber: 29
                                                                     }, _this),
                                                                     isCheap && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                         style: {
                                                                             fontSize: '10px',
-                                                                            background: c.bg,
+                                                                            background: 'var(--success-color)',
                                                                             color: 'white',
-                                                                            padding: '2px 6px',
+                                                                            padding: '2px 8px',
                                                                             borderRadius: '8px',
-                                                                            fontWeight: 700
+                                                                            fontWeight: 800,
+                                                                            letterSpacing: '0.5px'
                                                                         },
-                                                                        children: "CHEAPEST"
+                                                                        children: "BEST"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                                        lineNumber: 190,
+                                                                        lineNumber: 210,
                                                                         columnNumber: 41
+                                                                    }, _this),
+                                                                    isExpensive && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                        style: {
+                                                                            fontSize: '10px',
+                                                                            background: 'rgba(239,68,68,0.8)',
+                                                                            color: 'white',
+                                                                            padding: '2px 8px',
+                                                                            borderRadius: '8px',
+                                                                            fontWeight: 800
+                                                                        },
+                                                                        children: "COSTLY"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                                        lineNumber: 211,
+                                                                        columnNumber: 45
                                                                     }, _this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                                lineNumber: 187,
+                                                                lineNumber: 208,
                                                                 columnNumber: 27
                                                             }, _this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 style: {
                                                                     display: 'flex',
                                                                     alignItems: 'center',
-                                                                    gap: '12px'
+                                                                    gap: '14px'
                                                                 },
                                                                 children: val.available ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                                                                     children: [
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                             style: {
-                                                                                fontSize: '16px',
-                                                                                fontWeight: 700,
-                                                                                color: isCheap ? c.text : 'white'
+                                                                                fontSize: '18px',
+                                                                                fontWeight: 800,
+                                                                                color: isCheap ? c.text : isExpensive ? '#fca5a5' : 'white'
                                                                             },
                                                                             children: [
                                                                                 "₹",
@@ -640,144 +763,180 @@ function GroceryApp(param) {
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                                            lineNumber: 196,
+                                                                            lineNumber: 217,
                                                                             columnNumber: 33
                                                                         }, _this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                                             href: val.url,
                                                                             target: "_blank",
                                                                             rel: "noreferrer",
+                                                                            className: "hover-lift",
                                                                             style: {
-                                                                                fontSize: '12px',
-                                                                                background: c.bg,
+                                                                                fontSize: '13px',
+                                                                                background: isCheap ? c.bg : '#334155',
                                                                                 color: 'white',
-                                                                                padding: '6px 12px',
-                                                                                borderRadius: '8px',
+                                                                                padding: '8px 16px',
+                                                                                borderRadius: '10px',
                                                                                 textDecoration: 'none',
-                                                                                fontWeight: 600
+                                                                                fontWeight: 700,
+                                                                                display: 'inline-block'
                                                                             },
                                                                             children: "Buy"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                                            lineNumber: 197,
+                                                                            lineNumber: 218,
                                                                             columnNumber: 33
                                                                         }, _this)
                                                                     ]
                                                                 }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     style: {
-                                                                        fontSize: '13px',
+                                                                        fontSize: '14px',
                                                                         color: '#64748b',
-                                                                        fontStyle: 'italic'
+                                                                        fontWeight: 500
                                                                     },
                                                                     children: "Unavailable"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                                    lineNumber: 203,
+                                                                    lineNumber: 224,
                                                                     columnNumber: 31
                                                                 }, _this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                                lineNumber: 193,
+                                                                lineNumber: 214,
                                                                 columnNumber: 27
                                                             }, _this)
                                                         ]
                                                     }, platform, true, {
                                                         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                        lineNumber: 181,
+                                                        lineNumber: 201,
                                                         columnNumber: 25
                                                     }, _this);
                                                 })
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                lineNumber: 174,
+                                                lineNumber: 193,
                                                 columnNumber: 19
                                             }, _this)
                                         ]
                                     }, product.id, true, {
                                         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                        lineNumber: 165,
+                                        lineNumber: 175,
                                         columnNumber: 17
                                     }, _this);
                                 })
                             }, void 0, false, {
                                 fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                lineNumber: 161,
+                                lineNumber: 171,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                        lineNumber: 158,
+                        lineNumber: 165,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            flex: '1 1 300px',
-                            maxWidth: '400px'
+                            flex: '1 1 340px',
+                            maxWidth: '420px'
                         },
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "glass",
+                            className: "glass-panel",
                             style: {
-                                padding: '24px',
+                                padding: '32px',
                                 position: 'sticky',
-                                top: '24px'
+                                top: '32px',
+                                borderTop: '2px solid rgba(108, 58, 232, 0.5)'
                             },
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     style: {
                                         display: 'flex',
                                         alignItems: 'center',
-                                        gap: '12px',
-                                        marginBottom: '20px'
+                                        gap: '16px',
+                                        marginBottom: '24px'
                                     },
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             style: {
-                                                fontSize: '28px'
+                                                background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))',
+                                                borderRadius: '16px',
+                                                padding: '12px',
+                                                fontSize: '28px',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center'
                                             },
-                                            children: "🤖"
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: isAILoading ? 'pulse-anim' : '',
+                                                children: "🤖"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                lineNumber: 242,
+                                                columnNumber: 17
+                                            }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                            lineNumber: 220,
+                                            lineNumber: 241,
                                             columnNumber: 15
                                         }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                            className: "gradient-text",
-                                            style: {
-                                                fontSize: '22px',
-                                                fontWeight: 700,
-                                                margin: 0
-                                            },
-                                            children: "Budget Assistant"
-                                        }, void 0, false, {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                    style: {
+                                                        fontSize: '24px',
+                                                        fontWeight: 800,
+                                                        margin: 0,
+                                                        color: 'white'
+                                                    },
+                                                    children: "Budget Assistant"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                    lineNumber: 245,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    style: {
+                                                        color: 'var(--secondary-color)',
+                                                        fontSize: '13px',
+                                                        fontWeight: 600
+                                                    },
+                                                    children: "Powered by AI"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                    lineNumber: 246,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                            lineNumber: 221,
+                                            lineNumber: 244,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                    lineNumber: 219,
+                                    lineNumber: 240,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     style: {
                                         color: '#94a3b8',
-                                        fontSize: '14px',
-                                        marginBottom: '20px',
-                                        lineHeight: 1.5
+                                        fontSize: '15px',
+                                        marginBottom: '24px',
+                                        lineHeight: 1.6
                                     },
-                                    children: "Enter your budget and let AI suggest an optimized grocery basket using the lowest prices across platforms."
+                                    children: "Enter your maximum budget. Our AI will curate the optimal basket using the lowest prices available across all platforms."
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                    lineNumber: 223,
+                                    lineNumber: 249,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     style: {
                                         display: 'flex',
                                         gap: '12px',
-                                        marginBottom: '20px'
+                                        marginBottom: '24px'
                                     },
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -785,17 +944,20 @@ function GroceryApp(param) {
                                                 position: 'relative',
                                                 flex: 1
                                             },
+                                            className: "glow-effect",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     style: {
                                                         position: 'absolute',
-                                                        margin: '14px 16px',
-                                                        color: '#94a3b8'
+                                                        margin: '16px 20px',
+                                                        color: '#94a3b8',
+                                                        fontSize: '18px',
+                                                        fontWeight: 700
                                                     },
                                                     children: "₹"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                    lineNumber: 229,
+                                                    lineNumber: 255,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -807,24 +969,25 @@ function GroceryApp(param) {
                                                     placeholder: "e.g. 500",
                                                     style: {
                                                         width: '100%',
-                                                        padding: '14px 12px 14px 36px',
-                                                        borderRadius: '12px',
-                                                        background: 'rgba(15, 23, 42, 0.5)',
+                                                        padding: '16px 16px 16px 44px',
+                                                        borderRadius: '16px',
+                                                        background: 'rgba(10, 14, 26, 0.6)',
                                                         border: '1px solid var(--border-color)',
                                                         color: 'white',
-                                                        fontSize: '16px',
+                                                        fontSize: '18px',
                                                         outline: 'none',
-                                                        fontFamily: 'inherit'
+                                                        fontFamily: 'inherit',
+                                                        fontWeight: 600
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                    lineNumber: 230,
+                                                    lineNumber: 256,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                            lineNumber: 228,
+                                            lineNumber: 254,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -835,99 +998,254 @@ function GroceryApp(param) {
                                                 background: 'var(--primary-color)',
                                                 color: 'white',
                                                 border: 'none',
-                                                padding: '0 20px',
-                                                borderRadius: '12px',
-                                                fontWeight: 600,
+                                                padding: '0 24px',
+                                                borderRadius: '16px',
+                                                fontWeight: 700,
                                                 cursor: 'pointer',
                                                 fontFamily: 'inherit',
-                                                fontSize: '15px'
+                                                fontSize: '16px',
+                                                boxShadow: '0 4px 14px 0 rgba(108, 58, 232, 0.39)'
                                             },
-                                            children: isAILoading ? 'Thinking...' : 'Plan'
+                                            children: isAILoading ? '...' : 'Plan'
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                            lineNumber: 242,
+                                            lineNumber: 268,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                    lineNumber: 227,
+                                    lineNumber: 253,
                                     columnNumber: 13
                                 }, this),
                                 budgetResult && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     style: {
-                                        background: 'rgba(15, 23, 42, 0.6)',
-                                        borderRadius: '16px',
-                                        padding: '16px',
+                                        background: 'rgba(10, 14, 26, 0.4)',
+                                        borderRadius: '20px',
+                                        padding: '24px',
                                         marginTop: '16px',
-                                        border: '1px solid var(--border-color)'
+                                        border: '1px solid rgba(255,255,255,0.08)'
                                     },
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             style: {
-                                                margin: '0 0 16px 0',
-                                                fontSize: '15px',
-                                                color: '#cbd5e1'
+                                                display: 'flex',
+                                                justifyContent: 'space-between',
+                                                alignItems: 'center',
+                                                marginBottom: '20px'
                                             },
-                                            children: "Suggested Basket:"
-                                        }, void 0, false, {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                    style: {
+                                                        margin: 0,
+                                                        fontSize: '16px',
+                                                        color: '#f8fafc',
+                                                        fontWeight: 700
+                                                    },
+                                                    children: "Optimized Basket"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                    lineNumber: 285,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    style: {
+                                                        background: 'rgba(34,197,94,0.15)',
+                                                        color: '#4ade80',
+                                                        padding: '4px 10px',
+                                                        borderRadius: '12px',
+                                                        fontSize: '12px',
+                                                        fontWeight: 700
+                                                    },
+                                                    children: [
+                                                        budgetResult.basket.length,
+                                                        " items"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                    lineNumber: 286,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                            lineNumber: 258,
+                                            lineNumber: 284,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            style: {
+                                                marginBottom: '24px',
+                                                background: 'rgba(255,255,255,0.05)',
+                                                borderRadius: '12px',
+                                                padding: '16px'
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    style: {
+                                                        fontSize: '12px',
+                                                        color: '#94a3b8',
+                                                        margin: '0 0 12px 0',
+                                                        fontWeight: 600,
+                                                        textTransform: 'uppercase'
+                                                    },
+                                                    children: "Budget Utilization"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                    lineNumber: 291,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    style: {
+                                                        height: '12px',
+                                                        background: 'rgba(255,255,255,0.1)',
+                                                        borderRadius: '6px',
+                                                        display: 'flex',
+                                                        overflow: 'hidden',
+                                                        marginBottom: '8px'
+                                                    },
+                                                    children: budgetResult.basket.map(function(b, i) {
+                                                        var percentage = b.price / budgetResult.total * 100;
+                                                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            title: "".concat(b.item.name, ": ₹").concat(b.price),
+                                                            style: {
+                                                                width: "".concat(percentage, "%"),
+                                                                background: platformColors[b.platform].bg,
+                                                                borderRight: '1px solid rgba(0,0,0,0.2)'
+                                                            }
+                                                        }, i, false, {
+                                                            fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                            lineNumber: 296,
+                                                            columnNumber: 25
+                                                        }, _this);
+                                                    })
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                    lineNumber: 292,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    style: {
+                                                        display: 'flex',
+                                                        justifyContent: 'space-between',
+                                                        fontSize: '12px',
+                                                        color: '#94a3b8',
+                                                        fontWeight: 500
+                                                    },
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            children: "0"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                            lineNumber: 305,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            children: [
+                                                                "Total: ₹",
+                                                                budgetResult.total
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                            lineNumber: 306,
+                                                            columnNumber: 21
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                    lineNumber: 304,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                            lineNumber: 290,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             style: {
                                                 display: 'flex',
                                                 flexDirection: 'column',
-                                                gap: '12px'
+                                                gap: '16px'
                                             },
                                             children: budgetResult.basket.map(function(b, i) {
                                                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     style: {
                                                         display: 'flex',
                                                         justifyContent: 'space-between',
-                                                        alignItems: 'center'
+                                                        alignItems: 'center',
+                                                        paddingBottom: '12px',
+                                                        borderBottom: i !== budgetResult.basket.length - 1 ? '1px dashed rgba(255,255,255,0.1)' : 'none'
                                                     },
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             style: {
                                                                 display: 'flex',
                                                                 alignItems: 'center',
-                                                                gap: '8px'
+                                                                gap: '12px'
                                                             },
                                                             children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    style: {
+                                                                        background: 'rgba(255,255,255,0.05)',
+                                                                        padding: '8px',
+                                                                        borderRadius: '10px',
+                                                                        fontSize: '18px'
+                                                                    },
                                                                     children: b.item.image
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                                    lineNumber: 263,
+                                                                    lineNumber: 314,
                                                                     columnNumber: 25
                                                                 }, _this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    style: {
-                                                                        fontSize: '14px',
-                                                                        whiteSpace: 'nowrap',
-                                                                        overflow: 'hidden',
-                                                                        textOverflow: 'ellipsis',
-                                                                        maxWidth: '140px'
-                                                                    },
-                                                                    children: b.item.name
-                                                                }, void 0, false, {
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            style: {
+                                                                                fontSize: '15px',
+                                                                                fontWeight: 600,
+                                                                                whiteSpace: 'nowrap',
+                                                                                overflow: 'hidden',
+                                                                                textOverflow: 'ellipsis',
+                                                                                maxWidth: '130px'
+                                                                            },
+                                                                            children: b.item.name
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                                            lineNumber: 316,
+                                                                            columnNumber: 27
+                                                                        }, _this),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            style: {
+                                                                                fontSize: '12px',
+                                                                                color: platformColors[b.platform].text,
+                                                                                fontWeight: 600
+                                                                            },
+                                                                            children: [
+                                                                                "from ",
+                                                                                b.platform
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                                            lineNumber: 317,
+                                                                            columnNumber: 27
+                                                                        }, _this)
+                                                                    ]
+                                                                }, void 0, true, {
                                                                     fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                                    lineNumber: 264,
+                                                                    lineNumber: 315,
                                                                     columnNumber: 25
                                                                 }, _this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                            lineNumber: 262,
+                                                            lineNumber: 313,
                                                             columnNumber: 23
                                                         }, _this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             style: {
-                                                                fontSize: '14px',
-                                                                fontWeight: 700,
-                                                                color: platformColors[b.platform].text
+                                                                fontSize: '16px',
+                                                                fontWeight: 800,
+                                                                color: 'white'
                                                             },
                                                             children: [
                                                                 "₹",
@@ -935,88 +1253,119 @@ function GroceryApp(param) {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                            lineNumber: 266,
+                                                            lineNumber: 320,
                                                             columnNumber: 23
                                                         }, _this)
                                                     ]
                                                 }, i, true, {
                                                     fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                    lineNumber: 261,
+                                                    lineNumber: 312,
                                                     columnNumber: 21
                                                 }, _this);
                                             })
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                            lineNumber: 259,
+                                            lineNumber: 310,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             style: {
-                                                marginTop: '20px',
-                                                paddingTop: '16px',
-                                                borderTop: '1px solid var(--border-color)',
+                                                marginTop: '24px',
+                                                paddingTop: '20px',
+                                                borderTop: '2px dashed rgba(255,255,255,0.1)',
                                                 display: 'flex',
-                                                justifyContent: 'space-between'
+                                                justifyContent: 'space-between',
+                                                alignItems: 'center'
                                             },
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     style: {
-                                                        color: '#94a3b8'
+                                                        color: '#94a3b8',
+                                                        fontSize: '16px',
+                                                        fontWeight: 600
                                                     },
-                                                    children: "Total"
+                                                    children: "Total Cost"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                    lineNumber: 271,
+                                                    lineNumber: 326,
                                                     columnNumber: 19
                                                 }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     style: {
-                                                        fontWeight: 800,
-                                                        color: '#4ade80',
-                                                        fontSize: '18px'
+                                                        textAlign: 'right'
                                                     },
                                                     children: [
-                                                        "₹",
-                                                        budgetResult.total
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            style: {
+                                                                fontWeight: 800,
+                                                                color: 'var(--success-color)',
+                                                                fontSize: '28px',
+                                                                lineHeight: 1
+                                                            },
+                                                            children: [
+                                                                "₹",
+                                                                budgetResult.total
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                            lineNumber: 328,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$grocery$2d$compare$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            style: {
+                                                                fontSize: '12px',
+                                                                color: '#94a3b8',
+                                                                marginTop: '4px'
+                                                            },
+                                                            children: [
+                                                                "Under ₹",
+                                                                budget,
+                                                                " budget"
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
+                                                            lineNumber: 329,
+                                                            columnNumber: 21
+                                                        }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                                    lineNumber: 272,
+                                                    lineNumber: 327,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                            lineNumber: 270,
+                                            lineNumber: 325,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                                    lineNumber: 257,
+                                    lineNumber: 283,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                            lineNumber: 218,
+                            lineNumber: 239,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                        lineNumber: 217,
+                        lineNumber: 238,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-                lineNumber: 155,
+                lineNumber: 162,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Documents/grocery-compare/src/components/GroceryApp.tsx",
-        lineNumber: 101,
+        lineNumber: 103,
         columnNumber: 5
     }, this);
 }
