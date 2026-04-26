@@ -5,6 +5,8 @@ export const metadata = {
   description: "AI-Powered Grocery Price Comparison",
 };
 
+import { AppProviders } from "@/providers/AppProviders";
+
 export default function RootLayout({
   children,
 }: {
@@ -12,7 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AppProviders>
+          {children}
+        </AppProviders>
+      </body>
     </html>
   );
 }

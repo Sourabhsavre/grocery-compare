@@ -1,6 +1,12 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useAppContext } from "@/providers/AppProviders";
+import DealOfTheDay from "./DealOfTheDay";
+import RecipeAssistant from "./RecipeAssistant";
+import AuthModal from "./AuthModal";
+import BudgetPlanner from "./BudgetPlanner";
+import PriceAlerts from "./PriceAlerts";
 
 const platformColors = {
   Zepto: { bg: "#8b5cf6", light: "rgba(139, 92, 246, 0.15)", text: "#c4b5fd", logo: "🟣 Zepto" },
@@ -21,11 +27,22 @@ function getPriceStats(prices: any) {
 }
 
 export default function GroceryApp({ products }: { products: any[] }) {
+  const { t, theme, toggleTheme, language, toggleLanguage } = useAppContext();
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
   const [budget, setBudget] = useState("");
   const [budgetResult, setBudgetResult] = useState<any>(null);
   const [isAILoading, setIsAILoading] = useState(false);
+  
+  const [user, setUser] = useState<any>(null);
+  const [showAuth, setShowAuth] = useState(false);
+  const [cart, setCart] = useState<any[]>([]);
+  const cartTotal = cart.reduce((sum, item) => sum + item.price * (item.requiredQuantity || 1), 0);
+
+  const handleAddToCart = (items: any[]) => {
+    setCart([...cart, ...items]);
+    alert(`Added ${items.length} items to your cart!`);
+  };
 
   const categories = ["All", ...Array.from(new Set(products.map((p) => p.category)))];
 
@@ -98,9 +115,51 @@ export default function GroceryApp({ products }: { products: any[] }) {
       setIsAILoading(false);
     }
   };
+  const shareProduct = (product: any) => {
+    const text = `Check out ${product.name} on GroceryCompare AI!\nBest price: ₹${getPriceStats(product.prices).min}`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+  };
+
+  const shareBudget = () => {
+    if (!budgetResult) return;
+    const text = `My Grocery Budget Plan (₹${budgetResult.target}):\nTotal Cost: ₹${budgetResult.total}\nItems: ${budgetResult.basket.length}\nPlanned with GroceryCompare AI!`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+  };
 
   return (
     <div style={{ minHeight: '100vh', paddingBottom: '80px' }}>
+      {/* Top Navbar */}
+      <div style={{ padding: '16px 24px', display: 'flex', justifyContent: 'flex-end', gap: '16px', background: 'rgba(0,0,0,0.2)', borderBottom: '1px solid var(--border-color)' }}>
+        <button onClick={toggleLanguage} style={{ background: 'transparent', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontWeight: 600 }}>
+          {language === 'en' ? 'A / अ' : 'अ / A'}
+        </button>
+        <button onClick={toggleTheme} style={{ background: 'transparent', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontSize: '18px' }}>
+          {theme === 'dark' ? '☀️' : '🌙'}
+        </button>
+        {cart.length > 0 && (
+          <button onClick={() => {
+            const text = `My Grocery Cart:\n${cart.map(c => `- ${c.item.name} (₹${c.price})`).join('\n')}\nTotal: ₹${cartTotal}`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+          }} style={{ background: '#25D366', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px' }}>
+            🛒 Share Cart ({cart.length})
+          </button>
+        )}
+        {user ? (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <span style={{ fontWeight: 600, color: 'var(--success-color)' }}>{user.email}</span>
+            <button onClick={() => setUser(null)} style={{ background: 'var(--danger-color)', color: 'white', border: 'none', padding: '8px 24px', borderRadius: '8px', cursor: 'pointer', fontWeight: 600 }}>
+              {t('logout') || 'Logout'}
+            </button>
+          </div>
+        ) : (
+          <button onClick={() => setShowAuth(true)} style={{ background: 'var(--primary-color)', color: 'white', border: 'none', padding: '8px 24px', borderRadius: '8px', cursor: 'pointer', fontWeight: 600 }}>
+            {t('login') || 'Login'}
+          </button>
+        )}
+      </div>
+
+      <AuthModal isOpen={showAuth} onClose={() => setShowAuth(false)} onLogin={(u) => { setUser(u); setShowAuth(false); }} />
+
       {/* Header */}
       <div className="glass-panel hover-lift" style={{ maxWidth: 1100, margin: '32px auto', padding: '40px', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: '-50%', left: '-20%', width: '100%', height: '200%', background: 'radial-gradient(circle, rgba(108,58,232,0.1) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
@@ -108,8 +167,8 @@ export default function GroceryApp({ products }: { products: any[] }) {
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '24px', position: 'relative', zIndex: 1 }}>
           <div style={{ fontSize: '56px', filter: 'drop-shadow(0 0 10px rgba(0,212,170,0.5))' }} className="pulse-anim">🛒</div>
           <div>
-            <h1 className="gradient-text" style={{ fontSize: '48px', fontWeight: 800, margin: 0, paddingBottom: '8px', letterSpacing: '-1px' }}>GroceryCompare AI</h1>
-            <p style={{ color: '#94a3b8', fontSize: '18px', margin: 0, fontWeight: 500 }}>India's Smartest Grocery Price Comparison</p>
+            <h1 className="gradient-text" style={{ fontSize: '48px', fontWeight: 800, margin: 0, paddingBottom: '8px', letterSpacing: '-1px' }}>{t('app_title')}</h1>
+            <p style={{ color: '#94a3b8', fontSize: '18px', margin: 0, fontWeight: 500 }}>{t('app_subtitle')}</p>
           </div>
         </div>
 
@@ -121,7 +180,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSmartSearch()}
-              placeholder="Try 'healthy snacks under 50' or 'milk'"
+              placeholder={t('search_placeholder')}
               style={{
                 width: '100%', padding: '20px 140px 20px 56px', borderRadius: '20px',
                 background: 'rgba(15, 23, 42, 0.6)', border: '1px solid var(--border-color)',
@@ -141,7 +200,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
                 fontFamily: 'inherit', fontSize: '16px', textShadow: '0 1px 2px rgba(0,0,0,0.2)'
               }}
             >
-              Ask AI ✨
+              {t('ask_ai')}
             </button>
           </div>
           <select
@@ -163,9 +222,11 @@ export default function GroceryApp({ products }: { products: any[] }) {
         
         {/* Main Content */}
         <div style={{ flex: '1 1 600px' }}>
+          <DealOfTheDay products={products} />
+
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
-            <h2 style={{ fontSize: '24px', fontWeight: 700 }}>Top Products</h2>
-            <span style={{ color: '#00D4AA', background: 'rgba(0, 212, 170, 0.1)', padding: '6px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: 600 }}>{filtered.length} items</span>
+            <h2 style={{ fontSize: '24px', fontWeight: 700 }}>{t('top_products')}</h2>
+            <span style={{ color: '#00D4AA', background: 'rgba(0, 212, 170, 0.1)', padding: '6px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: 600 }}>{filtered.length} {t('items')}</span>
           </div>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '24px' }}>
@@ -183,11 +244,14 @@ export default function GroceryApp({ products }: { products: any[] }) {
                         <span style={{ fontSize: '12px', background: 'rgba(108,58,232,0.2)', color: '#c4b5fd', padding: '4px 12px', borderRadius: '12px', fontWeight: 600 }}>{product.category}</span>
                         {stats.savings > 0 && (
                           <span style={{ fontSize: '12px', background: 'rgba(34,197,94,0.2)', color: '#86efac', padding: '4px 12px', borderRadius: '12px', fontWeight: 600 }}>
-                            Save ₹{stats.savings}
+                            {t('save')} ₹{stats.savings}
                           </span>
                         )}
                       </div>
                     </div>
+                    <button onClick={() => shareProduct(product)} style={{ position: 'absolute', top: '24px', right: '24px', background: 'rgba(37, 211, 102, 0.2)', border: 'none', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.2s', color: '#25D366' }} className="hover-lift" title="Share on WhatsApp">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    </button>
                   </div>
                   
                   <div style={{ padding: '20px', flex: 1, display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -207,8 +271,8 @@ export default function GroceryApp({ products }: { products: any[] }) {
                         }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                             <span style={{ fontSize: '16px', fontWeight: 600 }}>{c.logo}</span>
-                            {isCheap && <span style={{ fontSize: '10px', background: 'var(--success-color)', color: 'white', padding: '2px 8px', borderRadius: '8px', fontWeight: 800, letterSpacing: '0.5px' }}>BEST</span>}
-                            {isExpensive && <span style={{ fontSize: '10px', background: 'rgba(239,68,68,0.8)', color: 'white', padding: '2px 8px', borderRadius: '8px', fontWeight: 800 }}>COSTLY</span>}
+                            {isCheap && <span style={{ fontSize: '10px', background: 'var(--success-color)', color: 'white', padding: '2px 8px', borderRadius: '8px', fontWeight: 800, letterSpacing: '0.5px' }}>{t('best')}</span>}
+                            {isExpensive && <span style={{ fontSize: '10px', background: 'rgba(239,68,68,0.8)', color: 'white', padding: '2px 8px', borderRadius: '8px', fontWeight: 800 }}>{t('costly')}</span>}
                           </div>
                           
                           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
@@ -218,10 +282,10 @@ export default function GroceryApp({ products }: { products: any[] }) {
                                 <a href={val.url} target="_blank" rel="noreferrer" className="hover-lift" style={{
                                   fontSize: '13px', background: isCheap ? c.bg : '#334155', color: 'white', padding: '8px 16px',
                                   borderRadius: '10px', textDecoration: 'none', fontWeight: 700, display: 'inline-block'
-                                }}>Buy</a>
+                                }}>{t('buy')}</a>
                               </>
                             ) : (
-                              <span style={{ fontSize: '14px', color: '#64748b', fontWeight: 500 }}>Unavailable</span>
+                              <span style={{ fontSize: '14px', color: '#64748b', fontWeight: 500 }}>{t('unavailable')}</span>
                             )}
                           </div>
                         </div>
@@ -234,20 +298,27 @@ export default function GroceryApp({ products }: { products: any[] }) {
           </div>
         </div>
 
-        {/* Sidebar - Budget Assistant */}
-        <div style={{ flex: '1 1 340px', maxWidth: '420px' }}>
-          <div className="glass-panel" style={{ padding: '32px', position: 'sticky', top: '32px', borderTop: '2px solid rgba(108, 58, 232, 0.5)' }}>
+        {/* Sidebar - Assistant & Planner */}
+        <div style={{ flex: '1 1 340px', maxWidth: '420px', display: 'flex', flexDirection: 'column', gap: '32px' }}>
+          
+          <RecipeAssistant products={products} addToCart={handleAddToCart} />
+          
+          <BudgetPlanner cartTotal={cartTotal} />
+
+          <PriceAlerts products={products} />
+
+          <div className="glass-panel" style={{ padding: '32px', borderTop: '2px solid rgba(108, 58, 232, 0.5)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
               <div style={{ background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))', borderRadius: '16px', padding: '12px', fontSize: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <span className={isAILoading ? 'pulse-anim' : ''}>🤖</span>
               </div>
               <div>
-                <h2 style={{ fontSize: '24px', fontWeight: 800, margin: 0, color: 'white' }}>Budget Assistant</h2>
-                <span style={{ color: 'var(--secondary-color)', fontSize: '13px', fontWeight: 600 }}>Powered by AI</span>
+                <h2 style={{ fontSize: '24px', fontWeight: 800, margin: 0, color: 'white' }}>{t('budget_assistant')}</h2>
+                <span style={{ color: 'var(--secondary-color)', fontSize: '13px', fontWeight: 600 }}>{t('powered_by_ai')}</span>
               </div>
             </div>
             <p style={{ color: '#94a3b8', fontSize: '15px', marginBottom: '24px', lineHeight: 1.6 }}>
-              Enter your maximum budget. Our AI will curate the optimal basket using the lowest prices available across all platforms.
+              {t('budget_desc')}
             </p>
             
             <div style={{ display: 'flex', gap: '12px', marginBottom: '24px' }}>
@@ -275,20 +346,23 @@ export default function GroceryApp({ products }: { products: any[] }) {
                   fontFamily: 'inherit', fontSize: '16px', boxShadow: '0 4px 14px 0 rgba(108, 58, 232, 0.39)'
                 }}
               >
-                {isAILoading ? '...' : 'Plan'}
+                {isAILoading ? '...' : t('plan')}
               </button>
             </div>
 
             {budgetResult && (
-              <div style={{ background: 'rgba(10, 14, 26, 0.4)', borderRadius: '20px', padding: '24px', marginTop: '16px', border: '1px solid rgba(255,255,255,0.08)' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                  <h4 style={{ margin: 0, fontSize: '16px', color: '#f8fafc', fontWeight: 700 }}>Optimized Basket</h4>
-                  <span style={{ background: 'rgba(34,197,94,0.15)', color: '#4ade80', padding: '4px 10px', borderRadius: '12px', fontSize: '12px', fontWeight: 700 }}>{budgetResult.basket.length} items</span>
+              <div style={{ background: 'rgba(10, 14, 26, 0.4)', borderRadius: '20px', padding: '24px', marginTop: '16px', border: '1px solid rgba(255,255,255,0.08)', position: 'relative' }}>
+                <button onClick={shareBudget} style={{ position: 'absolute', top: '20px', right: '20px', background: 'rgba(37, 211, 102, 0.2)', border: 'none', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.2s', color: '#25D366' }} className="hover-lift" title="Share Plan on WhatsApp">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                </button>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', paddingRight: '40px' }}>
+                  <h4 style={{ margin: 0, fontSize: '16px', color: '#f8fafc', fontWeight: 700 }}>{t('optimized_basket')}</h4>
+                  <span style={{ background: 'rgba(34,197,94,0.15)', color: '#4ade80', padding: '4px 10px', borderRadius: '12px', fontSize: '12px', fontWeight: 700 }}>{budgetResult.basket.length} {t('items')}</span>
                 </div>
                 
                 {/* Visual Chart Breakdown */}
                 <div style={{ marginBottom: '24px', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', padding: '16px' }}>
-                  <p style={{ fontSize: '12px', color: '#94a3b8', margin: '0 0 12px 0', fontWeight: 600, textTransform: 'uppercase' }}>Budget Utilization</p>
+                  <p style={{ fontSize: '12px', color: '#94a3b8', margin: '0 0 12px 0', fontWeight: 600, textTransform: 'uppercase' }}>{t('budget_utilization')}</p>
                   <div style={{ height: '12px', background: 'rgba(255,255,255,0.1)', borderRadius: '6px', display: 'flex', overflow: 'hidden', marginBottom: '8px' }}>
                     {budgetResult.basket.map((b: any, i: number) => {
                       const percentage = (b.price / budgetResult.total) * 100;
@@ -303,7 +377,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', color: '#94a3b8', fontWeight: 500 }}>
                     <span>0</span>
-                    <span>Total: ₹{budgetResult.total}</span>
+                    <span>{t('total')}: ₹{budgetResult.total}</span>
                   </div>
                 </div>
 
@@ -314,7 +388,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
                         <div style={{ background: 'rgba(255,255,255,0.05)', padding: '8px', borderRadius: '10px', fontSize: '18px' }}>{b.item.image}</div>
                         <div>
                           <div style={{ fontSize: '15px', fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '130px' }}>{b.item.name}</div>
-                          <div style={{ fontSize: '12px', color: (platformColors as any)[b.platform].text, fontWeight: 600 }}>from {b.platform}</div>
+                          <div style={{ fontSize: '12px', color: (platformColors as any)[b.platform].text, fontWeight: 600 }}>{t('from')} {b.platform}</div>
                         </div>
                       </div>
                       <span style={{ fontSize: '16px', fontWeight: 800, color: 'white' }}>₹{b.price}</span>
@@ -324,15 +398,15 @@ export default function GroceryApp({ products }: { products: any[] }) {
                 
                 <div style={{ marginTop: '24px', paddingTop: '20px', borderTop: '2px dashed rgba(255,255,255,0.1)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ color: '#94a3b8', fontSize: '16px', fontWeight: 600 }}>Used Budget</span>
+                    <span style={{ color: '#94a3b8', fontSize: '16px', fontWeight: 600 }}>{t('used_budget')}</span>
                     <span style={{ fontWeight: 800, color: 'var(--success-color)', fontSize: '24px' }}>₹{budgetResult.total}</span>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ color: '#94a3b8', fontSize: '16px', fontWeight: 600 }}>Remaining Budget</span>
+                    <span style={{ color: '#94a3b8', fontSize: '16px', fontWeight: 600 }}>{t('remaining_budget')}</span>
                     <span style={{ fontWeight: 800, color: '#38bdf8', fontSize: '20px' }}>₹{budgetResult.target - budgetResult.total}</span>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '8px', paddingTop: '12px', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-                    <span style={{ color: '#64748b', fontSize: '14px', fontWeight: 500 }}>Target Budget</span>
+                    <span style={{ color: '#64748b', fontSize: '14px', fontWeight: 500 }}>{t('target_budget')}</span>
                     <span style={{ color: '#64748b', fontSize: '14px', fontWeight: 500 }}>₹{budgetResult.target}</span>
                   </div>
                 </div>
