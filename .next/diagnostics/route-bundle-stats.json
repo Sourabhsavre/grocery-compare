@@ -1,25 +1,27 @@
 [
   {
     "route": "/",
-    "firstLoadUncompressedJsBytes": 529702,
+    "firstLoadUncompressedJsBytes": 796324,
     "firstLoadChunkPaths": [
+      ".next\\static\\chunks\\0wks-426dshn~.js",
       ".next\\static\\chunks\\0gpevnhmvuy_a.js",
-      ".next\\static\\chunks\\0k15fco5a6a7c.js",
-      ".next\\static\\chunks\\0y0.~41ye6m0r.js",
-      ".next\\static\\chunks\\01jqhlaxpsce~.js",
+      ".next\\static\\chunks\\0a4lc_0ubh6-k.js",
+      ".next\\static\\chunks\\0.s0d4qvi1kkp.js",
+      ".next\\static\\chunks\\0148b8ffhs1qs.js",
       ".next\\static\\chunks\\176s2am1btuxx.js",
-      ".next\\static\\chunks\\turbopack-0a56x1gd5gld9.js"
+      ".next\\static\\chunks\\turbopack-0wh48bqi2t835.js"
     ]
   },
   {
     "route": "/_not-found",
-    "firstLoadUncompressedJsBytes": 521004,
+    "firstLoadUncompressedJsBytes": 524243,
     "firstLoadChunkPaths": [
+      ".next\\static\\chunks\\0wks-426dshn~.js",
       ".next\\static\\chunks\\0gpevnhmvuy_a.js",
-      ".next\\static\\chunks\\0y0.~41ye6m0r.js",
-      ".next\\static\\chunks\\01jqhlaxpsce~.js",
+      ".next\\static\\chunks\\0.s0d4qvi1kkp.js",
+      ".next\\static\\chunks\\0148b8ffhs1qs.js",
       ".next\\static\\chunks\\176s2am1btuxx.js",
-      ".next\\static\\chunks\\turbopack-0a56x1gd5gld9.js"
+      ".next\\static\\chunks\\turbopack-0wh48bqi2t835.js"
     ]
   }
 ]

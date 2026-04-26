@@ -48,6 +48,12 @@
       "namedRegex": "^/api/ai/budget(?:/)?$"
     },
     {
+      "page": "/api/ai/recipe",
+      "regex": "^/api/ai/recipe(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/ai/recipe(?:/)?$"
+    },
+    {
       "page": "/api/ai/search",
       "regex": "^/api/ai/search(?:/)?$",
       "routeKeys": {},

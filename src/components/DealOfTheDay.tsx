@@ -1,35 +1,39 @@
+"use client";
 import { useState, useEffect } from 'react';
 import { useAppContext } from '@/providers/AppProviders';
+
+function getTimeToMidnight() {
+  const now = new Date();
+  const midnight = new Date();
+  midnight.setHours(24, 0, 0, 0);
+  const diff = midnight.getTime() - now.getTime();
+  
+  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const m = Math.floor((diff / 1000 / 60) % 60);
+  const s = Math.floor((diff / 1000) % 60);
+  return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+}
 
 export default function DealOfTheDay({ products }: { products: any[] }) {
   const { t } = useAppContext();
   const [deals, setDeals] = useState<any[]>([]);
-  const [timeLeft, setTimeLeft] = useState(getTimeToMidnight());
+  const [timeLeft, setTimeLeft] = useState("");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     // Pick 5 random products for deals
     const shuffled = [...products].sort(() => 0.5 - Math.random());
     setDeals(shuffled.slice(0, 5));
 
+    setTimeLeft(getTimeToMidnight());
     const timer = setInterval(() => {
       setTimeLeft(getTimeToMidnight());
     }, 1000);
     return () => clearInterval(timer);
   }, [products]);
 
-  function getTimeToMidnight() {
-    const now = new Date();
-    const midnight = new Date();
-    midnight.setHours(24, 0, 0, 0);
-    const diff = midnight.getTime() - now.getTime();
-    
-    const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const m = Math.floor((diff / 1000 / 60) % 60);
-    const s = Math.floor((diff / 1000) % 60);
-    return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-  }
-
-  if (deals.length === 0) return null;
+  if (!mounted || deals.length === 0) return null;
 
   return (
     <div className="glass-panel" style={{ padding: '24px', marginBottom: '32px', background: 'linear-gradient(135deg, rgba(234, 179, 8, 0.1), rgba(220, 38, 38, 0.1))', border: '1px solid rgba(234, 179, 8, 0.3)' }}>

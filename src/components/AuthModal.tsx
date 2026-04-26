@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+"use client";
+import { useState } from 'react';
 import { createClient } from '@/utils/supabase/client';
 
 export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolean, onClose: () => void, onLogin: (user: any) => void }) {
