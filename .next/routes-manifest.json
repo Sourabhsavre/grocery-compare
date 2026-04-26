@@ -48,6 +48,12 @@
       "namedRegex": "^/api/ai/budget(?:/)?$"
     },
     {
+      "page": "/api/ai/monthly-plan",
+      "regex": "^/api/ai/monthly\\-plan(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/ai/monthly\\-plan(?:/)?$"
+    },
+    {
       "page": "/api/ai/recipe",
       "regex": "^/api/ai/recipe(?:/)?$",
       "routeKeys": {},
@@ -58,6 +64,12 @@
       "regex": "^/api/ai/search(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/api/ai/search(?:/)?$"
+    },
+    {
+      "page": "/api/ai/vision",
+      "regex": "^/api/ai/vision(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/ai/vision(?:/)?$"
     }
   ],
   "dataRoutes": [],

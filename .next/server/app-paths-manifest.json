@@ -2,7 +2,9 @@
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/api/ai/budget/route": "app/api/ai/budget/route.js",
+  "/api/ai/monthly-plan/route": "app/api/ai/monthly-plan/route.js",
   "/api/ai/recipe/route": "app/api/ai/recipe/route.js",
   "/api/ai/search/route": "app/api/ai/search/route.js",
+  "/api/ai/vision/route": "app/api/ai/vision/route.js",
   "/page": "app/page.js"
 }

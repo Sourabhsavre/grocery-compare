@@ -5,8 +5,9 @@ import { useAppContext } from "@/providers/AppProviders";
 import DealOfTheDay from "./DealOfTheDay";
 import RecipeAssistant from "./RecipeAssistant";
 import AuthModal from "./AuthModal";
-import BudgetPlanner from "./BudgetPlanner";
+import MonthlyPlanner from "./MonthlyPlanner";
 import PriceAlerts from "./PriceAlerts";
+import ImageScannerModal from "./ImageScannerModal";
 
 const platformColors = {
   Zepto: { bg: "#8b5cf6", light: "rgba(139, 92, 246, 0.15)", text: "#c4b5fd", logo: "🟣 Zepto" },
@@ -36,6 +37,8 @@ export default function GroceryApp({ products }: { products: any[] }) {
   
   const [user, setUser] = useState<any>(null);
   const [showAuth, setShowAuth] = useState(false);
+  const [showScanner, setShowScanner] = useState(false);
+  const [isListening, setIsListening] = useState(false);
   const [cart, setCart] = useState<any[]>([]);
   const cartTotal = cart.reduce((sum, item) => sum + item.price * (item.requiredQuantity || 1), 0);
 
@@ -88,12 +91,40 @@ export default function GroceryApp({ products }: { products: any[] }) {
       if (data.cleanQuery) {
         setSearch(data.cleanQuery);
       }
+      
+      const msg = new SpeechSynthesisUtterance(`Found results for ${data.cleanQuery || search}`);
+      window.speechSynthesis.speak(msg);
+
     } catch (e) {
       console.error(e);
     } finally {
       setIsAILoading(false);
     }
   }
+
+  const handleVoiceSearch = () => {
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SpeechRecognition) return alert("Voice recognition not supported in this browser.");
+    
+    const recognition = new SpeechRecognition();
+    recognition.lang = language === 'hi' ? 'hi-IN' : 'en-IN';
+    recognition.interimResults = false;
+    
+    recognition.onstart = () => setIsListening(true);
+    recognition.onend = () => setIsListening(false);
+    recognition.onresult = (e: any) => {
+      const transcript = e.results[0][0].transcript;
+      setSearch(transcript);
+      // Let the user see what was typed, then search
+      setTimeout(() => {
+        // Trigger search by passing transcript directly since state might not be fully updated
+        const dummyEvent = { key: 'Enter', target: { value: transcript } };
+        // We will just call a smart search with the transcript
+        setSearch(transcript);
+      }, 500);
+    };
+    recognition.start();
+  };
 
   const handleBudgetAssistant = async () => {
     const b = parseInt(budget);
@@ -159,6 +190,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
       </div>
 
       <AuthModal isOpen={showAuth} onClose={() => setShowAuth(false)} onLogin={(u) => { setUser(u); setShowAuth(false); }} />
+      <ImageScannerModal isOpen={showScanner} onClose={() => setShowScanner(false)} products={products} onScanComplete={handleAddToCart} />
 
       {/* Header */}
       <div className="glass-panel hover-lift" style={{ maxWidth: 1100, margin: '32px auto', padding: '40px', position: 'relative', overflow: 'hidden' }}>
@@ -174,20 +206,32 @@ export default function GroceryApp({ products }: { products: any[] }) {
 
         {/* Search & Filters */}
         <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginTop: '32px', position: 'relative', zIndex: 1 }}>
-          <div style={{ flex: 1, position: 'relative', minWidth: '300px' }} className="glow-effect">
-            <span style={{ position: 'absolute', left: '20px', top: '18px', fontSize: '22px' }}>🔍</span>
+          <div style={{ flex: 1, position: 'relative', minWidth: '300px', display: 'flex', alignItems: 'center' }} className="glow-effect">
+            <span style={{ position: 'absolute', left: '20px', fontSize: '22px' }}>🔍</span>
             <input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSmartSearch()}
-              placeholder={t('search_placeholder')}
+              placeholder={isListening ? 'Listening...' : t('search_placeholder')}
               style={{
-                width: '100%', padding: '20px 140px 20px 56px', borderRadius: '20px',
-                background: 'rgba(15, 23, 42, 0.6)', border: '1px solid var(--border-color)',
+                width: '100%', padding: '20px 180px 20px 56px', borderRadius: '20px',
+                background: isListening ? 'rgba(239, 68, 68, 0.2)' : 'rgba(15, 23, 42, 0.6)', 
+                border: isListening ? '1px solid #fca5a5' : '1px solid var(--border-color)',
                 color: 'white', fontSize: '18px', outline: 'none', transition: 'all 0.3s ease',
                 fontFamily: 'inherit', backdropFilter: 'blur(10px)'
               }}
             />
+            
+            {/* Mic and Camera buttons inside search */}
+            <div style={{ position: 'absolute', right: '140px', display: 'flex', gap: '8px' }}>
+              <button onClick={handleVoiceSearch} style={{ background: 'transparent', border: 'none', fontSize: '24px', cursor: 'pointer', color: isListening ? '#fca5a5' : 'white' }} title="Voice Search">
+                🎤
+              </button>
+              <button onClick={() => setShowScanner(true)} style={{ background: 'transparent', border: 'none', fontSize: '24px', cursor: 'pointer' }} title="Scan List">
+                📷
+              </button>
+            </div>
+
             <button 
               onClick={handleSmartSearch}
               disabled={isAILoading}
@@ -303,7 +347,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
           
           <RecipeAssistant products={products} addToCart={handleAddToCart} />
           
-          <BudgetPlanner cartTotal={cartTotal} />
+          <MonthlyPlanner products={products} addToCart={handleAddToCart} />
 
           <PriceAlerts products={products} />
 
@@ -415,6 +459,32 @@ export default function GroceryApp({ products }: { products: any[] }) {
           </div>
         </div>
       </div>
+      
+      {/* Mobile Floating Action Button */}
+      <button 
+        onClick={() => setShowScanner(true)}
+        className="hover-lift"
+        style={{
+          position: 'fixed',
+          bottom: '24px',
+          right: '24px',
+          width: '64px',
+          height: '64px',
+          borderRadius: '32px',
+          background: 'linear-gradient(135deg, #10b981, #3b82f6)',
+          color: 'white',
+          fontSize: '28px',
+          border: 'none',
+          boxShadow: '0 8px 16px rgba(0,0,0,0.3), 0 0 20px rgba(16, 185, 129, 0.4)',
+          cursor: 'pointer',
+          zIndex: 100,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        📷
+      </button>
     </div>
   );
 }

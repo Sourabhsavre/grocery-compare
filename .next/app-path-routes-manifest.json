@@ -2,7 +2,9 @@
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
   "/api/ai/budget/route": "/api/ai/budget",
+  "/api/ai/monthly-plan/route": "/api/ai/monthly-plan",
   "/api/ai/recipe/route": "/api/ai/recipe",
   "/api/ai/search/route": "/api/ai/search",
+  "/api/ai/vision/route": "/api/ai/vision",
   "/page": "/"
 }
