@@ -322,11 +322,18 @@ export default function GroceryApp({ products }: { products: any[] }) {
                   ))}
                 </div>
                 
-                <div style={{ marginTop: '24px', paddingTop: '20px', borderTop: '2px dashed rgba(255,255,255,0.1)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span style={{ color: '#94a3b8', fontSize: '16px', fontWeight: 600 }}>Total Cost</span>
-                  <div style={{ textAlign: 'right' }}>
-                    <div style={{ fontWeight: 800, color: 'var(--success-color)', fontSize: '28px', lineHeight: 1 }}>₹{budgetResult.total}</div>
-                    <div style={{ fontSize: '12px', color: '#94a3b8', marginTop: '4px' }}>Under ₹{budget} budget</div>
+                <div style={{ marginTop: '24px', paddingTop: '20px', borderTop: '2px dashed rgba(255,255,255,0.1)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span style={{ color: '#94a3b8', fontSize: '16px', fontWeight: 600 }}>Used Budget</span>
+                    <span style={{ fontWeight: 800, color: 'var(--success-color)', fontSize: '24px' }}>₹{budgetResult.total}</span>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span style={{ color: '#94a3b8', fontSize: '16px', fontWeight: 600 }}>Remaining Budget</span>
+                    <span style={{ fontWeight: 800, color: '#38bdf8', fontSize: '20px' }}>₹{budgetResult.target - budgetResult.total}</span>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '8px', paddingTop: '12px', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+                    <span style={{ color: '#64748b', fontSize: '14px', fontWeight: 500 }}>Target Budget</span>
+                    <span style={{ color: '#64748b', fontSize: '14px', fontWeight: 500 }}>₹{budgetResult.target}</span>
                   </div>
                 </div>
               </div>

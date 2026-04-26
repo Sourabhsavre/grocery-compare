@@ -7,59 +7,45 @@ export async function POST(request: Request) {
     const basket = [];
     let currentTotal = 0;
     
-    // Sort items by their cheapest price available
-    const sorted = [...products].sort((x: any, y: any) => {
-      const getMinPrice = (item: any) => {
-        let min = Infinity;
-        for (const v of Object.values(item.prices) as any[]) {
-          if (v.available && v.price < min) min = v.price;
-        }
-        return min;
-      };
-      return getMinPrice(x) - getMinPrice(y);
-    });
-
-    // Keep track of added categories to ensure variety
-    const addedCategories = new Set();
-
-    // First pass: try to add items from different categories
-    for (const item of sorted) {
-      if (basket.length >= 6) break; // limit to 6 items
-
-      let cheapPlatform = null;
+    // Shuffle the products to ensure randomness across different budgets
+    const shuffled = [...products].sort(() => 0.5 - Math.random());
+    
+    // Calculate min price for each item and filter out unavailable items
+    const itemsWithMinPrice = shuffled.map(item => {
       let minPrice = Infinity;
+      let cheapPlatform = null;
       for (const [p, v] of Object.entries(item.prices)) {
         if ((v as any).available && (v as any).price < minPrice) {
           minPrice = (v as any).price;
           cheapPlatform = p;
         }
       }
-      
+      return { item, minPrice, cheapPlatform };
+    }).filter(x => x.cheapPlatform !== null);
+
+    // Keep track of added categories to ensure variety
+    const addedCategories = new Set();
+
+    // First pass: try to add items from different categories greedily
+    for (const { item, minPrice, cheapPlatform } of itemsWithMinPrice) {
+      if (basket.length >= 8) break; // Limit items to prevent massive arrays
+
       // If we haven't added this category yet, prioritize it
-      if (cheapPlatform && currentTotal + minPrice <= budget && !addedCategories.has(item.category)) {
+      if (currentTotal + minPrice <= budget && !addedCategories.has(item.category)) {
         basket.push({ item, platform: cheapPlatform, price: minPrice });
         currentTotal += minPrice;
         addedCategories.add(item.category);
       }
     }
 
-    // Second pass: fill remaining budget with other affordable items if we have less than 4 items
-    for (const item of sorted) {
-      if (basket.length >= 6) break;
+    // Second pass: fill remaining budget with other affordable items
+    for (const { item, minPrice, cheapPlatform } of itemsWithMinPrice) {
+      if (basket.length >= 10) break;
       
       // Skip if already in basket
       if (basket.some(b => b.item.id === item.id)) continue;
-
-      let cheapPlatform = null;
-      let minPrice = Infinity;
-      for (const [p, v] of Object.entries(item.prices)) {
-        if ((v as any).available && (v as any).price < minPrice) {
-          minPrice = (v as any).price;
-          cheapPlatform = p;
-        }
-      }
       
-      if (cheapPlatform && currentTotal + minPrice <= budget) {
+      if (currentTotal + minPrice <= budget) {
         basket.push({ item, platform: cheapPlatform, price: minPrice });
         currentTotal += minPrice;
       }
