@@ -63,8 +63,8 @@ export default function MonthlyPlanner({ products, addToCart }: { products: any[
   return (
     <div className="glass-panel" style={{ padding: '32px', marginBottom: '32px' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-        <div style={{ background: 'linear-gradient(135deg, #10b981, #3b82f6)', borderRadius: '16px', padding: '12px', fontSize: '28px' }}>
-          📅
+        <div style={{ background: 'linear-gradient(135deg, #10b981, #3b82f6)', borderRadius: '16px', padding: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
+          <svg className="svg-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7v-5z"/></svg>
         </div>
         <div>
           <h2 style={{ fontSize: '24px', fontWeight: 800, margin: 0, color: 'white' }}>Monthly Planner</h2>
@@ -82,7 +82,7 @@ export default function MonthlyPlanner({ products, addToCart }: { products: any[
               disabled={loading}
               className="hover-lift"
               style={{ flex: 1, background: 'rgba(255,255,255,0.1)', border: '1px solid var(--border-color)', color: 'white', padding: '16px', borderRadius: '16px', fontSize: '16px', fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-              📷 Upload List
+              <svg className="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><circle cx="12" cy="13" r="4"/></svg> Upload List
             </button>
             <input type="file" ref={fileInputRef} onChange={handleFile} accept="image/*" capture="environment" style={{ display: 'none' }} />
             
@@ -91,7 +91,18 @@ export default function MonthlyPlanner({ products, addToCart }: { products: any[
               disabled={loading || isListening}
               className="hover-lift"
               style={{ flex: 1, background: isListening ? 'rgba(239, 68, 68, 0.2)' : 'rgba(255,255,255,0.1)', border: '1px solid var(--border-color)', color: isListening ? '#fca5a5' : 'white', padding: '16px', borderRadius: '16px', fontSize: '16px', fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-              {isListening ? '🎙️ Listening...' : '🎤 Speak Needs'}
+              {isListening ? (
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', height: '16px' }}>
+                    <div className="mic-wave"></div><div className="mic-wave"></div><div className="mic-wave"></div><div className="mic-wave"></div>
+                  </div>
+                  Listening...
+                </div>
+              ) : (
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <svg className="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg> Speak Needs
+                </div>
+              )}
             </button>
           </div>
           {loading && <div style={{ textAlign: 'center', color: '#94a3b8', marginTop: '12px' }} className="pulse-anim">Generating your smart monthly plan...</div>}

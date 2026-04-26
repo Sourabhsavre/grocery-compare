@@ -29,8 +29,8 @@ export default function RecipeAssistant({ products, addToCart }: { products: any
   return (
     <div className="glass-panel" style={{ padding: '32px', marginBottom: '32px' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-        <div style={{ background: 'linear-gradient(135deg, #f59e0b, #ef4444)', borderRadius: '16px', padding: '12px', fontSize: '28px' }}>
-          👨‍🍳
+        <div style={{ background: 'linear-gradient(135deg, #f59e0b, #ef4444)', borderRadius: '16px', padding: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
+          <svg className="svg-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 0 0-9 9c0 4.97 4.03 9 9 9s9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm1-11h-2v4h2V8zm0 6h-2v2h2v-2z"/></svg>
         </div>
         <div>
           <h2 style={{ fontSize: '24px', fontWeight: 800, margin: 0, color: 'white' }}>{t('recipe_assistant') || 'Recipe Assistant'}</h2>
@@ -94,7 +94,7 @@ export default function RecipeAssistant({ products, addToCart }: { products: any
               <div style={{ fontSize: '28px', fontWeight: 800, color: 'white' }}>₹{result.total}</div>
             </div>
             <button onClick={() => addToCart(result.basket)} className="hover-lift" style={{ background: 'var(--success-color)', color: 'white', border: 'none', padding: '12px 24px', borderRadius: '12px', fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span>🛒</span> Add All to Cart
+              <svg className="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg> Add All to Cart
             </button>
           </div>
         </div>

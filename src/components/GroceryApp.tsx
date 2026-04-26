@@ -164,15 +164,20 @@ export default function GroceryApp({ products }: { products: any[] }) {
         <button onClick={toggleLanguage} style={{ background: 'transparent', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontWeight: 600 }}>
           {language === 'en' ? 'A / अ' : 'अ / A'}
         </button>
-        <button onClick={toggleTheme} style={{ background: 'transparent', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontSize: '18px' }}>
-          {theme === 'dark' ? '☀️' : '🌙'}
+        <button onClick={toggleTheme} className="custom-btn-hover" style={{ background: 'transparent', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontSize: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          {theme === 'dark' ? (
+            <svg className="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zm1-14h-2v3h2V1zm0 19h-2v3h2v-3zM5.64 3.52L4.22 4.94l2.12 2.12 1.42-1.42L5.64 3.52zM18.36 19.06l1.42-1.42-2.12-2.12-1.42 1.42 2.12 2.12zM1 11h3v2H1v-2zm19 0h3v2h-3v-2zM5.64 20.48l1.42-1.42-2.12-2.12-1.42 1.42 2.12 2.12zM18.36 4.94l-1.42-1.42-2.12 2.12 1.42 1.42 2.12-2.12z"/></svg>
+          ) : (
+            <svg className="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          )}
         </button>
         {cart.length > 0 && (
           <button onClick={() => {
             const text = `My Grocery Cart:\n${cart.map(c => `- ${c.item.name} (₹${c.price})`).join('\n')}\nTotal: ₹${cartTotal}`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
-          }} style={{ background: '#25D366', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px' }}>
-            🛒 Share Cart ({cart.length})
+          }} className="custom-btn-hover hover-lift" style={{ background: '#25D366', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <svg className="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+            Share Cart ({cart.length})
           </button>
         )}
         {user ? (
@@ -197,7 +202,11 @@ export default function GroceryApp({ products }: { products: any[] }) {
         <div style={{ position: 'absolute', top: '-50%', left: '-20%', width: '100%', height: '200%', background: 'radial-gradient(circle, rgba(108,58,232,0.1) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
         
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '24px', position: 'relative', zIndex: 1 }}>
-          <div style={{ fontSize: '56px', filter: 'drop-shadow(0 0 10px rgba(0,212,170,0.5))' }} className="pulse-anim">🛒</div>
+          <div style={{ filter: 'drop-shadow(0 0 10px rgba(0,212,170,0.5))', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--secondary-color)' }} className="pulse-anim">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+          </div>
           <div>
             <h1 className="gradient-text" style={{ fontSize: '48px', fontWeight: 800, margin: 0, paddingBottom: '8px', letterSpacing: '-1px' }}>{t('app_title')}</h1>
             <p style={{ color: '#94a3b8', fontSize: '18px', margin: 0, fontWeight: 500 }}>{t('app_subtitle')}</p>
@@ -207,7 +216,9 @@ export default function GroceryApp({ products }: { products: any[] }) {
         {/* Search & Filters */}
         <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginTop: '32px', position: 'relative', zIndex: 1 }}>
           <div style={{ flex: 1, position: 'relative', minWidth: '300px', display: 'flex', alignItems: 'center' }} className="glow-effect">
-            <span style={{ position: 'absolute', left: '20px', fontSize: '22px' }}>🔍</span>
+            <span style={{ position: 'absolute', left: '20px', display: 'flex', alignItems: 'center', color: '#94a3b8' }}>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </span>
             <input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
@@ -224,11 +235,17 @@ export default function GroceryApp({ products }: { products: any[] }) {
             
             {/* Mic and Camera buttons inside search */}
             <div style={{ position: 'absolute', right: '140px', display: 'flex', gap: '8px' }}>
-              <button onClick={handleVoiceSearch} style={{ background: 'transparent', border: 'none', fontSize: '24px', cursor: 'pointer', color: isListening ? '#fca5a5' : 'white' }} title="Voice Search">
-                🎤
+              <button className="custom-btn-hover" onClick={handleVoiceSearch} style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: isListening ? '#fca5a5' : 'white', display: 'flex', alignItems: 'center', position: 'relative' }} title="Voice Search">
+                {isListening ? (
+                  <div style={{ display: 'flex', alignItems: 'center', height: '24px' }}>
+                    <div className="mic-wave"></div><div className="mic-wave"></div><div className="mic-wave"></div><div className="mic-wave"></div>
+                  </div>
+                ) : (
+                  <svg className="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>
+                )}
               </button>
-              <button onClick={() => setShowScanner(true)} style={{ background: 'transparent', border: 'none', fontSize: '24px', cursor: 'pointer' }} title="Scan List">
-                📷
+              <button className="custom-btn-hover" onClick={() => setShowScanner(true)} style={{ background: 'transparent', border: 'none', color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center' }} title="Scan List">
+                <svg className="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><circle cx="12" cy="13" r="4"/></svg>
               </button>
             </div>
 
@@ -354,7 +371,11 @@ export default function GroceryApp({ products }: { products: any[] }) {
           <div className="glass-panel" style={{ padding: '32px', borderTop: '2px solid rgba(108, 58, 232, 0.5)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
               <div style={{ background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))', borderRadius: '16px', padding: '12px', fontSize: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span className={isAILoading ? 'pulse-anim' : ''}>🤖</span>
+                <div className={isAILoading ? 'pulse-anim' : ''} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2a2 2 0 0 1 2 2v2h3a2 2 0 0 1 2 2v2h1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-1v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H3a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h1V8a2 2 0 0 1 2-2h3V4a2 2 0 0 1 2-2zM9 11a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"></path>
+                  </svg>
+                </div>
               </div>
               <div>
                 <h2 style={{ fontSize: '24px', fontWeight: 800, margin: 0, color: 'white' }}>{t('budget_assistant')}</h2>
@@ -483,7 +504,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
           justifyContent: 'center',
         }}
       >
-        📷
+        <svg className="svg-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><circle cx="12" cy="13" r="4"/></svg>
       </button>
     </div>
   );
