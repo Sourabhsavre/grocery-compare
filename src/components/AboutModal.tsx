@@ -111,7 +111,7 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
               <span style={{ fontWeight: 700, fontSize: '14px', color: 'var(--text-color)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Contact</span>
             </div>
             <a
-              href="mailto:sourabhsavre@gmail.com"
+              href="mailto:sourabhsavre8435@gmail.com"
               style={{
                 color: 'var(--secondary-color)', fontWeight: 600, fontSize: '14px',
                 textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px',
@@ -120,7 +120,7 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
               onMouseOver={e => (e.currentTarget.style.opacity = '0.8')}
               onMouseOut={e => (e.currentTarget.style.opacity = '1')}
             >
-              sourabhsavre@gmail.com
+              sourabhsavre8435@gmail.com
             </a>
           </div>
 
