@@ -51,14 +51,11 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
     return (translations as any)[language][key] || key;
   };
 
-  // Prevent hydration mismatch by not rendering until mounted
-  if (!mounted) {
-    return <div style={{ visibility: 'hidden' }}>{children}</div>;
-  }
-
   return (
     <AppContext.Provider value={{ theme, toggleTheme, language, toggleLanguage, t }}>
-      {children}
+      <div style={{ visibility: !mounted ? 'hidden' : 'visible' }}>
+        {children}
+      </div>
     </AppContext.Provider>
   );
 }
