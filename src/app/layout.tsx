@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "GroceryCompare AI",
-  description: "AI-Powered Grocery Price Comparison",
+  title: "GroceryCompare AI - by Sourabh Savre",
+  description: "AI-Powered Grocery Price Comparison across Zepto, BigBasket & Blinkit. Built by Sourabh Savre.",
 };
 
 import { AppProviders } from "@/providers/AppProviders";

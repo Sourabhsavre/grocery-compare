@@ -8,6 +8,7 @@ import AuthModal from "./AuthModal";
 import MonthlyPlanner from "./MonthlyPlanner";
 import PriceAlerts from "./PriceAlerts";
 import ImageScannerModal from "./ImageScannerModal";
+import AboutModal from "./AboutModal";
 
 const platformColors = {
   Zepto: { bg: "#8b5cf6", light: "rgba(139, 92, 246, 0.15)", text: "#c4b5fd", logo: "🟣 Zepto" },
@@ -38,6 +39,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
   const [user, setUser] = useState<any>(null);
   const [showAuth, setShowAuth] = useState(false);
   const [showScanner, setShowScanner] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [cart, setCart] = useState<any[]>([]);
   const cartTotal = cart.reduce((sum, item) => sum + item.price * (item.requiredQuantity || 1), 0);
@@ -161,6 +163,10 @@ export default function GroceryApp({ products }: { products: any[] }) {
     <div style={{ minHeight: '100vh', paddingBottom: '80px' }}>
       {/* Top Navbar */}
       <div style={{ padding: '16px 24px', display: 'flex', justifyContent: 'flex-end', gap: '12px', background: 'rgba(0,0,0,0.15)', borderBottom: '1px solid var(--border-color)', backdropFilter: 'blur(12px)' }}>
+        <button onClick={() => setShowAbout(true)} className="pro-btn" style={{ background: 'var(--card-bg)', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '10px', fontSize: '14px', letterSpacing: '0.02em', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          About
+        </button>
         <button onClick={toggleLanguage} className="pro-btn" style={{ background: 'var(--card-bg)', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '10px', fontSize: '14px', letterSpacing: '0.02em', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
           {language === 'en' ? 'A / अ' : 'अ / A'}
         </button>
@@ -197,6 +203,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
 
       <AuthModal isOpen={showAuth} onClose={() => setShowAuth(false)} onLogin={(u) => { setUser(u); setShowAuth(false); }} />
       <ImageScannerModal isOpen={showScanner} onClose={() => setShowScanner(false)} products={products} onScanComplete={handleAddToCart} />
+      <AboutModal isOpen={showAbout} onClose={() => setShowAbout(false)} />
 
       {/* Header */}
       <div className="glass-panel hover-lift" style={{ maxWidth: 1100, margin: '32px auto', padding: '40px', position: 'relative', overflow: 'hidden' }}>
@@ -507,6 +514,35 @@ export default function GroceryApp({ products }: { products: any[] }) {
       >
         <svg className="svg-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><circle cx="12" cy="13" r="4"/></svg>
       </button>
+
+      {/* Footer */}
+      <footer style={{
+        padding: '24px',
+        textAlign: 'center',
+        borderTop: '1px solid var(--border-color)',
+        background: 'rgba(0,0,0,0.1)',
+        marginTop: '40px'
+      }}>
+        <p style={{ fontSize: '14px', color: 'var(--muted-color)', margin: '0 0 8px' }}>
+          Built with{' '}
+          <span style={{ color: '#ef4444' }}>♥</span>
+          {' '}by{' '}
+          <button
+            onClick={() => setShowAbout(true)}
+            style={{
+              background: 'none', border: 'none', cursor: 'pointer', padding: 0,
+              fontWeight: 700, fontSize: '14px', fontFamily: 'inherit',
+              background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))',
+              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
+            } as any}
+          >
+            Sourabh Savre
+          </button>
+        </p>
+        <p style={{ fontSize: '12px', color: 'var(--muted-color)', margin: 0, opacity: 0.7 }}>
+          GroceryCompare AI &nbsp;·&nbsp; © 2025 &nbsp;·&nbsp; Made in India
+        </p>
+      </footer>
     </div>
   );
 }

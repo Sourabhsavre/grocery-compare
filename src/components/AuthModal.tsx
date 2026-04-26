@@ -92,6 +92,15 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
             {isLogin ? 'Sign up' : 'Login'}
           </button>
         </p>
+
+        <div style={{ marginTop: '28px', paddingTop: '20px', borderTop: '1px solid var(--border-color)', textAlign: 'center' }}>
+          <p style={{ fontSize: '12px', color: '#64748b', letterSpacing: '0.03em' }}>
+            Created by{' '}
+            <span style={{ fontWeight: 700, background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              Sourabh Savre
+            </span>
+          </p>
+        </div>
       </div>
     </div>
   );
