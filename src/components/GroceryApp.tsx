@@ -160,35 +160,36 @@ export default function GroceryApp({ products }: { products: any[] }) {
   return (
     <div style={{ minHeight: '100vh', paddingBottom: '80px' }}>
       {/* Top Navbar */}
-      <div style={{ padding: '16px 24px', display: 'flex', justifyContent: 'flex-end', gap: '16px', background: 'rgba(0,0,0,0.2)', borderBottom: '1px solid var(--border-color)' }}>
-        <button onClick={toggleLanguage} style={{ background: 'transparent', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontWeight: 600 }}>
+      <div style={{ padding: '16px 24px', display: 'flex', justifyContent: 'flex-end', gap: '12px', background: 'rgba(0,0,0,0.15)', borderBottom: '1px solid var(--border-color)', backdropFilter: 'blur(12px)' }}>
+        <button onClick={toggleLanguage} className="pro-btn" style={{ background: 'var(--card-bg)', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '10px', fontSize: '14px', letterSpacing: '0.02em', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
           {language === 'en' ? 'A / अ' : 'अ / A'}
         </button>
-        <button onClick={toggleTheme} className="custom-btn-hover" style={{ background: 'transparent', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontSize: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <button onClick={toggleTheme} className="pro-btn" style={{ background: 'var(--card-bg)', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 12px', borderRadius: '10px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }} title={theme === 'dark' ? 'Switch to Light' : 'Switch to Dark'}>
           {theme === 'dark' ? (
-            <svg className="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zm1-14h-2v3h2V1zm0 19h-2v3h2v-3zM5.64 3.52L4.22 4.94l2.12 2.12 1.42-1.42L5.64 3.52zM18.36 19.06l1.42-1.42-2.12-2.12-1.42 1.42 2.12 2.12zM1 11h3v2H1v-2zm19 0h3v2h-3v-2zM5.64 20.48l1.42-1.42-2.12-2.12-1.42 1.42 2.12 2.12zM18.36 4.94l-1.42-1.42-2.12 2.12 1.42 1.42 2.12-2.12z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zm1-14h-2v3h2V1zm0 19h-2v3h2v-3zM5.64 3.52L4.22 4.94l2.12 2.12 1.42-1.42L5.64 3.52zM18.36 19.06l1.42-1.42-2.12-2.12-1.42 1.42 2.12 2.12zM1 11h3v2H1v-2zm19 0h3v2h-3v-2zM5.64 20.48l1.42-1.42-2.12-2.12-1.42 1.42 2.12 2.12zM18.36 4.94l-1.42-1.42-2.12 2.12 1.42 1.42 2.12-2.12z"/></svg>
           ) : (
-            <svg className="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
           )}
         </button>
         {cart.length > 0 && (
           <button onClick={() => {
             const text = `My Grocery Cart:\n${cart.map(c => `- ${c.item.name} (₹${c.price})`).join('\n')}\nTotal: ₹${cartTotal}`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
-          }} className="custom-btn-hover hover-lift" style={{ background: '#25D366', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <svg className="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-            Share Cart ({cart.length})
+          }} className="pro-btn hover-lift" style={{ background: '#25D366', color: 'white', border: 'none', padding: '8px 18px', borderRadius: '10px', boxShadow: '0 2px 12px rgba(37,211,102,0.35)' }}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+            Cart ({cart.length})
           </button>
         )}
         {user ? (
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <span style={{ fontWeight: 600, color: 'var(--success-color)' }}>{user.email}</span>
-            <button onClick={() => setUser(null)} style={{ background: 'var(--danger-color)', color: 'white', border: 'none', padding: '8px 24px', borderRadius: '8px', cursor: 'pointer', fontWeight: 600 }}>
+            <span style={{ fontWeight: 600, color: 'var(--success-color)', fontSize: '14px' }}>{user.email}</span>
+            <button onClick={() => setUser(null)} className="pro-btn" style={{ background: 'var(--danger-color)', color: 'white', border: 'none', padding: '8px 20px', borderRadius: '10px', boxShadow: '0 2px 8px rgba(239,68,68,0.3)' }}>
               {t('logout') || 'Logout'}
             </button>
           </div>
         ) : (
-          <button onClick={() => setShowAuth(true)} style={{ background: 'var(--primary-color)', color: 'white', border: 'none', padding: '8px 24px', borderRadius: '8px', cursor: 'pointer', fontWeight: 600 }}>
+          <button onClick={() => setShowAuth(true)} className="pro-btn" style={{ background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))', color: 'white', border: 'none', padding: '8px 24px', borderRadius: '10px', boxShadow: '0 2px 12px rgba(108,58,232,0.35)' }}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
             {t('login') || 'Login'}
           </button>
         )}
@@ -209,14 +210,14 @@ export default function GroceryApp({ products }: { products: any[] }) {
           </div>
           <div>
             <h1 className="gradient-text" style={{ fontSize: '48px', fontWeight: 800, margin: 0, paddingBottom: '8px', letterSpacing: '-1px' }}>{t('app_title')}</h1>
-            <p style={{ color: '#94a3b8', fontSize: '18px', margin: 0, fontWeight: 500 }}>{t('app_subtitle')}</p>
+            <p style={{ color: 'var(--muted-color)', fontSize: '18px', margin: 0, fontWeight: 500 }}>{t('app_subtitle')}</p>
           </div>
         </div>
 
         {/* Search & Filters */}
         <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginTop: '32px', position: 'relative', zIndex: 1 }}>
           <div style={{ flex: 1, position: 'relative', minWidth: '300px', display: 'flex', alignItems: 'center' }} className="glow-effect">
-            <span style={{ position: 'absolute', left: '20px', display: 'flex', alignItems: 'center', color: '#94a3b8' }}>
+            <span style={{ position: 'absolute', left: '20px', display: 'flex', alignItems: 'center', color: 'var(--muted-color)' }}>
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
             </span>
             <input
@@ -226,16 +227,16 @@ export default function GroceryApp({ products }: { products: any[] }) {
               placeholder={isListening ? 'Listening...' : t('search_placeholder')}
               style={{
                 width: '100%', padding: '20px 180px 20px 56px', borderRadius: '20px',
-                background: isListening ? 'rgba(239, 68, 68, 0.2)' : 'rgba(15, 23, 42, 0.6)', 
+                background: isListening ? 'rgba(239, 68, 68, 0.2)' : 'var(--surface-color)',
                 border: isListening ? '1px solid #fca5a5' : '1px solid var(--border-color)',
-                color: 'white', fontSize: '18px', outline: 'none', transition: 'all 0.3s ease',
+                color: 'var(--text-color)', fontSize: '18px', outline: 'none', transition: 'all 0.3s ease',
                 fontFamily: 'inherit', backdropFilter: 'blur(10px)'
               }}
             />
-            
+
             {/* Mic and Camera buttons inside search */}
             <div style={{ position: 'absolute', right: '140px', display: 'flex', gap: '8px' }}>
-              <button className="custom-btn-hover" onClick={handleVoiceSearch} style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: isListening ? '#fca5a5' : 'white', display: 'flex', alignItems: 'center', position: 'relative' }} title="Voice Search">
+              <button className="custom-btn-hover" onClick={handleVoiceSearch} style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: isListening ? '#fca5a5' : 'var(--text-color)', display: 'flex', alignItems: 'center', position: 'relative' }} title="Voice Search">
                 {isListening ? (
                   <div style={{ display: 'flex', alignItems: 'center', height: '24px' }}>
                     <div className="mic-wave"></div><div className="mic-wave"></div><div className="mic-wave"></div><div className="mic-wave"></div>
@@ -244,7 +245,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
                   <svg className="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>
                 )}
               </button>
-              <button className="custom-btn-hover" onClick={() => setShowScanner(true)} style={{ background: 'transparent', border: 'none', color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center' }} title="Scan List">
+              <button className="custom-btn-hover" onClick={() => setShowScanner(true)} style={{ background: 'transparent', border: 'none', color: 'var(--text-color)', cursor: 'pointer', display: 'flex', alignItems: 'center' }} title="Scan List">
                 <svg className="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><circle cx="12" cy="13" r="4"/></svg>
               </button>
             </div>
@@ -268,8 +269,8 @@ export default function GroceryApp({ products }: { products: any[] }) {
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             style={{
-              padding: '20px 32px', borderRadius: '20px', background: 'rgba(15, 23, 42, 0.6)',
-              border: '1px solid var(--border-color)', color: 'white', fontSize: '18px',
+              padding: '20px 32px', borderRadius: '20px', background: 'var(--surface-color)',
+              border: '1px solid var(--border-color)', color: 'var(--text-color)', fontSize: '18px',
               outline: 'none', cursor: 'pointer', fontFamily: 'inherit', backdropFilter: 'blur(10px)',
               fontWeight: 500
             }}
