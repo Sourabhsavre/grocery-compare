@@ -129,7 +129,7 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
           }}>
             <p style={{ color: 'var(--muted-color)', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', margin: '0 0 10px' }}>Built With</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-              {['Next.js 15', 'TypeScript', 'Supabase', 'Google Gemini AI', 'Vanilla CSS'].map(tech => (
+              {['Next.js 15', 'TypeScript', 'Supabase', 'React', 'Tailwind CSS'].map(tech => (
                 <span key={tech} style={{
                   padding: '4px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 600,
                   background: 'rgba(108,58,232,0.15)', color: 'var(--primary-color)',
@@ -147,9 +147,7 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
           textAlign: 'center', marginTop: '28px', fontSize: '13px',
           color: 'var(--muted-color)', position: 'relative', zIndex: 1
         }}>
-          Made with{' '}
-          <span style={{ color: '#ef4444' }}>♥</span>
-          {' '}in India &nbsp;·&nbsp; © 2025 Sourabh Savre
+          Designed & Developed in India &nbsp;·&nbsp; © 2026 Sourabh Savre
         </p>
       </div>
     </div>
