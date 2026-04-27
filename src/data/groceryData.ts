@@ -19,6 +19,26 @@ export const groceryData = [
         "price": 106,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 103,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 101,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 117,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 97,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -42,6 +62,26 @@ export const groceryData = [
         "price": 511,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 549,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 482,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 538,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 465,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -65,6 +105,26 @@ export const groceryData = [
         "price": 986,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 971,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 978,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 1102,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 931,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -88,6 +148,26 @@ export const groceryData = [
         "price": 2301,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 2393,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 2369,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 2502,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 2176,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -111,6 +191,26 @@ export const groceryData = [
         "price": 107,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 113,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 107,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 118,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 98,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -134,6 +234,26 @@ export const groceryData = [
         "price": 503,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 518,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 501,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 539,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 483,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -157,6 +277,26 @@ export const groceryData = [
         "price": 1002,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 1061,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 1012,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 1075,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 942,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -180,6 +320,26 @@ export const groceryData = [
         "price": 2446,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 2551,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 2379,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 2528,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 2224,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -203,6 +363,26 @@ export const groceryData = [
         "price": 111,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 111,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 111,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 122,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 105,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -226,6 +406,26 @@ export const groceryData = [
         "price": 538,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 562,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 515,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 554,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 524,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -249,6 +449,26 @@ export const groceryData = [
         "price": 951,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 1020,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 953,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 1011,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 887,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -272,6 +492,26 @@ export const groceryData = [
         "price": 2369,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 2376,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 2284,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 2609,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 2317,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -295,6 +535,26 @@ export const groceryData = [
         "price": 112,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 116,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 112,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 123,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 101,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -318,6 +578,26 @@ export const groceryData = [
         "price": 523,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 557,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 530,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 540,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 485,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -341,6 +621,26 @@ export const groceryData = [
         "price": 954,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 1003,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 971,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 1007,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 867,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -364,6 +664,26 @@ export const groceryData = [
         "price": 2369,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 2455,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 2412,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 2579,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 2198,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -387,6 +707,26 @@ export const groceryData = [
         "price": 56,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 63,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -410,6 +750,26 @@ export const groceryData = [
         "price": 261,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 253,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 254,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 280,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 253,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -433,6 +793,26 @@ export const groceryData = [
         "price": 505,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 538,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 500,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 526,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 487,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -456,6 +836,26 @@ export const groceryData = [
         "price": 56,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 53,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 60,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -479,6 +879,26 @@ export const groceryData = [
         "price": 270,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 288,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 271,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 290,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 264,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -502,6 +922,26 @@ export const groceryData = [
         "price": 494,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 482,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 508,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 521,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 455,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -525,6 +965,26 @@ export const groceryData = [
         "price": 54,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 49,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -548,6 +1008,26 @@ export const groceryData = [
         "price": 268,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 274,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 258,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 296,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 242,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -571,6 +1051,26 @@ export const groceryData = [
         "price": 508,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 499,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 515,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 527,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 484,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -594,6 +1094,26 @@ export const groceryData = [
         "price": 47,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 49,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 47,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 49,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 45,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -617,6 +1137,26 @@ export const groceryData = [
         "price": 227,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 227,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 221,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 244,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 222,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -640,6 +1180,26 @@ export const groceryData = [
         "price": 417,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 450,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 412,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 449,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 382,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -663,6 +1223,26 @@ export const groceryData = [
         "price": 43,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 42,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 44,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 45,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 39,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -686,6 +1266,26 @@ export const groceryData = [
         "price": 212,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 227,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 205,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 226,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 205,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -709,6 +1309,26 @@ export const groceryData = [
         "price": 434,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 461,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 415,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 455,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 419,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -732,6 +1352,26 @@ export const groceryData = [
         "price": 43,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 43,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 41,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 47,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 42,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -755,6 +1395,26 @@ export const groceryData = [
         "price": 225,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 234,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 218,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 247,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 210,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -778,6 +1438,26 @@ export const groceryData = [
         "price": 433,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 443,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 418,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 448,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 411,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -801,6 +1481,26 @@ export const groceryData = [
         "price": 47,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 50,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 47,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 49,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 45,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -824,6 +1524,26 @@ export const groceryData = [
         "price": 213,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 223,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 217,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 223,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 203,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -847,6 +1567,26 @@ export const groceryData = [
         "price": 427,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 434,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 418,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 445,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 386,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -870,6 +1610,26 @@ export const groceryData = [
         "price": 30,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 31,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 31,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 31,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 27,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -893,6 +1653,26 @@ export const groceryData = [
         "price": 55,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 60,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -916,6 +1696,26 @@ export const groceryData = [
         "price": 29,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 30,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 29,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 30,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 27,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -939,6 +1739,26 @@ export const groceryData = [
         "price": 55,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 58,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -962,6 +1782,26 @@ export const groceryData = [
         "price": 29,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 31,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 29,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 30,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 26,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -985,6 +1825,26 @@ export const groceryData = [
         "price": 54,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 60,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 50,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1008,6 +1868,26 @@ export const groceryData = [
         "price": 50,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 51,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 55,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 46,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1031,6 +1911,26 @@ export const groceryData = [
         "price": 98,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 96,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 93,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 106,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 93,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1054,6 +1954,26 @@ export const groceryData = [
         "price": 50,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 50,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 46,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1077,6 +1997,26 @@ export const groceryData = [
         "price": 93,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 92,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 88,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 103,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 89,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1100,6 +2040,26 @@ export const groceryData = [
         "price": 51,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 50,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 54,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 48,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1123,6 +2083,26 @@ export const groceryData = [
         "price": 93,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 94,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 91,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 103,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 84,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1146,6 +2126,26 @@ export const groceryData = [
         "price": 30,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 31,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 29,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 33,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 28,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1169,6 +2169,26 @@ export const groceryData = [
         "price": 53,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 50,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1192,6 +2212,26 @@ export const groceryData = [
         "price": 30,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 32,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 31,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 32,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 29,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1215,6 +2255,26 @@ export const groceryData = [
         "price": 55,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 53,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1238,6 +2298,26 @@ export const groceryData = [
         "price": 46,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 48,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 44,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 51,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 44,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1261,6 +2341,26 @@ export const groceryData = [
         "price": 82,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 86,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 80,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 86,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 74,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1284,6 +2384,26 @@ export const groceryData = [
         "price": 47,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 49,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 48,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 50,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 45,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1307,6 +2427,26 @@ export const groceryData = [
         "price": 82,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 84,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 78,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 89,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 80,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1330,6 +2470,26 @@ export const groceryData = [
         "price": 47,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 50,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 48,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 44,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1353,6 +2513,26 @@ export const groceryData = [
         "price": 84,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 85,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 85,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 90,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 80,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1376,6 +2556,26 @@ export const groceryData = [
         "price": 42,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 42,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 40,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 46,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 40,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1399,6 +2599,26 @@ export const groceryData = [
         "price": 75,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 79,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 74,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 78,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 69,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1422,6 +2642,26 @@ export const groceryData = [
         "price": 41,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 40,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 41,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 44,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 39,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1445,6 +2685,26 @@ export const groceryData = [
         "price": 72,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 73,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 72,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 77,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 66,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1468,6 +2728,26 @@ export const groceryData = [
         "price": 59,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 62,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 62,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1491,6 +2771,26 @@ export const groceryData = [
         "price": 119,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 125,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 116,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 125,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 107,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1514,6 +2814,26 @@ export const groceryData = [
         "price": 59,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 62,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 60,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 63,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1537,6 +2857,26 @@ export const groceryData = [
         "price": 115,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 117,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 117,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 124,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 111,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1560,6 +2900,26 @@ export const groceryData = [
         "price": 61,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 61,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 62,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 64,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1583,6 +2943,26 @@ export const groceryData = [
         "price": 111,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 109,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 110,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 122,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 103,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1606,6 +2986,26 @@ export const groceryData = [
         "price": 72,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 74,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 69,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 78,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 66,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1629,6 +3029,26 @@ export const groceryData = [
         "price": 133,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 140,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 137,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 140,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 123,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1652,6 +3072,26 @@ export const groceryData = [
         "price": 71,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 76,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 71,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 76,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 69,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1675,6 +3115,26 @@ export const groceryData = [
         "price": 142,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 138,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 143,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 158,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 132,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1698,6 +3158,26 @@ export const groceryData = [
         "price": 67,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 66,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 67,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 71,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 62,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1721,6 +3201,26 @@ export const groceryData = [
         "price": 140,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 137,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 134,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 151,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 133,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1744,6 +3244,26 @@ export const groceryData = [
         "price": 78,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 82,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 74,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 87,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 74,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1767,6 +3287,26 @@ export const groceryData = [
         "price": 154,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 165,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 145,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 166,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 141,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1790,6 +3330,26 @@ export const groceryData = [
         "price": 80,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 82,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 80,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 83,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 74,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1813,6 +3373,26 @@ export const groceryData = [
         "price": 160,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 164,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 161,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 173,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 157,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1836,6 +3416,26 @@ export const groceryData = [
         "price": 53,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 49,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1859,6 +3459,26 @@ export const groceryData = [
         "price": 103,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 108,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 105,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 107,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 99,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1882,6 +3502,26 @@ export const groceryData = [
         "price": 57,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 54,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 61,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1905,6 +3545,26 @@ export const groceryData = [
         "price": 106,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 103,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 107,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 117,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 103,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1928,6 +3588,26 @@ export const groceryData = [
         "price": 56,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 60,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 61,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 53,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1951,6 +3631,26 @@ export const groceryData = [
         "price": 104,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 111,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 105,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 108,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 101,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1974,6 +3674,26 @@ export const groceryData = [
         "price": 82,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 87,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 77,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 91,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 80,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -1997,6 +3717,26 @@ export const groceryData = [
         "price": 159,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 155,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 160,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 172,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 146,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2020,6 +3760,26 @@ export const groceryData = [
         "price": 82,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 82,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 83,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 88,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 74,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2043,6 +3803,26 @@ export const groceryData = [
         "price": 172,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 176,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 166,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 192,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 165,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2066,6 +3846,26 @@ export const groceryData = [
         "price": 82,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 88,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 77,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 89,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 79,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2089,6 +3889,26 @@ export const groceryData = [
         "price": 166,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 173,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 159,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 178,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 155,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2112,6 +3932,26 @@ export const groceryData = [
         "price": 93,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 97,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 89,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 99,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 91,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2135,6 +3975,26 @@ export const groceryData = [
         "price": 179,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 183,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 178,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 187,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 174,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2158,6 +4018,26 @@ export const groceryData = [
         "price": 88,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 87,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 88,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 95,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 86,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2181,6 +4061,26 @@ export const groceryData = [
         "price": 183,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 180,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 174,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 203,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 174,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2204,6 +4104,26 @@ export const groceryData = [
         "price": 88,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 94,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 86,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 91,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 80,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2227,6 +4147,26 @@ export const groceryData = [
         "price": 168,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 176,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 158,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 185,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 162,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2250,6 +4190,26 @@ export const groceryData = [
         "price": 84,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 88,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 86,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 89,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 78,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2273,6 +4233,26 @@ export const groceryData = [
         "price": 165,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 162,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 158,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 184,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 155,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2296,6 +4276,26 @@ export const groceryData = [
         "price": 83,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 89,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 84,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 90,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 79,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2319,6 +4319,26 @@ export const groceryData = [
         "price": 159,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 164,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 150,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 171,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 150,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2342,6 +4362,26 @@ export const groceryData = [
         "price": 149,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 156,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 149,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 155,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 141,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2365,6 +4405,26 @@ export const groceryData = [
         "price": 734,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 732,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 713,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 819,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 676,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2388,6 +4448,26 @@ export const groceryData = [
         "price": 149,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 156,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 141,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 164,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 135,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2411,6 +4491,26 @@ export const groceryData = [
         "price": 726,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 765,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 693,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 813,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 659,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2434,6 +4534,26 @@ export const groceryData = [
         "price": 148,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 159,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 144,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 163,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 143,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2457,6 +4577,26 @@ export const groceryData = [
         "price": 678,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 731,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 687,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 703,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 611,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2480,6 +4620,26 @@ export const groceryData = [
         "price": 149,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 156,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 144,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 165,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 137,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2503,6 +4663,26 @@ export const groceryData = [
         "price": 687,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 699,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 675,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 733,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 636,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2526,6 +4706,26 @@ export const groceryData = [
         "price": 168,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 175,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 172,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 178,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 164,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2549,6 +4749,26 @@ export const groceryData = [
         "price": 783,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 802,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 759,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 817,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 762,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2572,6 +4792,26 @@ export const groceryData = [
         "price": 156,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 154,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 155,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 171,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 147,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2595,6 +4835,26 @@ export const groceryData = [
         "price": 793,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 805,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 814,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 831,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 719,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2618,6 +4878,26 @@ export const groceryData = [
         "price": 157,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 162,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 149,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 169,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 144,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2641,6 +4921,26 @@ export const groceryData = [
         "price": 777,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 821,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 798,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 826,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 707,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2664,6 +4964,26 @@ export const groceryData = [
         "price": 166,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 162,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 169,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 183,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 153,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2687,6 +5007,26 @@ export const groceryData = [
         "price": 750,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 797,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 716,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 805,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 725,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2710,6 +5050,26 @@ export const groceryData = [
         "price": 124,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 125,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 125,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 138,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 119,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2733,6 +5093,26 @@ export const groceryData = [
         "price": 609,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 617,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 580,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 651,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 557,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2756,6 +5136,26 @@ export const groceryData = [
         "price": 133,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 143,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 128,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 147,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 126,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2779,6 +5179,26 @@ export const groceryData = [
         "price": 628,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 635,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 595,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 670,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 598,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2802,6 +5222,26 @@ export const groceryData = [
         "price": 132,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 128,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 135,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 139,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 128,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2825,6 +5265,26 @@ export const groceryData = [
         "price": 647,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 697,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 634,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 719,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 598,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2848,6 +5308,26 @@ export const groceryData = [
         "price": 47,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 50,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 47,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 51,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 44,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2871,6 +5351,26 @@ export const groceryData = [
         "price": 101,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 100,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 100,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 104,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 97,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2894,6 +5394,26 @@ export const groceryData = [
         "price": 208,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 206,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 212,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 218,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 193,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2917,6 +5437,26 @@ export const groceryData = [
         "price": 46,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 46,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 44,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 47,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 42,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2940,6 +5480,26 @@ export const groceryData = [
         "price": 102,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 106,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 99,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 109,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 98,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2963,6 +5523,26 @@ export const groceryData = [
         "price": 196,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 190,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 187,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 202,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 178,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -2986,6 +5566,26 @@ export const groceryData = [
         "price": 45,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 48,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 46,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 47,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 43,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3009,6 +5609,26 @@ export const groceryData = [
         "price": 109,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 108,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 105,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 115,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 105,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3032,6 +5652,26 @@ export const groceryData = [
         "price": 197,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 197,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 199,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 215,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 188,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3055,6 +5695,26 @@ export const groceryData = [
         "price": 246,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 264,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 249,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 254,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 240,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3078,6 +5738,26 @@ export const groceryData = [
         "price": 468,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 470,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 441,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 498,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 439,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3101,6 +5781,26 @@ export const groceryData = [
         "price": 903,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 877,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 912,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 1004,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 884,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3124,6 +5824,26 @@ export const groceryData = [
         "price": 261,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 264,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 256,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 269,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 237,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3147,6 +5867,26 @@ export const groceryData = [
         "price": 476,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 478,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 469,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 518,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 439,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3170,6 +5910,26 @@ export const groceryData = [
         "price": 892,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 909,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 843,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 965,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 834,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3193,6 +5953,26 @@ export const groceryData = [
         "price": 242,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 242,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 241,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 252,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 237,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3216,6 +5996,26 @@ export const groceryData = [
         "price": 473,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 475,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 474,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 489,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 432,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3239,6 +6039,26 @@ export const groceryData = [
         "price": 908,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 884,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 929,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 1001,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 829,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3262,6 +6082,26 @@ export const groceryData = [
         "price": 133,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 143,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 126,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 149,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 129,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3285,6 +6125,26 @@ export const groceryData = [
         "price": 319,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 319,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 301,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 347,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 288,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3308,6 +6168,26 @@ export const groceryData = [
         "price": 620,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 615,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 634,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 666,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 585,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3331,6 +6211,26 @@ export const groceryData = [
         "price": 135,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 134,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 136,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 140,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 130,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3354,6 +6254,26 @@ export const groceryData = [
         "price": 307,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 317,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 305,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 322,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 288,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3377,6 +6297,26 @@ export const groceryData = [
         "price": 623,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 667,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 613,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 666,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 606,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3400,6 +6340,26 @@ export const groceryData = [
         "price": 140,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 150,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 142,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 147,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 133,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3423,6 +6383,26 @@ export const groceryData = [
         "price": 330,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 328,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 322,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 363,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 322,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3446,6 +6426,26 @@ export const groceryData = [
         "price": 605,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 613,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 613,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 665,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 546,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3469,6 +6469,26 @@ export const groceryData = [
         "price": 137,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 145,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 129,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 153,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 134,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3492,6 +6512,26 @@ export const groceryData = [
         "price": 324,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 317,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 328,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 338,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 302,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3515,6 +6555,26 @@ export const groceryData = [
         "price": 637,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 620,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 610,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 698,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 599,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3538,6 +6598,26 @@ export const groceryData = [
         "price": 140,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 142,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 137,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 145,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 133,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3561,6 +6641,26 @@ export const groceryData = [
         "price": 316,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 335,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 312,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 339,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 291,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3584,6 +6684,26 @@ export const groceryData = [
         "price": 611,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 649,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 589,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 671,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 577,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3607,6 +6727,26 @@ export const groceryData = [
         "price": 29,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 28,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 27,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 31,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 27,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3630,6 +6770,26 @@ export const groceryData = [
         "price": 69,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 74,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 70,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 74,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 65,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3653,6 +6813,26 @@ export const groceryData = [
         "price": 132,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 140,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 131,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 147,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 128,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3676,6 +6856,26 @@ export const groceryData = [
         "price": 30,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 29,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 29,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 32,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 28,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3699,6 +6899,26 @@ export const groceryData = [
         "price": 71,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 73,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 70,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 78,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 64,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3722,6 +6942,26 @@ export const groceryData = [
         "price": 133,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 138,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 137,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 139,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 123,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3745,6 +6985,26 @@ export const groceryData = [
         "price": 29,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 29,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 28,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 31,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 27,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3768,6 +7028,26 @@ export const groceryData = [
         "price": 67,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 72,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 66,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 70,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 64,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3791,6 +7071,26 @@ export const groceryData = [
         "price": 134,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 142,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 138,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 139,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 124,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3814,6 +7114,26 @@ export const groceryData = [
         "price": 30,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 30,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 30,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 33,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 28,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3837,6 +7157,26 @@ export const groceryData = [
         "price": 70,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 74,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 67,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 75,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 63,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3860,6 +7200,26 @@ export const groceryData = [
         "price": 130,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 134,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 131,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 136,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 126,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3883,6 +7243,26 @@ export const groceryData = [
         "price": 41,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 40,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 39,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 45,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 40,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3906,6 +7286,26 @@ export const groceryData = [
         "price": 89,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 90,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 91,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 95,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 87,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3929,6 +7329,26 @@ export const groceryData = [
         "price": 174,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 172,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 172,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 180,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 164,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3952,6 +7372,26 @@ export const groceryData = [
         "price": 39,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 40,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 39,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 40,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 37,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3975,6 +7415,26 @@ export const groceryData = [
         "price": 94,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 99,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 90,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 99,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 90,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -3998,6 +7458,26 @@ export const groceryData = [
         "price": 173,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 184,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 167,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 188,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 165,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4021,6 +7501,26 @@ export const groceryData = [
         "price": 38,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 38,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 36,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 39,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 37,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4044,6 +7544,26 @@ export const groceryData = [
         "price": 93,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 95,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 90,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 96,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 88,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4067,6 +7587,26 @@ export const groceryData = [
         "price": 174,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 172,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 176,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 188,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 165,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4090,6 +7630,26 @@ export const groceryData = [
         "price": 38,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 40,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 39,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 41,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 37,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4113,6 +7673,26 @@ export const groceryData = [
         "price": 92,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 90,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 88,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 102,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 89,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4136,6 +7716,26 @@ export const groceryData = [
         "price": 166,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 167,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 169,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 178,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 150,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4159,6 +7759,26 @@ export const groceryData = [
         "price": 36,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 38,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 37,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 37,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 34,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4182,6 +7802,26 @@ export const groceryData = [
         "price": 79,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 85,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 79,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 87,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 73,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4205,6 +7845,26 @@ export const groceryData = [
         "price": 148,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 155,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 140,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 162,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 138,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4228,6 +7888,26 @@ export const groceryData = [
         "price": 36,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 35,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 36,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 39,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 34,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4251,6 +7931,26 @@ export const groceryData = [
         "price": 83,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 90,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 78,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 87,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 76,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4274,6 +7974,26 @@ export const groceryData = [
         "price": 154,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 165,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 154,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 169,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 145,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4297,6 +8017,26 @@ export const groceryData = [
         "price": 34,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 33,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 35,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 38,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 33,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4320,6 +8060,26 @@ export const groceryData = [
         "price": 77,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 80,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 73,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 81,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 72,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4343,6 +8103,26 @@ export const groceryData = [
         "price": 151,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 159,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 149,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 165,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 146,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4366,6 +8146,26 @@ export const groceryData = [
         "price": 34,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 36,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 32,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 36,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 32,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4389,6 +8189,26 @@ export const groceryData = [
         "price": 65,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 65,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 66,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 71,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 62,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4412,6 +8232,26 @@ export const groceryData = [
         "price": 34,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 36,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 33,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 36,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 32,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4435,6 +8275,26 @@ export const groceryData = [
         "price": 65,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 64,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 66,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 71,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 61,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4458,6 +8318,26 @@ export const groceryData = [
         "price": 36,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 37,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 36,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 37,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 34,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4481,6 +8361,26 @@ export const groceryData = [
         "price": 64,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 63,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 64,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 69,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 63,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4504,6 +8404,26 @@ export const groceryData = [
         "price": 46,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 47,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 46,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 51,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 42,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4527,6 +8447,26 @@ export const groceryData = [
         "price": 87,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 90,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 88,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 93,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 82,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4550,6 +8490,26 @@ export const groceryData = [
         "price": 46,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 45,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 45,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 50,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 44,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4573,6 +8533,26 @@ export const groceryData = [
         "price": 87,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 86,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 83,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 97,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 84,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4596,6 +8576,26 @@ export const groceryData = [
         "price": 43,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 46,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 43,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 47,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 40,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4619,6 +8619,26 @@ export const groceryData = [
         "price": 88,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 93,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 84,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 98,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 81,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4642,6 +8662,26 @@ export const groceryData = [
         "price": 24,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 26,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 23,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 26,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 23,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4665,6 +8705,26 @@ export const groceryData = [
         "price": 50,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 49,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 52,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 45,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4688,6 +8748,26 @@ export const groceryData = [
         "price": 25,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 25,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 24,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 26,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 24,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4711,6 +8791,26 @@ export const groceryData = [
         "price": 48,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 50,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 49,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 50,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 45,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4734,6 +8834,26 @@ export const groceryData = [
         "price": 25,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 27,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 24,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 26,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 23,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4757,6 +8877,26 @@ export const groceryData = [
         "price": 48,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 50,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 46,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 50,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 47,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4780,6 +8920,26 @@ export const groceryData = [
         "price": 26,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 28,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 26,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 28,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 24,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4803,6 +8963,26 @@ export const groceryData = [
         "price": 48,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 48,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 47,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 46,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4826,6 +9006,26 @@ export const groceryData = [
         "price": 78,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 82,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 77,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 80,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 75,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4849,6 +9049,26 @@ export const groceryData = [
         "price": 157,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 156,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 159,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 172,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 143,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4872,6 +9092,26 @@ export const groceryData = [
         "price": 80,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 84,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 79,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 83,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 75,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4895,6 +9135,26 @@ export const groceryData = [
         "price": 143,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 142,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 136,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 160,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 139,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4918,6 +9178,26 @@ export const groceryData = [
         "price": 82,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 83,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 80,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 88,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 79,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4941,6 +9221,26 @@ export const groceryData = [
         "price": 150,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 157,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 153,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 167,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 139,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4964,6 +9264,26 @@ export const groceryData = [
         "price": 242,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 251,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 231,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 251,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 222,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -4987,6 +9307,26 @@ export const groceryData = [
         "price": 258,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 256,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 243,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 286,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 253,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5010,6 +9350,26 @@ export const groceryData = [
         "price": 115,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 118,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 110,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 127,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 111,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5033,6 +9393,26 @@ export const groceryData = [
         "price": 115,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 123,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 117,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 120,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 110,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5056,6 +9436,26 @@ export const groceryData = [
         "price": 73,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 71,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 74,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 76,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 68,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5079,6 +9479,26 @@ export const groceryData = [
         "price": 73,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 75,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 75,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 77,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 69,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5102,6 +9522,26 @@ export const groceryData = [
         "price": 68,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 72,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 66,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 71,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 65,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5125,6 +9565,26 @@ export const groceryData = [
         "price": 39,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 41,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 39,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 41,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 36,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5148,6 +9608,26 @@ export const groceryData = [
         "price": 39,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 41,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 37,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 42,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 38,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5171,6 +9651,26 @@ export const groceryData = [
         "price": 34,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 33,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 34,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 38,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 33,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5194,6 +9694,26 @@ export const groceryData = [
         "price": 68,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 68,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 69,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 72,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 65,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5217,6 +9737,26 @@ export const groceryData = [
         "price": 35,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 35,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 34,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 39,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 33,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5240,6 +9780,26 @@ export const groceryData = [
         "price": 66,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 69,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 66,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 72,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 64,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5263,6 +9823,26 @@ export const groceryData = [
         "price": 34,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 34,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 34,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 38,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 32,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5286,6 +9866,26 @@ export const groceryData = [
         "price": 71,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 69,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 68,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 79,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 67,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5309,6 +9909,26 @@ export const groceryData = [
         "price": 35,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 37,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 35,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 37,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 32,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5332,6 +9952,26 @@ export const groceryData = [
         "price": 70,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 71,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 69,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 73,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 63,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5355,6 +9995,26 @@ export const groceryData = [
         "price": 28,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 30,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 27,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 29,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 27,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5378,6 +10038,26 @@ export const groceryData = [
         "price": 59,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 61,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 58,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 65,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5401,6 +10081,26 @@ export const groceryData = [
         "price": 27,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 28,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 28,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 28,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 25,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5424,6 +10124,26 @@ export const groceryData = [
         "price": 58,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 57,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 64,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5447,6 +10167,26 @@ export const groceryData = [
         "price": 27,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 26,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 27,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 30,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 24,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5470,6 +10210,26 @@ export const groceryData = [
         "price": 55,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 51,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5493,6 +10253,26 @@ export const groceryData = [
         "price": 42,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 43,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 40,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 44,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 40,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5516,6 +10296,26 @@ export const groceryData = [
         "price": 97,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 101,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 91,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 105,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 88,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5539,6 +10339,26 @@ export const groceryData = [
         "price": 41,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 44,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 40,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 43,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 38,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5562,6 +10382,26 @@ export const groceryData = [
         "price": 95,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 96,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 91,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 105,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 92,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5585,6 +10425,26 @@ export const groceryData = [
         "price": 40,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 41,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 39,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 43,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 36,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5608,6 +10468,26 @@ export const groceryData = [
         "price": 94,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 96,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 93,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 103,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 92,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5631,6 +10511,26 @@ export const groceryData = [
         "price": 41,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 44,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 42,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 45,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 40,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5654,6 +10554,26 @@ export const groceryData = [
         "price": 96,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 93,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 98,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 106,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 90,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5677,6 +10597,26 @@ export const groceryData = [
         "price": 88,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 89,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 84,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 93,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 80,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5700,6 +10640,26 @@ export const groceryData = [
         "price": 204,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 211,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 207,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 211,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 193,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5723,6 +10683,26 @@ export const groceryData = [
         "price": 94,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 95,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 94,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 98,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 88,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5746,6 +10726,26 @@ export const groceryData = [
         "price": 219,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 233,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 208,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 226,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 197,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5769,6 +10769,26 @@ export const groceryData = [
         "price": 87,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 84,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 89,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 93,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 84,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5792,6 +10812,26 @@ export const groceryData = [
         "price": 215,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 227,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 209,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 230,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 194,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5815,6 +10855,26 @@ export const groceryData = [
         "price": 54,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 51,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5838,6 +10898,26 @@ export const groceryData = [
         "price": 280,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 296,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 268,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 292,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 255,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5861,6 +10941,26 @@ export const groceryData = [
         "price": 54,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 50,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5884,6 +10984,26 @@ export const groceryData = [
         "price": 292,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 315,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 281,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 305,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 282,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5907,6 +11027,26 @@ export const groceryData = [
         "price": 55,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 61,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5930,6 +11070,26 @@ export const groceryData = [
         "price": 277,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 281,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 274,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 297,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 256,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5953,6 +11113,26 @@ export const groceryData = [
         "price": 75,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 81,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 76,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 80,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 69,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5976,6 +11156,26 @@ export const groceryData = [
         "price": 147,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 153,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 145,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 155,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 137,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -5999,6 +11199,26 @@ export const groceryData = [
         "price": 73,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 79,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 73,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 78,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 70,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6022,6 +11242,26 @@ export const groceryData = [
         "price": 134,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 140,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 137,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 149,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 126,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6045,6 +11285,26 @@ export const groceryData = [
         "price": 73,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 78,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 69,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 79,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 69,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6068,6 +11328,26 @@ export const groceryData = [
         "price": 140,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 141,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 137,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 145,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 129,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6091,6 +11371,26 @@ export const groceryData = [
         "price": 14,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 14,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 13,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 15,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 13,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6114,6 +11414,26 @@ export const groceryData = [
         "price": 60,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 58,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 67,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 58,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6137,6 +11457,26 @@ export const groceryData = [
         "price": 15,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 16,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 14,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 16,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 14,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6160,6 +11500,26 @@ export const groceryData = [
         "price": 59,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 62,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 63,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6183,6 +11543,26 @@ export const groceryData = [
         "price": 66,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 66,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 63,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 70,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 60,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6206,6 +11586,26 @@ export const groceryData = [
         "price": 65,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 64,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 63,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 69,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 59,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6229,6 +11629,26 @@ export const groceryData = [
         "price": 10,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 11,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 10,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 10,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 10,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6252,6 +11672,26 @@ export const groceryData = [
         "price": 83,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 89,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 84,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 86,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 77,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6275,6 +11715,26 @@ export const groceryData = [
         "price": 24,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 25,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 23,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 26,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 23,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6298,6 +11758,26 @@ export const groceryData = [
         "price": 49,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 49,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 47,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 46,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6321,6 +11801,26 @@ export const groceryData = [
         "price": 24,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 24,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 23,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 25,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 23,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6344,6 +11844,26 @@ export const groceryData = [
         "price": 48,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 48,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 49,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 44,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6367,6 +11887,26 @@ export const groceryData = [
         "price": 24,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 25,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 23,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 26,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 22,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6390,6 +11930,26 @@ export const groceryData = [
         "price": 49,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 51,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 46,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 54,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 47,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6413,6 +11973,26 @@ export const groceryData = [
         "price": 29,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 29,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 27,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 32,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 28,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6436,6 +12016,26 @@ export const groceryData = [
         "price": 54,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 50,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6459,6 +12059,26 @@ export const groceryData = [
         "price": 29,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 30,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 29,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 30,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 28,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6482,6 +12102,26 @@ export const groceryData = [
         "price": 56,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 58,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6505,6 +12145,26 @@ export const groceryData = [
         "price": 35,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 34,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 35,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 38,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 33,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6528,6 +12188,26 @@ export const groceryData = [
         "price": 70,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 70,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 70,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 74,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 67,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6551,6 +12231,26 @@ export const groceryData = [
         "price": 51,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 50,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 49,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6574,6 +12274,26 @@ export const groceryData = [
         "price": 95,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 98,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 90,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 101,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 88,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6597,6 +12317,26 @@ export const groceryData = [
         "price": 212,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 207,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 205,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 227,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 204,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6620,6 +12360,26 @@ export const groceryData = [
         "price": 51,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 50,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 47,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6643,6 +12403,26 @@ export const groceryData = [
         "price": 91,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 89,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 88,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 98,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 86,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6666,6 +12446,26 @@ export const groceryData = [
         "price": 224,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 237,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 226,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 246,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 202,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6689,6 +12489,26 @@ export const groceryData = [
         "price": 50,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 50,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 49,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 48,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6712,6 +12532,26 @@ export const groceryData = [
         "price": 98,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 106,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 101,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 109,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 88,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6735,6 +12575,26 @@ export const groceryData = [
         "price": 220,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 232,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 221,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 237,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 210,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6758,6 +12618,26 @@ export const groceryData = [
         "price": 20,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 21,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 20,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 22,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 18,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6781,6 +12661,26 @@ export const groceryData = [
         "price": 38,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 37,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 37,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 43,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 35,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6804,6 +12704,26 @@ export const groceryData = [
         "price": 86,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 93,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 87,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 91,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 78,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6827,6 +12747,26 @@ export const groceryData = [
         "price": 20,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 20,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 20,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 22,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 18,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6850,6 +12790,26 @@ export const groceryData = [
         "price": 40,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 40,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 40,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 42,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 38,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6873,6 +12833,26 @@ export const groceryData = [
         "price": 89,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 91,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 91,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 98,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 82,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6896,6 +12876,26 @@ export const groceryData = [
         "price": 19,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 19,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 19,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 20,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 17,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6919,6 +12919,26 @@ export const groceryData = [
         "price": 39,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 41,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 40,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 42,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 36,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6942,6 +12962,26 @@ export const groceryData = [
         "price": 85,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 89,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 82,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 92,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 82,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6965,6 +13005,26 @@ export const groceryData = [
         "price": 21,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 23,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 21,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 23,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 19,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -6988,6 +13048,26 @@ export const groceryData = [
         "price": 39,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 39,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 38,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 43,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 36,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7011,6 +13091,26 @@ export const groceryData = [
         "price": 15,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 15,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 15,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 16,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 14,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7034,6 +13134,26 @@ export const groceryData = [
         "price": 35,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 36,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 34,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 38,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 33,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7057,6 +13177,26 @@ export const groceryData = [
         "price": 15,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 16,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 15,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 16,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 14,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7080,6 +13220,26 @@ export const groceryData = [
         "price": 34,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 36,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 34,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 36,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 31,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7103,6 +13263,26 @@ export const groceryData = [
         "price": 136,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 143,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 128,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 148,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 132,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7126,6 +13306,26 @@ export const groceryData = [
         "price": 256,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 249,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 255,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 275,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 242,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7149,6 +13349,26 @@ export const groceryData = [
         "price": 505,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 501,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 506,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 549,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 459,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7172,6 +13392,26 @@ export const groceryData = [
         "price": 135,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 143,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 137,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 151,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 132,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7195,6 +13435,26 @@ export const groceryData = [
         "price": 257,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 268,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 263,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 279,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 233,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7218,6 +13478,26 @@ export const groceryData = [
         "price": 495,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 493,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 496,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 517,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 477,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7241,6 +13521,26 @@ export const groceryData = [
         "price": 132,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 132,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 127,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 141,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 123,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7264,6 +13564,26 @@ export const groceryData = [
         "price": 262,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 258,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 252,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 272,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 241,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7287,6 +13607,26 @@ export const groceryData = [
         "price": 470,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 500,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 466,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 522,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 456,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7310,6 +13650,26 @@ export const groceryData = [
         "price": 136,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 144,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 135,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 148,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 130,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7333,6 +13693,26 @@ export const groceryData = [
         "price": 254,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 266,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 249,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 283,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 238,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7356,6 +13736,26 @@ export const groceryData = [
         "price": 502,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 517,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 474,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 545,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 471,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7379,6 +13779,26 @@ export const groceryData = [
         "price": 150,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 153,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 153,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 159,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 140,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7402,6 +13822,26 @@ export const groceryData = [
         "price": 300,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 303,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 306,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 314,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 279,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7425,6 +13865,26 @@ export const groceryData = [
         "price": 564,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 596,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 580,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 628,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 524,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7448,6 +13908,26 @@ export const groceryData = [
         "price": 153,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 155,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 151,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 159,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 141,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7471,6 +13951,26 @@ export const groceryData = [
         "price": 282,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 288,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 280,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 301,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 271,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7494,6 +13994,26 @@ export const groceryData = [
         "price": 548,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 588,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 559,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 567,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 526,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7517,6 +14037,26 @@ export const groceryData = [
         "price": 149,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 153,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 151,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 164,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 137,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7540,6 +14080,26 @@ export const groceryData = [
         "price": 276,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 282,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 272,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 299,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 265,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7563,6 +14123,26 @@ export const groceryData = [
         "price": 562,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 571,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 543,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 615,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 549,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7586,6 +14166,26 @@ export const groceryData = [
         "price": 165,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 173,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 167,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 178,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 159,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7609,6 +14209,26 @@ export const groceryData = [
         "price": 312,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 324,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 305,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 341,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 285,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7632,6 +14252,26 @@ export const groceryData = [
         "price": 163,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 166,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 158,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 170,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 148,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7655,6 +14295,26 @@ export const groceryData = [
         "price": 286,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 289,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 270,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 314,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 258,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7678,6 +14338,26 @@ export const groceryData = [
         "price": 159,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 169,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 149,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 172,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 154,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7701,6 +14381,26 @@ export const groceryData = [
         "price": 309,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 300,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 308,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 333,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 296,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7724,6 +14424,26 @@ export const groceryData = [
         "price": 19,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 20,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 18,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 20,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 18,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7747,6 +14467,26 @@ export const groceryData = [
         "price": 118,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 124,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 118,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 131,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 110,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7770,6 +14510,26 @@ export const groceryData = [
         "price": 19,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 20,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 19,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 20,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 18,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7793,6 +14553,26 @@ export const groceryData = [
         "price": 118,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 126,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 117,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 132,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 110,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7816,6 +14596,26 @@ export const groceryData = [
         "price": 19,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 19,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 20,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 20,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 18,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7839,6 +14639,26 @@ export const groceryData = [
         "price": 109,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 113,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 106,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 119,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 101,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7862,6 +14682,26 @@ export const groceryData = [
         "price": 41,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 44,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 39,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 46,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 38,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7885,6 +14725,26 @@ export const groceryData = [
         "price": 56,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 58,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 51,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7908,6 +14768,26 @@ export const groceryData = [
         "price": 91,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 93,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 86,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 99,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 85,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7931,6 +14811,26 @@ export const groceryData = [
         "price": 40,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 43,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 39,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 44,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 37,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7954,6 +14854,26 @@ export const groceryData = [
         "price": 57,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 61,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -7977,6 +14897,26 @@ export const groceryData = [
         "price": 92,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 94,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 87,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 97,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 84,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8000,6 +14940,26 @@ export const groceryData = [
         "price": 38,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 38,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 37,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 42,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 36,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8023,6 +14983,26 @@ export const groceryData = [
         "price": 56,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 61,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8046,6 +15026,26 @@ export const groceryData = [
         "price": 93,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 99,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 91,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 104,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 90,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8069,6 +15069,26 @@ export const groceryData = [
         "price": 39,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 40,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 39,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 41,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 38,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8092,6 +15112,26 @@ export const groceryData = [
         "price": 55,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8115,6 +15155,26 @@ export const groceryData = [
         "price": 92,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 99,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 87,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 102,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 87,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8138,6 +15198,26 @@ export const groceryData = [
         "price": 109,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 110,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 109,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 113,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 99,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8161,6 +15241,26 @@ export const groceryData = [
         "price": 321,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 319,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 321,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 340,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 296,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8184,6 +15284,26 @@ export const groceryData = [
         "price": 509,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 499,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 502,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 534,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 483,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8207,6 +15327,26 @@ export const groceryData = [
         "price": 105,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 111,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 100,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 116,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 100,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8230,6 +15370,26 @@ export const groceryData = [
         "price": 305,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 315,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 298,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 323,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 286,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8253,6 +15413,26 @@ export const groceryData = [
         "price": 516,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 505,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 497,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 574,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 505,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8276,6 +15456,26 @@ export const groceryData = [
         "price": 111,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 118,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 108,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 118,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 104,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8299,6 +15499,26 @@ export const groceryData = [
         "price": 314,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 313,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 306,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 337,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 307,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8322,6 +15542,26 @@ export const groceryData = [
         "price": 500,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 505,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 478,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 551,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 458,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8345,6 +15585,26 @@ export const groceryData = [
         "price": 115,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 124,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 109,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 121,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 107,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8368,6 +15628,26 @@ export const groceryData = [
         "price": 305,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 313,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 313,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 319,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 297,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8391,6 +15671,26 @@ export const groceryData = [
         "price": 506,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 541,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 503,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 564,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 493,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8414,6 +15714,26 @@ export const groceryData = [
         "price": 52,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 53,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 48,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8437,6 +15757,26 @@ export const groceryData = [
         "price": 105,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 109,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 105,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 114,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 102,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8460,6 +15800,26 @@ export const groceryData = [
         "price": 57,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 60,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8483,6 +15843,26 @@ export const groceryData = [
         "price": 101,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 107,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 101,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 109,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 92,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8506,6 +15886,26 @@ export const groceryData = [
         "price": 57,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 58,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 62,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8529,6 +15929,26 @@ export const groceryData = [
         "price": 106,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 113,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 104,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 112,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 99,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8552,6 +15972,26 @@ export const groceryData = [
         "price": 96,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 96,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 93,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 107,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 87,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8575,6 +16015,26 @@ export const groceryData = [
         "price": 199,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 203,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 190,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 208,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 188,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8598,6 +16058,26 @@ export const groceryData = [
         "price": 99,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 106,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 100,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 109,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 95,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8621,6 +16101,26 @@ export const groceryData = [
         "price": 183,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 197,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 175,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 200,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 166,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8644,6 +16144,26 @@ export const groceryData = [
         "price": 102,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 109,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 100,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 110,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 97,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8667,6 +16187,26 @@ export const groceryData = [
         "price": 188,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 202,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 192,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 205,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 181,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8690,6 +16230,26 @@ export const groceryData = [
         "price": 94,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 97,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 91,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 101,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 85,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8713,6 +16273,26 @@ export const groceryData = [
         "price": 179,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 180,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 178,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 196,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 164,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8736,6 +16316,26 @@ export const groceryData = [
         "price": 94,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 99,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 90,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 104,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 85,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8759,6 +16359,26 @@ export const groceryData = [
         "price": 187,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 187,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 190,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 205,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 173,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8782,6 +16402,26 @@ export const groceryData = [
         "price": 56,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 61,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8805,6 +16445,26 @@ export const groceryData = [
         "price": 103,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 105,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 98,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 112,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 94,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8828,6 +16488,26 @@ export const groceryData = [
         "price": 56,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 57,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 62,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8851,6 +16531,26 @@ export const groceryData = [
         "price": 141,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 143,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 138,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 153,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 137,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8874,6 +16574,26 @@ export const groceryData = [
         "price": 54,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 51,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8897,6 +16617,26 @@ export const groceryData = [
         "price": 139,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 147,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 139,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 155,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 130,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8920,6 +16660,26 @@ export const groceryData = [
         "price": 53,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 51,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 56,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 51,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8943,6 +16703,26 @@ export const groceryData = [
         "price": 145,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 151,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 148,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 154,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 133,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8966,6 +16746,26 @@ export const groceryData = [
         "price": 36,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 37,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 34,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 40,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 33,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -8989,6 +16789,26 @@ export const groceryData = [
         "price": 47,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 48,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 47,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 45,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9012,6 +16832,26 @@ export const groceryData = [
         "price": 56,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 58,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 54,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9035,6 +16875,26 @@ export const groceryData = [
         "price": 33,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 35,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 32,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 36,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 30,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9058,6 +16918,26 @@ export const groceryData = [
         "price": 43,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 43,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 41,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 46,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 42,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9081,6 +16961,26 @@ export const groceryData = [
         "price": 53,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 53,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 51,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 58,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 48,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9104,6 +17004,26 @@ export const groceryData = [
         "price": 34,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 34,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 35,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 36,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 31,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9127,6 +17047,26 @@ export const groceryData = [
         "price": 44,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 44,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 42,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 47,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 42,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9150,6 +17090,26 @@ export const groceryData = [
         "price": 56,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 61,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 51,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9173,6 +17133,26 @@ export const groceryData = [
         "price": 35,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 37,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 35,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 37,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 32,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9196,6 +17176,26 @@ export const groceryData = [
         "price": 46,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 45,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 45,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 51,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 43,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9219,6 +17219,26 @@ export const groceryData = [
         "price": 53,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 49,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9242,6 +17262,26 @@ export const groceryData = [
         "price": 34,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 36,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 35,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 37,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 32,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9265,6 +17305,26 @@ export const groceryData = [
         "price": 44,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 47,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 42,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 45,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 41,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9288,6 +17348,26 @@ export const groceryData = [
         "price": 54,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9311,6 +17391,26 @@ export const groceryData = [
         "price": 154,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 156,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 155,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 170,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 139,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9334,6 +17434,26 @@ export const groceryData = [
         "price": 283,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 286,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 281,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 302,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 255,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9357,6 +17477,26 @@ export const groceryData = [
         "price": 542,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 533,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 514,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 570,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 524,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9380,6 +17520,26 @@ export const groceryData = [
         "price": 144,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 148,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 138,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 154,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 130,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9403,6 +17563,26 @@ export const groceryData = [
         "price": 273,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 281,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 273,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 306,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 265,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9426,6 +17606,26 @@ export const groceryData = [
         "price": 534,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 534,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 511,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 574,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 496,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9449,6 +17649,26 @@ export const groceryData = [
         "price": 157,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 162,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 150,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 174,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 149,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9472,6 +17692,26 @@ export const groceryData = [
         "price": 277,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 291,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 277,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 305,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 265,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9495,6 +17735,26 @@ export const groceryData = [
         "price": 504,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 504,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 489,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 521,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 464,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9518,6 +17778,26 @@ export const groceryData = [
         "price": 154,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 160,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 145,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 165,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 142,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9541,6 +17821,26 @@ export const groceryData = [
         "price": 284,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 305,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 287,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 297,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 265,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9564,6 +17864,26 @@ export const groceryData = [
         "price": 500,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 514,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 512,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 549,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 473,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9587,6 +17907,26 @@ export const groceryData = [
         "price": 144,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 148,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 144,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 152,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 137,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9610,6 +17950,26 @@ export const groceryData = [
         "price": 284,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 301,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 270,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 308,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 269,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9633,6 +17993,26 @@ export const groceryData = [
         "price": 524,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 518,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 500,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 587,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 495,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9656,6 +18036,26 @@ export const groceryData = [
         "price": 59,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 61,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9679,6 +18079,26 @@ export const groceryData = [
         "price": 106,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 107,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 100,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 117,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 98,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9702,6 +18122,26 @@ export const groceryData = [
         "price": 152,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 148,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 154,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 165,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 138,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9725,6 +18165,26 @@ export const groceryData = [
         "price": 59,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 58,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 58,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 64,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9748,6 +18208,26 @@ export const groceryData = [
         "price": 115,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 113,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 116,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 126,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 110,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9771,6 +18251,26 @@ export const groceryData = [
         "price": 153,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 163,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 151,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 166,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 142,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9794,6 +18294,26 @@ export const groceryData = [
         "price": 59,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 63,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 60,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 64,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9817,6 +18337,26 @@ export const groceryData = [
         "price": 110,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 113,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 112,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 119,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 100,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9840,6 +18380,26 @@ export const groceryData = [
         "price": 163,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 170,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 153,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 172,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 157,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9863,6 +18423,26 @@ export const groceryData = [
         "price": 57,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 61,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 52,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9886,6 +18466,26 @@ export const groceryData = [
         "price": 105,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 106,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 106,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 114,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 98,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9909,6 +18509,26 @@ export const groceryData = [
         "price": 167,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 179,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 160,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 177,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 156,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9932,6 +18552,26 @@ export const groceryData = [
         "price": 181,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 193,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 175,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 190,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 173,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9955,6 +18595,26 @@ export const groceryData = [
         "price": 327,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 339,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 324,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 357,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 318,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -9978,6 +18638,26 @@ export const groceryData = [
         "price": 184,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 194,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 175,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 198,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 168,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10001,6 +18681,26 @@ export const groceryData = [
         "price": 327,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 324,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 331,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 342,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 317,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10024,6 +18724,26 @@ export const groceryData = [
         "price": 183,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 185,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 182,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 199,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 169,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10047,6 +18767,26 @@ export const groceryData = [
         "price": 334,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 358,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 334,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 347,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 312,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10070,6 +18810,26 @@ export const groceryData = [
         "price": 207,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 223,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 211,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 221,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 196,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10093,6 +18853,26 @@ export const groceryData = [
         "price": 248,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 263,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 243,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 264,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 234,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10116,6 +18896,26 @@ export const groceryData = [
         "price": 197,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 199,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 198,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 203,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 188,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10139,6 +18939,26 @@ export const groceryData = [
         "price": 248,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 249,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 249,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 267,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 224,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10162,6 +18982,26 @@ export const groceryData = [
         "price": 207,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 204,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 198,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 223,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 195,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10185,6 +19025,26 @@ export const groceryData = [
         "price": 243,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 250,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 244,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 258,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 234,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10208,6 +19068,26 @@ export const groceryData = [
         "price": 199,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 207,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 189,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 221,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 192,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10231,6 +19111,26 @@ export const groceryData = [
         "price": 240,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 256,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 241,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 266,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 233,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10254,6 +19154,26 @@ export const groceryData = [
         "price": 24,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 23,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 25,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 25,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 23,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10277,6 +19197,26 @@ export const groceryData = [
         "price": 43,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 46,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 41,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 48,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 40,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10300,6 +19240,26 @@ export const groceryData = [
         "price": 42,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 45,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 42,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 43,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 41,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10323,6 +19283,26 @@ export const groceryData = [
         "price": 76,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 81,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 73,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 83,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 74,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10346,6 +19326,26 @@ export const groceryData = [
         "price": 180,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 175,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 185,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 190,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 167,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10369,6 +19369,26 @@ export const groceryData = [
         "price": 30,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 31,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 30,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 32,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 27,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10392,6 +19412,26 @@ export const groceryData = [
         "price": 55,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10415,6 +19455,26 @@ export const groceryData = [
         "price": 129,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 139,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 132,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 139,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 117,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10438,6 +19498,26 @@ export const groceryData = [
         "price": 80,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 84,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 80,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 88,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 76,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10461,6 +19541,26 @@ export const groceryData = [
         "price": 48,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 46,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 52,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 45,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10484,6 +19584,26 @@ export const groceryData = [
         "price": 34,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 37,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 35,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 35,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 31,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10507,6 +19627,26 @@ export const groceryData = [
         "price": 77,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 78,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 73,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 79,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 71,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10530,6 +19670,26 @@ export const groceryData = [
         "price": 15,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 15,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 15,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 16,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 14,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10553,6 +19713,26 @@ export const groceryData = [
         "price": 27,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 28,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 26,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 29,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 24,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10576,6 +19756,26 @@ export const groceryData = [
         "price": 29,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 29,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 29,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 31,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 27,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10599,6 +19799,26 @@ export const groceryData = [
         "price": 54,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 56,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 54,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 59,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 51,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10622,6 +19842,26 @@ export const groceryData = [
         "price": 39,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 39,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 37,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 41,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 35,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10645,6 +19885,26 @@ export const groceryData = [
         "price": 79,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 84,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 76,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 83,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 76,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10668,6 +19928,26 @@ export const groceryData = [
         "price": 86,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 93,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 86,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 91,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 80,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10691,6 +19971,26 @@ export const groceryData = [
         "price": 170,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 172,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 165,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 183,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 161,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10714,6 +20014,26 @@ export const groceryData = [
         "price": 92,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 90,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 91,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 98,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 86,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10737,6 +20057,26 @@ export const groceryData = [
         "price": 172,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 173,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 172,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 183,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 165,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10760,6 +20100,26 @@ export const groceryData = [
         "price": 94,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 101,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 90,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 101,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 90,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10783,6 +20143,26 @@ export const groceryData = [
         "price": 172,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 173,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 162,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 190,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 156,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10806,6 +20186,26 @@ export const groceryData = [
         "price": 63,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 62,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 64,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 68,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 57,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10829,6 +20229,26 @@ export const groceryData = [
         "price": 106,
         "available": false,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 107,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 102,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 116,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 100,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10852,6 +20272,26 @@ export const groceryData = [
         "price": 146,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 157,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 141,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 161,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 139,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10875,6 +20315,26 @@ export const groceryData = [
         "price": 149,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 150,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 147,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 161,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 143,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10898,6 +20358,26 @@ export const groceryData = [
         "price": 148,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 151,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 144,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 156,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 139,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10921,6 +20401,26 @@ export const groceryData = [
         "price": 68,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 68,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 64,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 73,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 63,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10944,6 +20444,26 @@ export const groceryData = [
         "price": 127,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 128,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 130,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 131,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 117,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10967,6 +20487,26 @@ export const groceryData = [
         "price": 79,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 84,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 81,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 82,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 77,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -10990,6 +20530,26 @@ export const groceryData = [
         "price": 267,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 267,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 271,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 286,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 261,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11013,6 +20573,26 @@ export const groceryData = [
         "price": 281,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 296,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 266,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 302,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 275,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11036,6 +20616,26 @@ export const groceryData = [
         "price": 270,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 280,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 261,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 289,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 247,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11059,6 +20659,26 @@ export const groceryData = [
         "price": 364,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 392,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 343,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 388,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 328,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11082,6 +20702,26 @@ export const groceryData = [
         "price": 469,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 469,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 472,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 485,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 441,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11105,6 +20745,26 @@ export const groceryData = [
         "price": 435,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 435,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 442,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 465,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 397,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11128,6 +20788,26 @@ export const groceryData = [
         "price": 336,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 328,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 335,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 372,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 320,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11151,6 +20831,26 @@ export const groceryData = [
         "price": 488,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 496,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 472,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 529,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 457,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11174,6 +20874,26 @@ export const groceryData = [
         "price": 404,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 427,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 414,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 418,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 382,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11197,6 +20917,26 @@ export const groceryData = [
         "price": 343,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 362,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 345,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 383,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 336,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11220,6 +20960,26 @@ export const groceryData = [
         "price": 488,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 477,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 479,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 538,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 473,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11243,6 +21003,26 @@ export const groceryData = [
         "price": 416,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 406,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 411,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 453,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 398,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11266,6 +21046,26 @@ export const groceryData = [
         "price": 55,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 58,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 58,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11289,6 +21089,26 @@ export const groceryData = [
         "price": 74,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 75,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 71,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 81,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 72,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11312,6 +21132,26 @@ export const groceryData = [
         "price": 56,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 55,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 56,
+        "available": false,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 63,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11335,6 +21175,26 @@ export const groceryData = [
         "price": 78,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 82,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 75,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 86,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 76,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11358,6 +21218,26 @@ export const groceryData = [
         "price": 54,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 58,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 60,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 53,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11381,6 +21261,26 @@ export const groceryData = [
         "price": 75,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 81,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 72,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 83,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 69,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11404,6 +21304,26 @@ export const groceryData = [
         "price": 95,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 97,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 95,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 102,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 89,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11427,6 +21347,26 @@ export const groceryData = [
         "price": 182,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 181,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 174,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 191,
+        "available": false,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 175,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11450,6 +21390,26 @@ export const groceryData = [
         "price": 100,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 101,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 94,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 108,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 93,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11473,6 +21433,26 @@ export const groceryData = [
         "price": 187,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 185,
+        "available": false,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 183,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 197,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 173,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11496,6 +21476,26 @@ export const groceryData = [
         "price": 97,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 99,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 96,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 101,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 93,
+        "available": true,
+        "url": "https://www.dmart.in"
       }
     }
   },
@@ -11519,6 +21519,26 @@ export const groceryData = [
         "price": 187,
         "available": true,
         "url": "https://blinkit.com"
+      },
+      "AmazonFresh": {
+        "price": 193,
+        "available": true,
+        "url": "https://www.amazon.in/alm/storefront"
+      },
+      "JioMart": {
+        "price": 186,
+        "available": true,
+        "url": "https://www.jiomart.com"
+      },
+      "SwiggyInstamart": {
+        "price": 201,
+        "available": true,
+        "url": "https://www.swiggy.com/instamart"
+      },
+      "DmartReady": {
+        "price": 174,
+        "available": false,
+        "url": "https://www.dmart.in"
       }
     }
   }

@@ -10,11 +10,17 @@ import PriceAlerts from "./PriceAlerts";
 import ImageScannerModal from "./ImageScannerModal";
 import AboutModal from "./AboutModal";
 
-const platformColors = {
+const platformColors: Record<string, { bg: string; light: string; text: string; logo: string }> = {
   Zepto: { bg: "#8b5cf6", light: "rgba(139, 92, 246, 0.15)", text: "#c4b5fd", logo: "🟣 Zepto" },
   BigBasket: { bg: "#22c55e", light: "rgba(34, 197, 94, 0.15)", text: "#86efac", logo: "🟢 BigBasket" },
   Blinkit: { bg: "#eab308", light: "rgba(234, 179, 8, 0.15)", text: "#fde047", logo: "🟡 Blinkit" },
+  AmazonFresh: { bg: "#ff9900", light: "rgba(255, 153, 0, 0.15)", text: "#fcd34d", logo: "🟠 Amazon Fresh" },
+  JioMart: { bg: "#0057a8", light: "rgba(0, 87, 168, 0.15)", text: "#93c5fd", logo: "🔵 JioMart" },
+  SwiggyInstamart: { bg: "#fc8019", light: "rgba(252, 128, 25, 0.15)", text: "#fed7aa", logo: "🔶 Swiggy Instamart" },
+  DmartReady: { bg: "#cc0000", light: "rgba(204, 0, 0, 0.15)", text: "#fca5a5", logo: "🔴 DMart Ready" },
 };
+
+const ALL_STORES = ["Zepto", "BigBasket", "Blinkit", "AmazonFresh", "JioMart", "SwiggyInstamart", "DmartReady"];
 
 function getPriceStats(prices: any) {
   let min = Infinity, max = -Infinity, cheapestPlatform = null;
@@ -35,6 +41,9 @@ export default function GroceryApp({ products }: { products: any[] }) {
   const [budget, setBudget] = useState("");
   const [budgetResult, setBudgetResult] = useState<any>(null);
   const [isAILoading, setIsAILoading] = useState(false);
+  const [selectedStores, setSelectedStores] = useState<string[]>(ALL_STORES);
+  const [showAutocomplete, setShowAutocomplete] = useState(false);
+  const [autocompleteResults, setAutocompleteResults] = useState<any[]>([]);
   
   const [user, setUser] = useState<any>(null);
   const [showAuth, setShowAuth] = useState(false);
@@ -43,6 +52,33 @@ export default function GroceryApp({ products }: { products: any[] }) {
   const [isListening, setIsListening] = useState(false);
   const [cart, setCart] = useState<any[]>([]);
   const cartTotal = cart.reduce((sum, item) => sum + item.price * (item.requiredQuantity || 1), 0);
+
+  const handleStoreToggle = (store: string) => {
+    setSelectedStores(prev =>
+      prev.includes(store) ? prev.filter(s => s !== store) : [...prev, store]
+    );
+  };
+
+  const handleSearchChange = (val: string) => {
+    setSearch(val);
+    if (val.trim().length > 1) {
+      const lower = val.toLowerCase();
+      const matches = products
+        .filter(p => p.name.toLowerCase().includes(lower))
+        .slice(0, 8);
+      setAutocompleteResults(matches);
+      setShowAutocomplete(matches.length > 0);
+    } else {
+      setShowAutocomplete(false);
+      setAutocompleteResults([]);
+    }
+  };
+
+  const handleAutocompleteSelect = (product: any) => {
+    setSearch(product.name);
+    setShowAutocomplete(false);
+    setAutocompleteResults([]);
+  };
 
   const handleAddToCart = (items: any[]) => {
     setCart([...cart, ...items]);
@@ -61,21 +97,31 @@ export default function GroceryApp({ products }: { products: any[] }) {
       lowerSearch = lowerSearch.replace(underMatch[0], "").trim();
     }
 
-    return products.filter((p) => {
-      const matchSearch = p.name.toLowerCase().includes(lowerSearch) || p.category.toLowerCase().includes(lowerSearch);
-      const matchCat = category === "All" || p.category === category;
-      
-      let meetsPrice = true;
-      if (maxPrice !== Infinity) {
-        const stats = getPriceStats(p.prices);
-        if (stats.cheapestPlatform && (p.prices as any)[stats.cheapestPlatform].price > maxPrice) {
-          meetsPrice = false;
+    return products
+      .filter((p) => {
+        const matchSearch = p.name.toLowerCase().includes(lowerSearch) || p.category.toLowerCase().includes(lowerSearch);
+        const matchCat = category === "All" || p.category === category;
+        
+        let meetsPrice = true;
+        if (maxPrice !== Infinity) {
+          const filteredPrices = Object.fromEntries(
+            Object.entries(p.prices).filter(([k]) => selectedStores.includes(k))
+          );
+          const stats = getPriceStats(filteredPrices);
+          if (stats.cheapestPlatform && (filteredPrices as any)[stats.cheapestPlatform].price > maxPrice) {
+            meetsPrice = false;
+          }
         }
-      }
 
-      return matchSearch && matchCat && meetsPrice;
-    });
-  }, [search, category, products]);
+        return matchSearch && matchCat && meetsPrice;
+      })
+      .map((p) => ({
+        ...p,
+        prices: Object.fromEntries(
+          Object.entries(p.prices).filter(([k]) => selectedStores.includes(k))
+        ),
+      }));
+  }, [search, category, products, selectedStores]);
 
   const handleSmartSearch = async () => {
     if (!search.trim()) return;
@@ -224,13 +270,14 @@ export default function GroceryApp({ products }: { products: any[] }) {
         {/* Search & Filters */}
         <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginTop: '32px', position: 'relative', zIndex: 1 }}>
           <div style={{ flex: 1, position: 'relative', minWidth: '300px', display: 'flex', alignItems: 'center' }} className="glow-effect">
-            <span style={{ position: 'absolute', left: '20px', display: 'flex', alignItems: 'center', color: 'var(--muted-color)' }}>
+            <span style={{ position: 'absolute', left: '20px', display: 'flex', alignItems: 'center', color: 'var(--muted-color)', zIndex: 2 }}>
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
             </span>
             <input
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && handleSmartSearch()}
+              onChange={(e) => handleSearchChange(e.target.value)}
+              onKeyDown={(e) => { if (e.key === 'Enter') { setShowAutocomplete(false); handleSmartSearch(); } if (e.key === 'Escape') setShowAutocomplete(false); }}
+              onBlur={() => setTimeout(() => setShowAutocomplete(false), 200)}
               placeholder={isListening ? 'Listening...' : t('search_placeholder')}
               style={{
                 width: '100%', padding: '20px 180px 20px 56px', borderRadius: '20px',
@@ -240,6 +287,44 @@ export default function GroceryApp({ products }: { products: any[] }) {
                 fontFamily: 'inherit', backdropFilter: 'blur(10px)'
               }}
             />
+            {showAutocomplete && autocompleteResults.length > 0 && (
+              <div style={{
+                position: 'absolute', top: 'calc(100% + 8px)', left: 0, right: 0,
+                background: 'var(--surface-color)', border: '1px solid var(--border-color)',
+                borderRadius: '16px', zIndex: 1000, overflow: 'hidden',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.4)', backdropFilter: 'blur(20px)'
+              }}>
+                {autocompleteResults.map((prod, idx) => {
+                  const stats = getPriceStats(Object.fromEntries(Object.entries(prod.prices).filter(([k]) => selectedStores.includes(k))));
+                  return (
+                    <div
+                      key={prod.id}
+                      onMouseDown={() => handleAutocompleteSelect(prod)}
+                      style={{
+                        padding: '12px 20px', cursor: 'pointer', display: 'flex',
+                        justifyContent: 'space-between', alignItems: 'center',
+                        borderBottom: idx < autocompleteResults.length - 1 ? '1px solid rgba(255,255,255,0.05)' : 'none',
+                        transition: 'background 0.15s'
+                      }}
+                      onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.07)')}
+                      onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+                    >
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                        <span style={{ fontSize: '22px' }}>{prod.image}</span>
+                        <div>
+                          <div style={{ fontWeight: 600, fontSize: '15px', color: 'var(--text-color)' }}>{prod.name}</div>
+                          <div style={{ fontSize: '12px', color: 'var(--muted-color)' }}>{prod.category}</div>
+                        </div>
+                      </div>
+                      <div style={{ textAlign: 'right' }}>
+                        <div style={{ fontWeight: 700, color: '#4ade80', fontSize: '15px' }}>from ₹{stats.min}</div>
+                        {stats.savings > 0 && <div style={{ fontSize: '11px', color: '#94a3b8' }}>save ₹{stats.savings}</div>}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
 
             {/* Mic and Camera buttons inside search */}
             <div style={{ position: 'absolute', right: '140px', display: 'flex', gap: '8px' }}>
@@ -284,6 +369,41 @@ export default function GroceryApp({ products }: { products: any[] }) {
           >
             {categories.map((c) => <option key={c as string} value={c as string}>{c as string}</option>)}
           </select>
+        </div>
+
+        {/* Store Filter */}
+        <div style={{ marginTop: '20px', position: 'relative', zIndex: 1 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+            <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--muted-color)', textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap' }}>Filter Stores:</span>
+            <button
+              onClick={() => setSelectedStores([...ALL_STORES])}
+              style={{ fontSize: '12px', padding: '4px 12px', borderRadius: '20px', border: '1px solid var(--border-color)', background: selectedStores.length === ALL_STORES.length ? 'var(--primary-color)' : 'transparent', color: 'white', cursor: 'pointer', fontWeight: 600, transition: 'all 0.2s' }}
+            >All</button>
+            <button
+              onClick={() => setSelectedStores([])}
+              style={{ fontSize: '12px', padding: '4px 12px', borderRadius: '20px', border: '1px solid var(--border-color)', background: 'transparent', color: 'var(--muted-color)', cursor: 'pointer', fontWeight: 600, transition: 'all 0.2s' }}
+            >None</button>
+            {ALL_STORES.map(store => {
+              const c = platformColors[store];
+              const active = selectedStores.includes(store);
+              return (
+                <button
+                  key={store}
+                  onClick={() => handleStoreToggle(store)}
+                  style={{
+                    fontSize: '12px', padding: '4px 14px', borderRadius: '20px', cursor: 'pointer',
+                    border: `1px solid ${active ? c.bg : 'var(--border-color)'}`,
+                    background: active ? c.light : 'transparent',
+                    color: active ? c.text : 'var(--muted-color)',
+                    fontWeight: 600, transition: 'all 0.2s', display: 'flex', alignItems: 'center', gap: '5px'
+                  }}
+                >
+                  <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: active ? c.bg : '#4b5563', display: 'inline-block', flexShrink: 0 }} />
+                  {c.logo.split(' ').slice(1).join(' ')}
+                </button>
+              );
+            })}
+          </div>
         </div>
       </div>
 
@@ -530,7 +650,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
           <button
             onClick={() => setShowAbout(true)}
             style={{
-              background: 'none', border: 'none', cursor: 'pointer', padding: 0,
+              border: 'none', cursor: 'pointer', padding: 0,
               fontWeight: 700, fontSize: '14px', fontFamily: 'inherit',
               background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))',
               WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
