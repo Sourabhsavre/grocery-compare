@@ -93,7 +93,7 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
               <span style={{ fontWeight: 700, fontSize: '14px', color: 'var(--text-color)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Institution</span>
             </div>
             <p style={{ color: 'var(--muted-color)', fontSize: '14px', margin: 0, lineHeight: 1.6 }}>
-              Pune Institute of Computer Technology (PICT), Pune<br />
+              Indore Institute of Science and Technology, Indore<br />
               <span style={{ fontSize: '13px' }}>B.E. in Computer Engineering</span>
             </p>
           </div>
