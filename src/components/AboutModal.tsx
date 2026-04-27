@@ -94,7 +94,7 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
             </div>
             <p style={{ color: 'var(--muted-color)', fontSize: '14px', margin: 0, lineHeight: 1.6 }}>
               Indore Institute of Science and Technology, Indore<br />
-              <span style={{ fontSize: '13px' }}>B.E. in Computer Engineering</span>
+              <span style={{ fontSize: '13px' }}>B.Tech Computer Science Engineering</span>
             </p>
           </div>
 
