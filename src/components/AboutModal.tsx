@@ -55,9 +55,6 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
           <h2 className="gradient-text" style={{ fontSize: '28px', fontWeight: 800, margin: '0 0 4px' }}>
             Sourabh Savre
           </h2>
-          <p style={{ color: 'var(--muted-color)', fontSize: '15px', margin: 0, fontWeight: 500 }}>
-            Full-Stack Developer & AI Enthusiast
-          </p>
         </div>
 
         {/* Info cards */}
