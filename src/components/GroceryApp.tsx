@@ -22,6 +22,20 @@ const platformColors: Record<string, { bg: string; light: string; text: string; 
 
 const ALL_STORES = ["Zepto", "BigBasket", "Blinkit", "AmazonFresh", "JioMart", "SwiggyInstamart", "DmartReady"];
 
+function getStoreSearchUrl(platform: string, productName: string): string {
+  const q = encodeURIComponent(productName);
+  switch (platform) {
+    case "Zepto":           return `https://www.zepto.com/search?query=${q}`;
+    case "BigBasket":       return `https://www.bigbasket.com/ps/?q=${q}`;
+    case "Blinkit":         return `https://blinkit.com/s/?q=${q}`;
+    case "JioMart":         return `https://www.jiomart.com/search/${q}`;
+    case "AmazonFresh":     return `https://www.amazon.in/s?k=${q}`;
+    case "SwiggyInstamart": return `https://www.swiggy.com/instamart/search?query=${q}`;
+    case "DmartReady":      return `https://www.dmart.in/search?q=${q}`;
+    default:                return `https://www.google.com/search?q=${q}+grocery`;
+  }
+}
+
 function getPriceStats(prices: any) {
   let min = Infinity, max = -Infinity, cheapestPlatform = null;
   for (const [p, v] of Object.entries(prices)) {
@@ -468,7 +482,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
                             {val.available ? (
                               <>
                                 <span style={{ fontSize: '18px', fontWeight: 800, color: isCheap ? c.text : (isExpensive ? '#fca5a5' : 'white') }}>₹{val.price}</span>
-                                <a href={val.url} target="_blank" rel="noreferrer" className="hover-lift" style={{
+                                <a href={getStoreSearchUrl(platform, product.name)} target="_blank" rel="noreferrer" className="hover-lift" style={{
                                   fontSize: '13px', background: isCheap ? c.bg : '#334155', color: 'white', padding: '8px 16px',
                                   borderRadius: '10px', textDecoration: 'none', fontWeight: 700, display: 'inline-block'
                                 }}>{t('buy')}</a>

@@ -127,6 +127,20 @@ function getCheapest(prices) {
   return platform;
 }
 
+function getStoreSearchUrl(platform, productName) {
+  const q = encodeURIComponent(productName);
+  switch (platform) {
+    case "Zepto":           return `https://www.zepto.com/search?query=${q}`;
+    case "BigBasket":       return `https://www.bigbasket.com/ps/?q=${q}`;
+    case "Blinkit":         return `https://blinkit.com/s/?q=${q}`;
+    case "JioMart":         return `https://www.jiomart.com/search/${q}`;
+    case "AmazonFresh":     return `https://www.amazon.in/s?k=${q}`;
+    case "SwiggyInstamart": return `https://www.swiggy.com/instamart/search?query=${q}`;
+    case "DmartReady":      return `https://www.dmart.in/search?q=${q}`;
+    default:                return `https://www.google.com/search?q=${q}+grocery`;
+  }
+}
+
 export default function App() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
@@ -215,7 +229,7 @@ export default function App() {
                           {data.available ? (
                             <>
                               <span style={{ fontWeight: 800, fontSize: 16, color: isCheap ? c.text : "#1e293b" }}>₹{data.price}</span>
-                              <a href={data.url} target="_blank" rel="noreferrer" style={{ fontSize: 12, background: c.bg, color: "white", padding: "4px 10px", borderRadius: 8, textDecoration: "none", fontWeight: 600 }}>Buy</a>
+                              <a href={getStoreSearchUrl(platform, product.name)} target="_blank" rel="noreferrer" style={{ fontSize: 12, background: c.bg, color: "white", padding: "4px 10px", borderRadius: 8, textDecoration: "none", fontWeight: 600 }}>Buy</a>
                             </>
                           ) : (
                             <span style={{ fontSize: 12, color: "#94a3b8", fontStyle: "italic" }}>Unavailable</span>
