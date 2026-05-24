@@ -36,14 +36,14 @@ export default function PriceAlerts({ products }: { products: any[] }) {
   };
 
   return (
-    <div className="glass-panel" style={{ padding: '32px', marginBottom: '32px', borderTop: '2px solid rgba(236, 72, 153, 0.5)' }}>
+    <div className="glass-panel" style={{ padding: '32px', marginBottom: '32px', borderTop: '2px solid rgba(255, 107, 0, 0.5)' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-        <div style={{ background: 'linear-gradient(135deg, #ec4899, #8b5cf6)', borderRadius: '16px', padding: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
+        <div className="btn-gradient" style={{ borderRadius: '16px', padding: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
           <Bell size={28} />
         </div>
         <div>
           <h2 style={{ fontSize: '24px', fontWeight: 800, margin: 0, color: 'white' }}>Price Alerts</h2>
-          <span style={{ color: '#fbcfe8', fontSize: '13px', fontWeight: 600 }}>Powered by Realtime</span>
+          <span style={{ color: 'var(--secondary-color)', fontSize: '13px', fontWeight: 600 }}>Powered by Realtime</span>
         </div>
       </div>
 
@@ -65,7 +65,7 @@ export default function PriceAlerts({ products }: { products: any[] }) {
           onChange={(e) => setTargetPrice(e.target.value)}
           style={{ flex: '1 1 120px', padding: '14px', borderRadius: '14px', background: 'var(--surface-color)', border: '1px solid var(--border-color)', color: 'white', outline: 'none', fontFamily: 'inherit', fontSize: '15px' }}
         />
-        <button onClick={handleSetAlert} className="pro-btn hover-lift" style={{ background: '#ec4899', color: 'white', border: 'none', padding: '0 24px', borderRadius: '14px', fontWeight: 700, cursor: 'pointer', fontSize: '15px', height: '50px', boxShadow: '0 4px 14px rgba(236, 72, 153, 0.4)' }}>
+        <button onClick={handleSetAlert} className="pro-btn hover-lift btn-gradient" style={{ color: '#0A0A0A', border: 'none', padding: '0 24px', borderRadius: '14px', fontWeight: 700, cursor: 'pointer', fontSize: '15px', height: '50px' }}>
           Set Alert
         </button>
       </div>
@@ -86,11 +86,11 @@ export default function PriceAlerts({ products }: { products: any[] }) {
                   </div>
                 </div>
                 {a.active ? (
-                  <button onClick={() => simulateDrop(a.id)} className="pro-btn hover-lift" style={{ background: 'transparent', border: '1px solid #ec4899', color: '#fbcfe8', padding: '8px 16px', borderRadius: '10px', cursor: 'pointer', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <button onClick={() => simulateDrop(a.id)} className="pro-btn hover-lift" style={{ background: 'transparent', border: '1px solid var(--primary-color)', color: 'var(--secondary-color)', padding: '8px 16px', borderRadius: '10px', cursor: 'pointer', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '6px' }}>
                     <BellRing size={14} /> Simulate Drop
                   </button>
                 ) : (
-                  <span style={{ color: '#4ade80', fontSize: '13px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '4px' }}><Bell size={14} /> Triggered</span>
+                  <span style={{ color: 'var(--primary-color)', fontSize: '13px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '4px' }}><Bell size={14} /> Triggered</span>
                 )}
               </motion.div>
             ))}

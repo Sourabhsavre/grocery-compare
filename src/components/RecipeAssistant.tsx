@@ -31,14 +31,14 @@ export default function RecipeAssistant({ products, addToCart }: { products: any
   };
 
   return (
-    <div className="glass-panel" style={{ padding: '32px', marginBottom: '32px', borderTop: '2px solid rgba(245, 158, 11, 0.5)' }}>
+    <div className="glass-panel" style={{ padding: '32px', marginBottom: '32px', borderTop: '2px solid rgba(255, 107, 0, 0.5)' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-        <div style={{ background: 'linear-gradient(135deg, #f59e0b, #ef4444)', borderRadius: '16px', padding: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
+        <div className="btn-gradient" style={{ borderRadius: '16px', padding: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
           {loading ? <Sparkles className="pulse-anim" size={28} /> : <ChefHat size={28} />}
         </div>
         <div>
           <h2 style={{ fontSize: '24px', fontWeight: 800, margin: 0, color: 'white' }}>{t('recipe_assistant') || 'Recipe Assistant'}</h2>
-          <span style={{ color: '#fca5a5', fontSize: '13px', fontWeight: 600 }}>{t('powered_by_ai')}</span>
+          <span style={{ color: 'var(--secondary-color)', fontSize: '13px', fontWeight: 600 }}>{t('powered_by_ai')}</span>
         </div>
       </div>
       
@@ -59,11 +59,11 @@ export default function RecipeAssistant({ products, addToCart }: { products: any
         <button 
           onClick={handleSearch}
           disabled={loading}
-          className="pro-btn hover-lift"
+          className="pro-btn hover-lift btn-gradient"
           style={{
-            background: 'linear-gradient(135deg, #f59e0b, #ef4444)', color: 'white', border: 'none',
+            color: 'white', border: 'none',
             padding: '0 24px', borderRadius: '16px', fontWeight: 700, cursor: 'pointer',
-            fontFamily: 'inherit', fontSize: '16px', boxShadow: '0 4px 14px 0 rgba(245, 158, 11, 0.4)'
+            fontFamily: 'inherit', fontSize: '16px'
           }}
         >
           {loading ? '...' : (t('get_ingredients') || 'Get Ingredients')}
@@ -72,10 +72,10 @@ export default function RecipeAssistant({ products, addToCart }: { products: any
 
       <AnimatePresence>
         {result && (
-          <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} style={{ background: 'rgba(10, 14, 26, 0.4)', borderRadius: '20px', padding: '24px', border: '1px solid rgba(255,255,255,0.08)', overflow: 'hidden' }}>
+          <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} style={{ background: 'var(--card-bg-elevated)', borderRadius: '20px', padding: '24px', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
               <h4 style={{ margin: 0, fontSize: '18px', fontWeight: 700 }}>Ingredients for {result.recipeName}</h4>
-              <span style={{ background: 'rgba(245,158,11,0.15)', color: '#fcd34d', padding: '4px 10px', borderRadius: '12px', fontSize: '12px', fontWeight: 700 }}>{result.basket.length} items</span>
+              <span style={{ background: 'rgba(255,107,0,0.15)', color: 'var(--secondary-color)', padding: '4px 10px', borderRadius: '12px', fontSize: '12px', fontWeight: 700 }}>{result.basket.length} items</span>
             </div>
             
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '24px' }}>
@@ -90,7 +90,7 @@ export default function RecipeAssistant({ products, addToCart }: { products: any
                       <div style={{ fontSize: '12px', color: '#94a3b8' }}>Best at {b.platform}</div>
                     </div>
                   </div>
-                  <span style={{ fontSize: '16px', fontWeight: 800, color: 'var(--success-color)' }}>₹{b.price}</span>
+                  <span className="price-highlight" style={{ fontSize: '16px', fontWeight: 800 }}>₹{b.price}</span>
                 </motion.div>
               ))}
             </div>
@@ -98,9 +98,9 @@ export default function RecipeAssistant({ products, addToCart }: { products: any
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '20px', borderTop: '2px dashed rgba(255,255,255,0.1)' }}>
               <div>
                 <div style={{ fontSize: '14px', color: '#94a3b8' }}>Total Recipe Cost</div>
-                <div style={{ fontSize: '28px', fontWeight: 800, color: 'white' }}>₹<CountUp end={result.total} duration={1} /></div>
+                <div className="price-highlight" style={{ fontSize: '28px', fontWeight: 800 }}>₹<CountUp end={result.total} duration={1} /></div>
               </div>
-              <button onClick={() => addToCart(result.basket)} className="pro-btn hover-lift" style={{ background: 'var(--success-color)', color: 'white', border: 'none', padding: '12px 24px', borderRadius: '12px', fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 4px 14px 0 rgba(34, 197, 94, 0.4)' }}>
+              <button onClick={() => addToCart(result.basket)} className="pro-btn hover-lift btn-gradient" style={{ color: '#0A0A0A', border: 'none', padding: '12px 24px', borderRadius: '12px', fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <ShoppingCart size={20} /> Add All to Cart
               </button>
             </div>

@@ -62,9 +62,9 @@ export default function MonthlyPlanner({ products, addToCart }: { products: any[
   };
 
   return (
-    <div className="glass-panel" style={{ padding: '32px', marginBottom: '32px', borderTop: '2px solid rgba(16, 185, 129, 0.5)' }}>
+    <div className="glass-panel" style={{ padding: '32px', marginBottom: '32px', borderTop: '2px solid rgba(255, 107, 0, 0.5)' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-        <div style={{ background: 'linear-gradient(135deg, #10b981, #3b82f6)', borderRadius: '16px', padding: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
+        <div className="btn-gradient" style={{ borderRadius: '16px', padding: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
           <Calendar size={28} />
         </div>
         <div>
@@ -111,9 +111,9 @@ export default function MonthlyPlanner({ products, addToCart }: { products: any[
           </motion.div>
         ) : (
           <motion.div key="result" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            <div style={{ background: 'rgba(16, 185, 129, 0.1)', padding: '24px', borderRadius: '20px', border: '1px solid rgba(16, 185, 129, 0.3)' }}>
-              <div style={{ color: '#94a3b8', fontSize: '14px', marginBottom: '4px', fontWeight: 600, textTransform: 'uppercase' }}>Total Monthly Budget</div>
-              <div style={{ fontSize: '36px', fontWeight: 800, color: '#4ade80' }}>₹{plan.grandTotal}</div>
+            <div style={{ background: 'rgba(255, 107, 0, 0.1)', padding: '24px', borderRadius: '20px', border: '1px solid rgba(255, 107, 0, 0.3)' }}>
+              <div style={{ color: 'var(--muted-color)', fontSize: '14px', marginBottom: '4px', fontWeight: 600, textTransform: 'uppercase' }}>Total Monthly Budget</div>
+              <div className="price-highlight" style={{ fontSize: '36px', fontWeight: 800 }}>₹{plan.grandTotal}</div>
               <p style={{ margin: '8px 0 0 0', fontSize: '15px', color: '#cbd5e1', lineHeight: 1.5 }}>{plan.summary}</p>
             </div>
 
@@ -128,7 +128,7 @@ export default function MonthlyPlanner({ products, addToCart }: { products: any[
                     {w.items.map((i: any, idx: number) => (
                       <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '14px', alignItems: 'center' }}>
                         <span style={{ fontWeight: 500 }}>{i.item.name}</span>
-                        <span style={{ color: 'var(--muted-color)' }}>via <span style={{ color: 'white', fontWeight: 600 }}>{i.platform}</span> <span style={{ marginLeft: '8px', color: 'var(--success-color)', fontWeight: 600 }}>₹{i.price}</span></span>
+                        <span style={{ color: 'var(--muted-color)' }}>via <span style={{ color: 'white', fontWeight: 600 }}>{i.platform}</span> <span className="price-highlight" style={{ marginLeft: '8px', fontWeight: 600 }}>₹{i.price}</span></span>
                       </div>
                     ))}
                   </div>

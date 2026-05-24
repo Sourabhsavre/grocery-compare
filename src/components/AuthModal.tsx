@@ -94,7 +94,7 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
                 className="glow-effect"
               />
             </div>
-            <button type="submit" disabled={loading} className="pro-btn hover-lift" style={{ background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))', color: 'white', padding: '16px', borderRadius: '12px', border: 'none', fontWeight: 700, fontSize: '16px', cursor: 'pointer', marginTop: '8px', display: 'flex', justifyContent: 'center', gap: '8px', boxShadow: '0 4px 14px rgba(139, 92, 246, 0.4)' }}>
+            <button type="submit" disabled={loading} className="pro-btn hover-lift btn-gradient" style={{ color: 'white', padding: '16px', borderRadius: '12px', border: 'none', fontWeight: 700, fontSize: '16px', cursor: 'pointer', marginTop: '8px', display: 'flex', justifyContent: 'center', gap: '8px' }}>
               {loading ? <Sparkles className="pulse-anim" size={20} /> : null}
               {loading ? 'Processing...' : (isLogin ? 'Login' : 'Sign Up')}
             </button>

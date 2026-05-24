@@ -63,7 +63,7 @@ export default function ImageScannerModal({ isOpen, onClose, products, onScanCom
           
           <div style={{ textAlign: 'center', marginBottom: '24px' }}>
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px', color: 'var(--primary-color)' }}>
-              <div style={{ background: 'rgba(139,92,246,0.15)', padding: '16px', borderRadius: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(139,92,246,0.3)' }}>
+              <div style={{ background: 'rgba(255,107,0,0.15)', padding: '16px', borderRadius: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(255,107,0,0.35)' }}>
                 <ScanLine size={40} />
               </div>
             </div>

@@ -12,7 +12,7 @@ export default function BudgetPlanner({ cartTotal }: { cartTotal: number }) {
   return (
     <div className="glass-panel" style={{ padding: '32px', marginBottom: '32px' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-        <div style={{ background: 'linear-gradient(135deg, #10b981, #3b82f6)', borderRadius: '16px', padding: '12px', fontSize: '28px' }}>
+        <div className="btn-gradient" style={{ borderRadius: '16px', padding: '12px', fontSize: '28px' }}>
           📅
         </div>
         <div>
@@ -48,7 +48,7 @@ export default function BudgetPlanner({ cartTotal }: { cartTotal: number }) {
           <div style={{ 
             height: '100%', 
             width: `${percentage}%`, 
-            background: isOverBudget ? 'var(--danger-color)' : 'linear-gradient(90deg, #10b981, #3b82f6)',
+            background: isOverBudget ? 'var(--danger-color)' : 'linear-gradient(90deg, var(--primary-color), var(--secondary-color))',
             transition: 'width 0.5s ease-out'
           }}></div>
         </div>

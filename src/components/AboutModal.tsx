@@ -31,12 +31,12 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
           {/* Background glow accent */}
           <div style={{
             position: 'absolute', top: '-60px', right: '-60px', width: '200px', height: '200px',
-            background: 'radial-gradient(circle, rgba(139,92,246,0.18) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(255,107,0,0.2) 0%, transparent 70%)',
             pointerEvents: 'none'
           }} />
           <div style={{
             position: 'absolute', bottom: '-40px', left: '-40px', width: '160px', height: '160px',
-            background: 'radial-gradient(circle, rgba(79,142,247,0.12) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(255,140,0,0.12) 0%, transparent 70%)',
             pointerEvents: 'none'
           }} />
 
@@ -60,7 +60,7 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
               width: '80px', height: '80px', borderRadius: '50%', margin: '0 auto 16px',
               background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              boxShadow: '0 0 32px rgba(139,92,246,0.4)',
+              boxShadow: '0 0 32px rgba(255,107,0,0.45)',
               fontSize: '36px', fontWeight: 800, color: 'white', letterSpacing: '-1px'
             }}>
               SS
@@ -76,8 +76,8 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
             {/* Project */}
             <div style={{
               padding: '20px', borderRadius: '16px',
-              background: 'linear-gradient(135deg, rgba(139,92,246,0.12), rgba(79,142,247,0.08))',
-              border: '1px solid rgba(139,92,246,0.2)'
+              background: 'linear-gradient(135deg, rgba(255,107,0,0.12), rgba(255,140,0,0.08))',
+              border: '1px solid rgba(255,107,0,0.25)'
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
                 <Briefcase size={20} style={{ color: 'var(--primary-color)', flexShrink: 0 }} />
@@ -111,7 +111,7 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
               border: '1px solid var(--border-color)'
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
-                <Mail size={20} style={{ color: '#f97316', flexShrink: 0 }} />
+                <Mail size={20} style={{ color: 'var(--primary-color)', flexShrink: 0 }} />
                 <span style={{ fontWeight: 700, fontSize: '14px', color: 'var(--text-color)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Contact</span>
               </div>
               <a
@@ -141,8 +141,8 @@ export default function AboutModal({ isOpen, onClose }: { isOpen: boolean; onClo
                 {['Next.js 15', 'TypeScript', 'Supabase', 'React', 'Framer Motion', 'Tailwind CSS'].map(tech => (
                   <span key={tech} style={{
                     padding: '4px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 600,
-                    background: 'rgba(139,92,246,0.15)', color: 'var(--primary-color)',
-                    border: '1px solid rgba(139,92,246,0.25)'
+                    background: 'rgba(255,107,0,0.15)', color: 'var(--primary-color)',
+                    border: '1px solid rgba(255,107,0,0.3)'
                   }}>
                     {tech}
                   </span>

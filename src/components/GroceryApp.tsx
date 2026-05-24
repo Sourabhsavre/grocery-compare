@@ -241,7 +241,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} style={{ minHeight: '100vh', paddingBottom: '80px' }}>
       {/* Top Navbar */}
-      <div style={{ padding: '16px 24px', display: 'flex', justifyContent: 'flex-end', gap: '12px', background: 'rgba(0,0,0,0.15)', borderBottom: '1px solid var(--border-color)', backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 50 }}>
+      <div style={{ padding: '16px 24px', display: 'flex', justifyContent: 'flex-end', gap: '12px', background: 'linear-gradient(180deg, #0A0A0A 0%, #111111 100%)', borderBottom: '1px solid var(--border-color)', backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 50, boxShadow: '0 4px 24px rgba(255, 107, 0, 0.08)' }}>
         <button onClick={() => setShowAbout(true)} className="pro-btn" style={{ background: 'var(--card-bg)', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '10px', fontSize: '14px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
           <Info size={16} />
           About
@@ -271,7 +271,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
             </button>
           </div>
         ) : (
-          <button onClick={() => setShowAuth(true)} className="pro-btn" style={{ background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))', color: 'white', border: 'none', padding: '8px 24px', borderRadius: '10px', boxShadow: '0 2px 12px rgba(108,58,232,0.35)' }}>
+          <button onClick={() => setShowAuth(true)} className="pro-btn btn-gradient" style={{ color: 'white', border: 'none', padding: '8px 24px', borderRadius: '10px' }}>
             <Sparkles size={16} />
             {t('login') || 'Login'}
           </button>
@@ -283,11 +283,11 @@ export default function GroceryApp({ products }: { products: any[] }) {
       <AboutModal isOpen={showAbout} onClose={() => setShowAbout(false)} />
 
       {/* Header */}
-      <div className="glass-panel" style={{ maxWidth: 1100, margin: '32px auto', padding: '40px', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: '-50%', left: '-20%', width: '100%', height: '200%', background: 'radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
+      <div className="glass-panel header-gradient" style={{ maxWidth: 1100, margin: '32px auto', padding: '40px', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: '-50%', left: '-20%', width: '100%', height: '200%', background: 'radial-gradient(circle, rgba(255,107,0,0.15) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
         
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '24px', position: 'relative', zIndex: 1 }}>
-          <div style={{ filter: 'drop-shadow(0 0 10px rgba(79,142,247,0.5))', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--secondary-color)' }} className="pulse-anim">
+          <div style={{ filter: 'drop-shadow(0 0 12px rgba(255,107,0,0.6))', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-color)' }} className="pulse-anim">
             <ShoppingCart size={48} strokeWidth={2.5} />
           </div>
           <div>
@@ -346,7 +346,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
                         </div>
                       </div>
                       <div style={{ textAlign: 'right' }}>
-                        <div style={{ fontWeight: 700, color: '#4ade80', fontSize: '15px' }}>from ₹{stats.min}</div>
+                        <div className="price-highlight" style={{ fontWeight: 700, fontSize: '15px' }}>from ₹{stats.min}</div>
                         {stats.savings > 0 && <div style={{ fontSize: '11px', color: '#94a3b8' }}>save ₹{stats.savings}</div>}
                       </div>
                     </div>
@@ -374,13 +374,12 @@ export default function GroceryApp({ products }: { products: any[] }) {
             <button 
               onClick={handleSmartSearch}
               disabled={isAILoading}
-              className="pro-btn"
+              className="pro-btn btn-gradient"
               style={{
                 position: 'absolute', right: '10px', top: '10px', bottom: '10px',
-                background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))', 
-                color: 'white', border: 'none',
+                color: '#0A0A0A', border: 'none',
                 padding: '0 24px', borderRadius: '14px', fontWeight: 700, cursor: 'pointer',
-                fontFamily: 'inherit', fontSize: '16px', textShadow: '0 1px 2px rgba(0,0,0,0.2)'
+                fontFamily: 'inherit', fontSize: '16px', textShadow: 'none'
               }}
             >
               {isAILoading ? <Sparkles size={18} className="pulse-anim" /> : <Sparkles size={18} />}
@@ -445,7 +444,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
 
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
             <h2 style={{ fontSize: '24px', fontWeight: 700 }}>{t('top_products')}</h2>
-            <span style={{ color: 'var(--secondary-color)', background: 'rgba(79, 142, 247, 0.1)', padding: '6px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: 600 }}>{filtered.length} {t('items')}</span>
+            <span style={{ color: 'var(--primary-color)', background: 'rgba(255, 107, 0, 0.12)', padding: '6px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, border: '1px solid rgba(255, 107, 0, 0.25)' }}>{filtered.length} {t('items')}</span>
           </div>
           
           {isLoadingProducts ? (
@@ -479,9 +478,9 @@ export default function GroceryApp({ products }: { products: any[] }) {
                       <div style={{ flex: 1 }}>
                         <h3 style={{ fontSize: '20px', fontWeight: 700, margin: '0 0 8px 0', lineHeight: 1.2 }}>{product.name}</h3>
                         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                          <span style={{ fontSize: '12px', background: 'rgba(139,92,246,0.2)', color: '#c4b5fd', padding: '4px 12px', borderRadius: '12px', fontWeight: 600 }}>{product.category}</span>
+                          <span style={{ fontSize: '12px', background: 'rgba(255,107,0,0.15)', color: 'var(--secondary-color)', padding: '4px 12px', borderRadius: '12px', fontWeight: 600, border: '1px solid rgba(255,107,0,0.25)' }}>{product.category}</span>
                           {stats.savings > 0 && (
-                            <span style={{ fontSize: '12px', background: 'rgba(34,197,94,0.2)', color: '#86efac', padding: '4px 12px', borderRadius: '12px', fontWeight: 600 }}>
+                            <span style={{ fontSize: '12px', background: 'rgba(255,107,0,0.2)', color: 'var(--primary-color)', padding: '4px 12px', borderRadius: '12px', fontWeight: 600 }}>
                               {t('save')} ₹<CountUp end={stats.savings} duration={1} />
                             </span>
                           )}
@@ -503,26 +502,26 @@ export default function GroceryApp({ products }: { products: any[] }) {
                           <div key={platform} style={{
                             display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                             padding: '12px 16px', borderRadius: '16px',
-                            background: isCheap ? c.light : 'rgba(10, 14, 26, 0.4)',
-                            border: `1px solid ${isCheap ? c.bg : (isExpensive ? 'rgba(239,68,68,0.3)' : 'transparent')}`,
-                            boxShadow: isCheap ? `0 0 12px ${c.bg}40` : 'none',
+                            background: isCheap ? 'rgba(255, 107, 0, 0.1)' : 'rgba(17, 17, 17, 0.8)',
+                            border: `1px solid ${isCheap ? 'rgba(255, 107, 0, 0.45)' : (isExpensive ? 'rgba(239,68,68,0.3)' : 'rgba(255,107,0,0.08)')}`,
+                            boxShadow: isCheap ? '0 0 16px rgba(255, 107, 0, 0.25)' : 'none',
                             transition: 'all 0.2s ease'
                           }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                               <span style={{ color: c.text, display: 'flex', alignItems: 'center' }}>{getStoreIcon(platform, 18)}</span>
                               <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text-color)' }}>{c.name}</span>
-                              {isCheap && <span style={{ fontSize: '10px', background: 'var(--success-color)', color: 'white', padding: '2px 8px', borderRadius: '8px', fontWeight: 800, letterSpacing: '0.5px' }}>{t('best')}</span>}
+                              {isCheap && <span className="cheapest-badge">{t('best')}</span>}
                               {isExpensive && <span style={{ fontSize: '10px', background: 'rgba(239,68,68,0.8)', color: 'white', padding: '2px 8px', borderRadius: '8px', fontWeight: 800 }}>{t('costly')}</span>}
                             </div>
                             
                             <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                               {val.available ? (
                                 <>
-                                  <span style={{ fontSize: '18px', fontWeight: 800, color: isCheap ? c.text : (isExpensive ? '#fca5a5' : 'white') }}>
+                                  <span className={isCheap ? 'price-highlight' : ''} style={{ fontSize: '18px', fontWeight: 800, color: isCheap ? 'var(--primary-color)' : (isExpensive ? '#fca5a5' : 'white') }}>
                                     ₹<CountUp end={val.price} duration={1.5} preserveValue />
                                   </span>
-                                  <a href={getStoreSearchUrl(platform, product.name)} target="_blank" rel="noreferrer" className="hover-lift" style={{
-                                    fontSize: '13px', background: isCheap ? c.bg : 'var(--surface-color)', color: 'white', padding: '8px 16px',
+                                  <a href={getStoreSearchUrl(platform, product.name)} target="_blank" rel="noreferrer" className={`hover-lift${isCheap ? ' btn-gradient' : ''}`} style={{
+                                    fontSize: '13px', background: isCheap ? undefined : 'var(--card-bg-elevated)', color: isCheap ? '#0A0A0A' : 'white', padding: '8px 16px',
                                     border: `1px solid ${isCheap ? 'transparent' : 'var(--border-color)'}`,
                                     borderRadius: '10px', textDecoration: 'none', fontWeight: 700, display: 'inline-block'
                                   }}>{t('buy')}</a>
@@ -551,9 +550,9 @@ export default function GroceryApp({ products }: { products: any[] }) {
 
           <PriceAlerts products={products} />
 
-          <div className="glass-panel" style={{ padding: '32px', borderTop: '2px solid rgba(139, 92, 246, 0.5)' }}>
+          <div className="glass-panel" style={{ padding: '32px', borderTop: '2px solid rgba(255, 107, 0, 0.5)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-              <div style={{ background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))', borderRadius: '16px', padding: '12px', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div className="btn-gradient" style={{ borderRadius: '16px', padding: '12px', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div className={isAILoading ? 'pulse-anim' : ''} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <Sparkles size={28} />
                 </div>
@@ -585,11 +584,11 @@ export default function GroceryApp({ products }: { products: any[] }) {
               <button 
                 onClick={handleBudgetAssistant}
                 disabled={isAILoading}
-                className="pro-btn hover-lift"
+                className="pro-btn hover-lift btn-gradient"
                 style={{
-                  background: 'var(--primary-color)', color: 'white', border: 'none',
+                  color: '#0A0A0A', border: 'none',
                   padding: '0 24px', borderRadius: '16px', fontWeight: 700, cursor: 'pointer',
-                  fontFamily: 'inherit', fontSize: '16px', boxShadow: '0 4px 14px 0 rgba(139, 92, 246, 0.4)'
+                  fontFamily: 'inherit', fontSize: '16px'
                 }}
               >
                 {isAILoading ? '...' : t('plan')}
@@ -602,14 +601,14 @@ export default function GroceryApp({ products }: { products: any[] }) {
                   initial={{ opacity: 0, height: 0, y: -20 }}
                   animate={{ opacity: 1, height: 'auto', y: 0 }}
                   exit={{ opacity: 0, height: 0 }}
-                  style={{ background: 'rgba(10, 14, 26, 0.4)', borderRadius: '20px', padding: '24px', marginTop: '16px', border: '1px solid rgba(255,255,255,0.08)', position: 'relative', overflow: 'hidden' }}
+                  style={{ background: 'var(--card-bg-elevated)', borderRadius: '20px', padding: '24px', marginTop: '16px', border: '1px solid var(--border-color)', position: 'relative', overflow: 'hidden' }}
                 >
                   <button onClick={shareBudget} style={{ position: 'absolute', top: '20px', right: '20px', background: 'rgba(37, 211, 102, 0.2)', border: 'none', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.2s', color: '#25D366' }} className="hover-lift" title="Share Plan on WhatsApp">
                     <Share2 size={14} />
                   </button>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', paddingRight: '40px' }}>
                     <h4 style={{ margin: 0, fontSize: '16px', color: 'var(--text-color)', fontWeight: 700 }}>{t('optimized_basket')}</h4>
-                    <span style={{ background: 'rgba(34,197,94,0.15)', color: '#4ade80', padding: '4px 10px', borderRadius: '12px', fontSize: '12px', fontWeight: 700 }}>{budgetResult.basket.length} {t('items')}</span>
+                    <span style={{ background: 'rgba(255,107,0,0.15)', color: 'var(--primary-color)', padding: '4px 10px', borderRadius: '12px', fontSize: '12px', fontWeight: 700 }}>{budgetResult.basket.length} {t('items')}</span>
                   </div>
                   
                   {/* Visual Chart Breakdown */}
@@ -656,7 +655,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <span style={{ color: 'var(--muted-color)', fontSize: '16px', fontWeight: 600 }}>{t('remaining_budget')}</span>
-                      <span style={{ fontWeight: 800, color: '#38bdf8', fontSize: '20px' }}>₹<CountUp end={budgetResult.target - budgetResult.total} duration={1} /></span>
+                      <span style={{ fontWeight: 800, color: 'var(--secondary-color)', fontSize: '20px' }}>₹<CountUp end={budgetResult.target - budgetResult.total} duration={1} /></span>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '8px', paddingTop: '12px', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
                       <span style={{ color: '#64748b', fontSize: '14px', fontWeight: 500 }}>{t('target_budget')}</span>
@@ -673,7 +672,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
       {/* Mobile Floating Action Button */}
       <button 
         onClick={() => setShowScanner(true)}
-        className="hover-lift float-anim"
+        className="hover-lift float-anim btn-gradient"
         style={{
           position: 'fixed',
           bottom: '24px',
@@ -681,10 +680,8 @@ export default function GroceryApp({ products }: { products: any[] }) {
           width: '64px',
           height: '64px',
           borderRadius: '32px',
-          background: 'linear-gradient(135deg, var(--secondary-color), var(--primary-color))',
-          color: 'white',
+          color: '#0A0A0A',
           border: 'none',
-          boxShadow: '0 8px 24px rgba(139, 92, 246, 0.4)',
           cursor: 'pointer',
           zIndex: 100,
           display: 'flex',
