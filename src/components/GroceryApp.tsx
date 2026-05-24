@@ -16,6 +16,7 @@ const AboutModal = dynamic(() => import("./AboutModal"), { ssr: false });
 import CountUp from "react-countup";
 import { Search, Mic, Camera, ShoppingCart, Info, LogOut, Sparkles, Share2, Moon, Sun, Languages, ScanLine } from "lucide-react";
 import { getIconForEmoji, getStoreIcon } from "@/utils/iconMap";
+import SplashScreen from "./SplashScreen";
 
 const platformColors: Record<string, { bg: string; light: string; text: string; name: string }> = {
   Zepto: { bg: "#8b5cf6", light: "rgba(139, 92, 246, 0.15)", text: "#c4b5fd", name: "Zepto" },
@@ -84,6 +85,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
   const [cart, setCart] = useState<any[]>([]);
   const [isLoadingProducts, setIsLoadingProducts] = useState(true);
   const [visibleCount, setVisibleCount] = useState(20);
+  const [showSplash, setShowSplash] = useState(true);
 
   const observerRef = useRef<IntersectionObserver | null>(null);
   const lastElementRef = useCallback((node: HTMLDivElement) => {
@@ -260,7 +262,9 @@ export default function GroceryApp({ products }: { products: any[] }) {
   }, [budgetResult]);
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} style={{ minHeight: '100vh', paddingBottom: '80px' }}>
+    <>
+      {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} style={{ minHeight: '100vh', paddingBottom: '80px' }}>
       {/* Top Navbar */}
       <div style={{ padding: '16px 24px', display: 'flex', justifyContent: 'flex-end', gap: '12px', background: 'linear-gradient(180deg, #0A0A0A 0%, #111111 100%)', borderBottom: '1px solid var(--border-color)', backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 50, boxShadow: '0 4px 24px rgba(255, 107, 0, 0.08)' }}>
         <button onClick={() => setShowAbout(true)} className="pro-btn" style={{ background: 'var(--card-bg)', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '10px', fontSize: '14px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
@@ -710,5 +714,6 @@ export default function GroceryApp({ products }: { products: any[] }) {
         </p>
       </footer>
     </motion.div>
+    </>
   );
 }

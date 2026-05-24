@@ -5,6 +5,10 @@ export const metadata = {
   description: "AI-Powered Grocery Price Comparison across Zepto, BigBasket & Blinkit. Built by Sourabh Savre.",
 };
 
+export const viewport = {
+  themeColor: "#0A0A0A",
+};
+
 import { AppProviders } from "@/providers/AppProviders";
 
 export default function RootLayout({
@@ -14,6 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+      </head>
       <body>
         <AppProviders>
           {children}
