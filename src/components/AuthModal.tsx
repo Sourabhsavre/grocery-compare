@@ -39,8 +39,8 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
       await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: window.location.origin
-        }
+          redirectTo: 'https://grocery-compare-six.vercel.app',
+        },
       });
     } catch (error: any) {
       alert(error.message);
