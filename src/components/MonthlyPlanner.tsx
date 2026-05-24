@@ -1,5 +1,7 @@
 "use client";
 import { useState, useRef } from 'react';
+import { Calendar, Upload, Mic, Share2 } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function MonthlyPlanner({ products, addToCart }: { products: any[], addToCart: (items: any[]) => void }) {
   const [loading, setLoading] = useState(false);
@@ -44,7 +46,6 @@ export default function MonthlyPlanner({ products, addToCart }: { products: any[
   const handleFile = (e: any) => {
     const file = e.target.files[0];
     if (file) {
-      // Simulate reading file and passing to API
       generatePlan("Image Uploaded");
     }
   };
@@ -61,10 +62,10 @@ export default function MonthlyPlanner({ products, addToCart }: { products: any[
   };
 
   return (
-    <div className="glass-panel" style={{ padding: '32px', marginBottom: '32px' }}>
+    <div className="glass-panel" style={{ padding: '32px', marginBottom: '32px', borderTop: '2px solid rgba(16, 185, 129, 0.5)' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
         <div style={{ background: 'linear-gradient(135deg, #10b981, #3b82f6)', borderRadius: '16px', padding: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
-          <svg className="svg-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7v-5z"/></svg>
+          <Calendar size={28} />
         </div>
         <div>
           <h2 style={{ fontSize: '24px', fontWeight: 800, margin: 0, color: 'white' }}>Monthly Planner</h2>
@@ -72,79 +73,81 @@ export default function MonthlyPlanner({ products, addToCart }: { products: any[
         </div>
       </div>
 
-      {!plan ? (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          <p style={{ color: '#94a3b8', margin: 0 }}>Upload a photo of your list or speak your requirements to generate a complete monthly plan.</p>
-          
-          <div style={{ display: 'flex', gap: '12px' }}>
-            <button 
-              onClick={() => fileInputRef.current?.click()}
-              disabled={loading}
-              className="hover-lift"
-              style={{ flex: 1, background: 'rgba(255,255,255,0.1)', border: '1px solid var(--border-color)', color: 'white', padding: '16px', borderRadius: '16px', fontSize: '16px', fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-              <svg className="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><circle cx="12" cy="13" r="4"/></svg> Upload List
-            </button>
-            <input type="file" ref={fileInputRef} onChange={handleFile} accept="image/*" capture="environment" style={{ display: 'none' }} />
+      <AnimatePresence mode="wait">
+        {!plan ? (
+          <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <p style={{ color: '#94a3b8', margin: 0, fontSize: '15px' }}>Upload a photo of your list or speak your requirements to generate a complete monthly plan.</p>
             
-            <button 
-              onClick={handleVoice}
-              disabled={loading || isListening}
-              className="hover-lift"
-              style={{ flex: 1, background: isListening ? 'rgba(239, 68, 68, 0.2)' : 'rgba(255,255,255,0.1)', border: '1px solid var(--border-color)', color: isListening ? '#fca5a5' : 'white', padding: '16px', borderRadius: '16px', fontSize: '16px', fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-              {isListening ? (
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', height: '16px' }}>
-                    <div className="mic-wave"></div><div className="mic-wave"></div><div className="mic-wave"></div><div className="mic-wave"></div>
-                  </div>
-                  Listening...
-                </div>
-              ) : (
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <svg className="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg> Speak Needs
-                </div>
-              )}
-            </button>
-          </div>
-          {loading && <div style={{ textAlign: 'center', color: '#94a3b8', marginTop: '12px' }} className="pulse-anim">Generating your smart monthly plan...</div>}
-        </div>
-      ) : (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          <div style={{ background: 'rgba(16, 185, 129, 0.1)', padding: '20px', borderRadius: '16px', border: '1px solid rgba(16, 185, 129, 0.3)' }}>
-            <div style={{ color: '#94a3b8', fontSize: '14px', marginBottom: '4px' }}>Total Monthly Budget</div>
-            <div style={{ fontSize: '32px', fontWeight: 800, color: '#4ade80' }}>₹{plan.grandTotal}</div>
-            <p style={{ margin: '8px 0 0 0', fontSize: '14px', color: '#cbd5e1' }}>{plan.summary}</p>
-          </div>
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            {plan.plan.map((w: any) => (
-              <div key={w.week} style={{ background: 'rgba(255,255,255,0.03)', padding: '16px', borderRadius: '16px', border: '1px solid var(--border-color)' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-                  <div style={{ fontWeight: 700, fontSize: '16px' }}>Week {w.week}: <span style={{ color: '#94a3b8' }}>{w.title}</span></div>
-                  <div style={{ fontWeight: 800, color: 'white' }}>₹{w.total}</div>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  {w.items.map((i: any, idx: number) => (
-                    <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px' }}>
-                      <span>{i.item.name}</span>
-                      <span style={{ color: '#94a3b8' }}>via <span style={{ color: 'white', fontWeight: 600 }}>{i.platform}</span> (₹{i.price})</span>
+            <div style={{ display: 'flex', gap: '12px' }}>
+              <button 
+                onClick={() => fileInputRef.current?.click()}
+                disabled={loading}
+                className="pro-btn hover-lift"
+                style={{ flex: 1, background: 'var(--surface-color)', border: '1px solid var(--border-color)', color: 'white', padding: '16px', borderRadius: '16px', fontSize: '16px', fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                <Upload size={20} /> Upload List
+              </button>
+              <input type="file" ref={fileInputRef} onChange={handleFile} accept="image/*" capture="environment" style={{ display: 'none' }} />
+              
+              <button 
+                onClick={handleVoice}
+                disabled={loading || isListening}
+                className="pro-btn hover-lift"
+                style={{ flex: 1, background: isListening ? 'rgba(239, 68, 68, 0.1)' : 'var(--surface-color)', border: isListening ? '1px solid #fca5a5' : '1px solid var(--border-color)', color: isListening ? '#fca5a5' : 'white', padding: '16px', borderRadius: '16px', fontSize: '16px', fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                {isListening ? (
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', height: '16px' }}>
+                      <div className="mic-wave"></div><div className="mic-wave"></div><div className="mic-wave"></div><div className="mic-wave"></div>
                     </div>
-                  ))}
-                </div>
-                <button onClick={() => addToCart(w.items)} style={{ width: '100%', marginTop: '12px', background: 'rgba(255,255,255,0.1)', color: 'white', border: 'none', padding: '8px', borderRadius: '8px', cursor: 'pointer', fontWeight: 600 }}>
-                  Add Week {w.week} to Cart
-                </button>
-              </div>
-            ))}
-          </div>
+                    Listening...
+                  </div>
+                ) : (
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <Mic size={20} /> Speak Needs
+                  </div>
+                )}
+              </button>
+            </div>
+            {loading && <div style={{ textAlign: 'center', color: '#94a3b8', marginTop: '12px', fontWeight: 600 }} className="pulse-anim">Generating your smart monthly plan...</div>}
+          </motion.div>
+        ) : (
+          <motion.div key="result" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <div style={{ background: 'rgba(16, 185, 129, 0.1)', padding: '24px', borderRadius: '20px', border: '1px solid rgba(16, 185, 129, 0.3)' }}>
+              <div style={{ color: '#94a3b8', fontSize: '14px', marginBottom: '4px', fontWeight: 600, textTransform: 'uppercase' }}>Total Monthly Budget</div>
+              <div style={{ fontSize: '36px', fontWeight: 800, color: '#4ade80' }}>₹{plan.grandTotal}</div>
+              <p style={{ margin: '8px 0 0 0', fontSize: '15px', color: '#cbd5e1', lineHeight: 1.5 }}>{plan.summary}</p>
+            </div>
 
-          <div style={{ display: 'flex', gap: '12px', marginTop: '12px' }}>
-            <button onClick={() => setPlan(null)} style={{ flex: 1, background: 'transparent', border: '1px solid var(--border-color)', color: 'white', padding: '12px', borderRadius: '12px', cursor: 'pointer', fontWeight: 600 }}>Start Over</button>
-            <button onClick={sharePlan} style={{ flex: 1, background: '#25D366', border: 'none', color: 'white', padding: '12px', borderRadius: '12px', cursor: 'pointer', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-              WhatsApp Share
-            </button>
-          </div>
-        </div>
-      )}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              {plan.plan.map((w: any, index: number) => (
+                <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.1 }} key={w.week} style={{ background: 'var(--surface-color)', padding: '20px', borderRadius: '16px', border: '1px solid var(--border-color)' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+                    <div style={{ fontWeight: 700, fontSize: '18px', color: 'var(--text-color)' }}>Week {w.week}: <span style={{ color: 'var(--muted-color)', fontWeight: 500 }}>{w.title}</span></div>
+                    <div style={{ fontWeight: 800, color: 'white', fontSize: '18px' }}>₹{w.total}</div>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                    {w.items.map((i: any, idx: number) => (
+                      <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '14px', alignItems: 'center' }}>
+                        <span style={{ fontWeight: 500 }}>{i.item.name}</span>
+                        <span style={{ color: 'var(--muted-color)' }}>via <span style={{ color: 'white', fontWeight: 600 }}>{i.platform}</span> <span style={{ marginLeft: '8px', color: 'var(--success-color)', fontWeight: 600 }}>₹{i.price}</span></span>
+                      </div>
+                    ))}
+                  </div>
+                  <button onClick={() => addToCart(w.items)} className="pro-btn hover-lift" style={{ width: '100%', marginTop: '16px', background: 'rgba(255,255,255,0.05)', color: 'white', border: '1px solid var(--border-color)', padding: '12px', borderRadius: '12px', cursor: 'pointer', fontWeight: 600, display: 'flex', justifyContent: 'center' }}>
+                    Add Week {w.week} to Cart
+                  </button>
+                </motion.div>
+              ))}
+            </div>
+
+            <div style={{ display: 'flex', gap: '12px', marginTop: '12px' }}>
+              <button onClick={() => setPlan(null)} className="pro-btn hover-lift" style={{ flex: 1, background: 'transparent', border: '1px solid var(--border-color)', color: 'white', padding: '14px', borderRadius: '14px', cursor: 'pointer', fontWeight: 600, display: 'flex', justifyContent: 'center' }}>Start Over</button>
+              <button onClick={sharePlan} className="pro-btn hover-lift" style={{ flex: 1, background: '#25D366', border: 'none', color: 'white', padding: '14px', borderRadius: '14px', cursor: 'pointer', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', boxShadow: '0 4px 12px rgba(37, 211, 102, 0.3)' }}>
+                <Share2 size={18} /> WhatsApp Share
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

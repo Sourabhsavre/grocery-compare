@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useAppContext } from "@/providers/AppProviders";
 import DealOfTheDay from "./DealOfTheDay";
 import RecipeAssistant from "./RecipeAssistant";
@@ -9,15 +9,19 @@ import MonthlyPlanner from "./MonthlyPlanner";
 import PriceAlerts from "./PriceAlerts";
 import ImageScannerModal from "./ImageScannerModal";
 import AboutModal from "./AboutModal";
+import { motion, AnimatePresence } from "framer-motion";
+import CountUp from "react-countup";
+import { Search, Mic, Camera, ShoppingCart, Info, LogOut, Sparkles, Share2, Moon, Sun, Languages, ScanLine } from "lucide-react";
+import { getIconForEmoji, getStoreIcon } from "@/utils/iconMap";
 
-const platformColors: Record<string, { bg: string; light: string; text: string; logo: string }> = {
-  Zepto: { bg: "#8b5cf6", light: "rgba(139, 92, 246, 0.15)", text: "#c4b5fd", logo: "🟣 Zepto" },
-  BigBasket: { bg: "#22c55e", light: "rgba(34, 197, 94, 0.15)", text: "#86efac", logo: "🟢 BigBasket" },
-  Blinkit: { bg: "#eab308", light: "rgba(234, 179, 8, 0.15)", text: "#fde047", logo: "🟡 Blinkit" },
-  AmazonFresh: { bg: "#ff9900", light: "rgba(255, 153, 0, 0.15)", text: "#fcd34d", logo: "🟠 Amazon Fresh" },
-  JioMart: { bg: "#0057a8", light: "rgba(0, 87, 168, 0.15)", text: "#93c5fd", logo: "🔵 JioMart" },
-  SwiggyInstamart: { bg: "#fc8019", light: "rgba(252, 128, 25, 0.15)", text: "#fed7aa", logo: "🔶 Swiggy Instamart" },
-  DmartReady: { bg: "#cc0000", light: "rgba(204, 0, 0, 0.15)", text: "#fca5a5", logo: "🔴 DMart Ready" },
+const platformColors: Record<string, { bg: string; light: string; text: string; name: string }> = {
+  Zepto: { bg: "#8b5cf6", light: "rgba(139, 92, 246, 0.15)", text: "#c4b5fd", name: "Zepto" },
+  BigBasket: { bg: "#22c55e", light: "rgba(34, 197, 94, 0.15)", text: "#86efac", name: "BigBasket" },
+  Blinkit: { bg: "#eab308", light: "rgba(234, 179, 8, 0.15)", text: "#fde047", name: "Blinkit" },
+  AmazonFresh: { bg: "#ff9900", light: "rgba(255, 153, 0, 0.15)", text: "#fcd34d", name: "Amazon Fresh" },
+  JioMart: { bg: "#0057a8", light: "rgba(0, 87, 168, 0.15)", text: "#93c5fd", name: "JioMart" },
+  SwiggyInstamart: { bg: "#fc8019", light: "rgba(252, 128, 25, 0.15)", text: "#fed7aa", name: "Swiggy Instamart" },
+  DmartReady: { bg: "#cc0000", light: "rgba(204, 0, 0, 0.15)", text: "#fca5a5", name: "DMart Ready" },
 };
 
 const ALL_STORES = ["Zepto", "BigBasket", "Blinkit", "AmazonFresh", "JioMart", "SwiggyInstamart", "DmartReady"];
@@ -48,6 +52,16 @@ function getPriceStats(prices: any) {
   return { cheapestPlatform, min, max, savings: max !== -Infinity && max > min ? max - min : 0 };
 }
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 300, damping: 24 } }
+  };
+
 export default function GroceryApp({ products }: { products: any[] }) {
   const { t, theme, toggleTheme, language, toggleLanguage } = useAppContext();
   const [search, setSearch] = useState("");
@@ -65,6 +79,14 @@ export default function GroceryApp({ products }: { products: any[] }) {
   const [showAbout, setShowAbout] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [cart, setCart] = useState<any[]>([]);
+  const [isLoadingProducts, setIsLoadingProducts] = useState(true);
+
+  useEffect(() => {
+    // Simulate initial loading for skeleton demo
+    const timer = setTimeout(() => setIsLoadingProducts(false), 800);
+    return () => clearTimeout(timer);
+  }, []);
+
   const cartTotal = cart.reduce((sum, item) => sum + item.price * (item.requiredQuantity || 1), 0);
 
   const handleStoreToggle = (store: string) => {
@@ -96,6 +118,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
 
   const handleAddToCart = (items: any[]) => {
     setCart([...cart, ...items]);
+    // Optional: Add toast notification instead of alert
     alert(`Added ${items.length} items to your cart!`);
   };
 
@@ -177,11 +200,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
     recognition.onresult = (e: any) => {
       const transcript = e.results[0][0].transcript;
       setSearch(transcript);
-      // Let the user see what was typed, then search
       setTimeout(() => {
-        // Trigger search by passing transcript directly since state might not be fully updated
-        const dummyEvent = { key: 'Enter', target: { value: transcript } };
-        // We will just call a smart search with the transcript
         setSearch(transcript);
       }, 500);
     };
@@ -220,29 +239,26 @@ export default function GroceryApp({ products }: { products: any[] }) {
   };
 
   return (
-    <div style={{ minHeight: '100vh', paddingBottom: '80px' }}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} style={{ minHeight: '100vh', paddingBottom: '80px' }}>
       {/* Top Navbar */}
-      <div style={{ padding: '16px 24px', display: 'flex', justifyContent: 'flex-end', gap: '12px', background: 'rgba(0,0,0,0.15)', borderBottom: '1px solid var(--border-color)', backdropFilter: 'blur(12px)' }}>
-        <button onClick={() => setShowAbout(true)} className="pro-btn" style={{ background: 'var(--card-bg)', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '10px', fontSize: '14px', letterSpacing: '0.02em', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+      <div style={{ padding: '16px 24px', display: 'flex', justifyContent: 'flex-end', gap: '12px', background: 'rgba(0,0,0,0.15)', borderBottom: '1px solid var(--border-color)', backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 50 }}>
+        <button onClick={() => setShowAbout(true)} className="pro-btn" style={{ background: 'var(--card-bg)', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '10px', fontSize: '14px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+          <Info size={16} />
           About
         </button>
-        <button onClick={toggleLanguage} className="pro-btn" style={{ background: 'var(--card-bg)', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '10px', fontSize: '14px', letterSpacing: '0.02em', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+        <button onClick={toggleLanguage} className="pro-btn" style={{ background: 'var(--card-bg)', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '10px', fontSize: '14px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+          <Languages size={16} />
           {language === 'en' ? 'A / अ' : 'अ / A'}
         </button>
         <button onClick={toggleTheme} className="pro-btn" style={{ background: 'var(--card-bg)', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 12px', borderRadius: '10px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }} title={theme === 'dark' ? 'Switch to Light' : 'Switch to Dark'}>
-          {theme === 'dark' ? (
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zm1-14h-2v3h2V1zm0 19h-2v3h2v-3zM5.64 3.52L4.22 4.94l2.12 2.12 1.42-1.42L5.64 3.52zM18.36 19.06l1.42-1.42-2.12-2.12-1.42 1.42 2.12 2.12zM1 11h3v2H1v-2zm19 0h3v2h-3v-2zM5.64 20.48l1.42-1.42-2.12-2.12-1.42 1.42 2.12 2.12zM18.36 4.94l-1.42-1.42-2.12 2.12 1.42 1.42 2.12-2.12z"/></svg>
-          ) : (
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
-          )}
+          {theme === 'dark' ? <Moon size={18} /> : <Sun size={18} />}
         </button>
         {cart.length > 0 && (
           <button onClick={() => {
             const text = `My Grocery Cart:\n${cart.map(c => `- ${c.item.name} (₹${c.price})`).join('\n')}\nTotal: ₹${cartTotal}`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
-          }} className="pro-btn hover-lift" style={{ background: '#25D366', color: 'white', border: 'none', padding: '8px 18px', borderRadius: '10px', boxShadow: '0 2px 12px rgba(37,211,102,0.35)' }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+          }} className="pro-btn float-anim" style={{ background: '#25D366', color: 'white', border: 'none', padding: '8px 18px', borderRadius: '10px', boxShadow: '0 2px 12px rgba(37,211,102,0.35)' }}>
+            <ShoppingCart size={18} />
             Cart ({cart.length})
           </button>
         )}
@@ -250,12 +266,13 @@ export default function GroceryApp({ products }: { products: any[] }) {
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <span style={{ fontWeight: 600, color: 'var(--success-color)', fontSize: '14px' }}>{user.email}</span>
             <button onClick={() => setUser(null)} className="pro-btn" style={{ background: 'var(--danger-color)', color: 'white', border: 'none', padding: '8px 20px', borderRadius: '10px', boxShadow: '0 2px 8px rgba(239,68,68,0.3)' }}>
+              <LogOut size={16} />
               {t('logout') || 'Logout'}
             </button>
           </div>
         ) : (
           <button onClick={() => setShowAuth(true)} className="pro-btn" style={{ background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))', color: 'white', border: 'none', padding: '8px 24px', borderRadius: '10px', boxShadow: '0 2px 12px rgba(108,58,232,0.35)' }}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            <Sparkles size={16} />
             {t('login') || 'Login'}
           </button>
         )}
@@ -266,17 +283,15 @@ export default function GroceryApp({ products }: { products: any[] }) {
       <AboutModal isOpen={showAbout} onClose={() => setShowAbout(false)} />
 
       {/* Header */}
-      <div className="glass-panel hover-lift" style={{ maxWidth: 1100, margin: '32px auto', padding: '40px', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: '-50%', left: '-20%', width: '100%', height: '200%', background: 'radial-gradient(circle, rgba(108,58,232,0.1) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
+      <div className="glass-panel" style={{ maxWidth: 1100, margin: '32px auto', padding: '40px', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: '-50%', left: '-20%', width: '100%', height: '200%', background: 'radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
         
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '24px', position: 'relative', zIndex: 1 }}>
-          <div style={{ filter: 'drop-shadow(0 0 10px rgba(0,212,170,0.5))', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--secondary-color)' }} className="pulse-anim">
-            <svg width="56" height="56" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
-            </svg>
+          <div style={{ filter: 'drop-shadow(0 0 10px rgba(79,142,247,0.5))', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--secondary-color)' }} className="pulse-anim">
+            <ShoppingCart size={48} strokeWidth={2.5} />
           </div>
           <div>
-            <h1 className="gradient-text" style={{ fontSize: '48px', fontWeight: 800, margin: 0, paddingBottom: '8px', letterSpacing: '-1px' }}>{t('app_title')}</h1>
+            <h1 className="gradient-text" style={{ fontSize: '52px', fontWeight: 800, margin: 0, paddingBottom: '8px', letterSpacing: '-1.5px' }}>{t('app_title')}</h1>
             <p style={{ color: 'var(--muted-color)', fontSize: '18px', margin: 0, fontWeight: 500 }}>{t('app_subtitle')}</p>
           </div>
         </div>
@@ -285,7 +300,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
         <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginTop: '32px', position: 'relative', zIndex: 1 }}>
           <div style={{ flex: 1, position: 'relative', minWidth: '300px', display: 'flex', alignItems: 'center' }} className="glow-effect">
             <span style={{ position: 'absolute', left: '20px', display: 'flex', alignItems: 'center', color: 'var(--muted-color)', zIndex: 2 }}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+              <Search size={22} />
             </span>
             <input
               value={search}
@@ -295,18 +310,18 @@ export default function GroceryApp({ products }: { products: any[] }) {
               placeholder={isListening ? 'Listening...' : t('search_placeholder')}
               style={{
                 width: '100%', padding: '20px 180px 20px 56px', borderRadius: '20px',
-                background: isListening ? 'rgba(239, 68, 68, 0.2)' : 'var(--surface-color)',
+                background: isListening ? 'rgba(239, 68, 68, 0.1)' : 'var(--surface-color)',
                 border: isListening ? '1px solid #fca5a5' : '1px solid var(--border-color)',
                 color: 'var(--text-color)', fontSize: '18px', outline: 'none', transition: 'all 0.3s ease',
                 fontFamily: 'inherit', backdropFilter: 'blur(10px)'
               }}
             />
             {showAutocomplete && autocompleteResults.length > 0 && (
-              <div style={{
+              <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} style={{
                 position: 'absolute', top: 'calc(100% + 8px)', left: 0, right: 0,
                 background: 'var(--surface-color)', border: '1px solid var(--border-color)',
                 borderRadius: '16px', zIndex: 1000, overflow: 'hidden',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.4)', backdropFilter: 'blur(20px)'
+                boxShadow: '0 16px 40px rgba(0,0,0,0.4)', backdropFilter: 'blur(20px)'
               }}>
                 {autocompleteResults.map((prod, idx) => {
                   const stats = getPriceStats(Object.fromEntries(Object.entries(prod.prices).filter(([k]) => selectedStores.includes(k))));
@@ -324,7 +339,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
                       onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
                     >
                       <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                        <span style={{ fontSize: '22px' }}>{prod.image}</span>
+                        <span style={{ fontSize: '22px', color: 'var(--muted-color)' }}>{getIconForEmoji(prod.image, 24)}</span>
                         <div>
                           <div style={{ fontWeight: 600, fontSize: '15px', color: 'var(--text-color)' }}>{prod.name}</div>
                           <div style={{ fontSize: '12px', color: 'var(--muted-color)' }}>{prod.category}</div>
@@ -337,7 +352,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
                     </div>
                   );
                 })}
-              </div>
+              </motion.div>
             )}
 
             {/* Mic and Camera buttons inside search */}
@@ -348,18 +363,18 @@ export default function GroceryApp({ products }: { products: any[] }) {
                     <div className="mic-wave"></div><div className="mic-wave"></div><div className="mic-wave"></div><div className="mic-wave"></div>
                   </div>
                 ) : (
-                  <svg className="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>
+                  <Mic className="svg-icon" size={24} />
                 )}
               </button>
               <button className="custom-btn-hover" onClick={() => setShowScanner(true)} style={{ background: 'transparent', border: 'none', color: 'var(--text-color)', cursor: 'pointer', display: 'flex', alignItems: 'center' }} title="Scan List">
-                <svg className="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><circle cx="12" cy="13" r="4"/></svg>
+                <Camera className="svg-icon" size={24} />
               </button>
             </div>
 
             <button 
               onClick={handleSmartSearch}
               disabled={isAILoading}
-              className="hover-lift"
+              className="pro-btn"
               style={{
                 position: 'absolute', right: '10px', top: '10px', bottom: '10px',
                 background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))', 
@@ -368,6 +383,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
                 fontFamily: 'inherit', fontSize: '16px', textShadow: '0 1px 2px rgba(0,0,0,0.2)'
               }}
             >
+              {isAILoading ? <Sparkles size={18} className="pulse-anim" /> : <Sparkles size={18} />}
               {t('ask_ai')}
             </button>
           </div>
@@ -391,11 +407,11 @@ export default function GroceryApp({ products }: { products: any[] }) {
             <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--muted-color)', textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap' }}>Filter Stores:</span>
             <button
               onClick={() => setSelectedStores([...ALL_STORES])}
-              style={{ fontSize: '12px', padding: '4px 12px', borderRadius: '20px', border: '1px solid var(--border-color)', background: selectedStores.length === ALL_STORES.length ? 'var(--primary-color)' : 'transparent', color: 'white', cursor: 'pointer', fontWeight: 600, transition: 'all 0.2s' }}
+              style={{ fontSize: '12px', padding: '6px 16px', borderRadius: '20px', border: '1px solid var(--border-color)', background: selectedStores.length === ALL_STORES.length ? 'var(--primary-color)' : 'transparent', color: 'white', cursor: 'pointer', fontWeight: 600, transition: 'all 0.2s' }}
             >All</button>
             <button
               onClick={() => setSelectedStores([])}
-              style={{ fontSize: '12px', padding: '4px 12px', borderRadius: '20px', border: '1px solid var(--border-color)', background: 'transparent', color: 'var(--muted-color)', cursor: 'pointer', fontWeight: 600, transition: 'all 0.2s' }}
+              style={{ fontSize: '12px', padding: '6px 16px', borderRadius: '20px', border: '1px solid var(--border-color)', background: 'transparent', color: 'var(--muted-color)', cursor: 'pointer', fontWeight: 600, transition: 'all 0.2s' }}
             >None</button>
             {ALL_STORES.map(store => {
               const c = platformColors[store];
@@ -405,15 +421,15 @@ export default function GroceryApp({ products }: { products: any[] }) {
                   key={store}
                   onClick={() => handleStoreToggle(store)}
                   style={{
-                    fontSize: '12px', padding: '4px 14px', borderRadius: '20px', cursor: 'pointer',
+                    fontSize: '12px', padding: '6px 16px', borderRadius: '20px', cursor: 'pointer',
                     border: `1px solid ${active ? c.bg : 'var(--border-color)'}`,
                     background: active ? c.light : 'transparent',
                     color: active ? c.text : 'var(--muted-color)',
-                    fontWeight: 600, transition: 'all 0.2s', display: 'flex', alignItems: 'center', gap: '5px'
+                    fontWeight: 600, transition: 'all 0.2s', display: 'flex', alignItems: 'center', gap: '6px'
                   }}
                 >
-                  <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: active ? c.bg : '#4b5563', display: 'inline-block', flexShrink: 0 }} />
-                  {c.logo.split(' ').slice(1).join(' ')}
+                  <span style={{ color: active ? c.bg : '#64748b' }}>{getStoreIcon(store, 14)}</span>
+                  {c.name}
                 </button>
               );
             })}
@@ -429,80 +445,105 @@ export default function GroceryApp({ products }: { products: any[] }) {
 
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
             <h2 style={{ fontSize: '24px', fontWeight: 700 }}>{t('top_products')}</h2>
-            <span style={{ color: '#00D4AA', background: 'rgba(0, 212, 170, 0.1)', padding: '6px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: 600 }}>{filtered.length} {t('items')}</span>
+            <span style={{ color: 'var(--secondary-color)', background: 'rgba(79, 142, 247, 0.1)', padding: '6px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: 600 }}>{filtered.length} {t('items')}</span>
           </div>
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '24px' }}>
-            {filtered.map((product) => {
-              const stats = getPriceStats(product.prices);
-              return (
-                <div key={product.id} className="glass-panel hover-lift" style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-                  <div style={{ padding: '24px', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'flex-start', gap: '20px', position: 'relative' }}>
-                    <div style={{ fontSize: '50px', background: 'rgba(255,255,255,0.05)', borderRadius: '20px', padding: '12px' }}>
-                      {product.image}
-                    </div>
+          {isLoadingProducts ? (
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '24px' }}>
+              {[1, 2, 3, 4].map((n) => (
+                <div key={n} className="glass-panel" style={{ height: '300px', display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ padding: '24px', display: 'flex', gap: '20px', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                    <div className="skeleton-box" style={{ width: '60px', height: '60px', borderRadius: '16px' }}></div>
                     <div style={{ flex: 1 }}>
-                      <h3 style={{ fontSize: '20px', fontWeight: 700, margin: '0 0 8px 0', lineHeight: 1.2 }}>{product.name}</h3>
-                      <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                        <span style={{ fontSize: '12px', background: 'rgba(108,58,232,0.2)', color: '#c4b5fd', padding: '4px 12px', borderRadius: '12px', fontWeight: 600 }}>{product.category}</span>
-                        {stats.savings > 0 && (
-                          <span style={{ fontSize: '12px', background: 'rgba(34,197,94,0.2)', color: '#86efac', padding: '4px 12px', borderRadius: '12px', fontWeight: 600 }}>
-                            {t('save')} ₹{stats.savings}
-                          </span>
-                        )}
-                      </div>
+                      <div className="skeleton-box" style={{ width: '80%', height: '20px', marginBottom: '12px' }}></div>
+                      <div className="skeleton-box" style={{ width: '40%', height: '16px' }}></div>
                     </div>
-                    <button onClick={() => shareProduct(product)} style={{ position: 'absolute', top: '24px', right: '24px', background: 'rgba(37, 211, 102, 0.2)', border: 'none', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.2s', color: '#25D366' }} className="hover-lift" title="Share on WhatsApp">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-                    </button>
                   </div>
-                  
                   <div style={{ padding: '20px', flex: 1, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                    {Object.entries(product.prices).map(([platform, data]) => {
-                      const val = data as any;
-                      const isCheap = platform === stats.cheapestPlatform;
-                      const isExpensive = val.available && val.price === stats.max && stats.max > stats.min;
-                      const c = (platformColors as any)[platform];
-                      
-                      return (
-                        <div key={platform} style={{
-                          display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                          padding: '12px 16px', borderRadius: '16px',
-                          background: isCheap ? c.light : 'rgba(10, 14, 26, 0.4)',
-                          border: `1px solid ${isCheap ? c.bg : (isExpensive ? 'rgba(239,68,68,0.3)' : 'transparent')}`,
-                          transition: 'all 0.2s ease'
-                        }}>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                            <span style={{ fontSize: '16px', fontWeight: 600 }}>{c.logo}</span>
-                            {isCheap && <span style={{ fontSize: '10px', background: 'var(--success-color)', color: 'white', padding: '2px 8px', borderRadius: '8px', fontWeight: 800, letterSpacing: '0.5px' }}>{t('best')}</span>}
-                            {isExpensive && <span style={{ fontSize: '10px', background: 'rgba(239,68,68,0.8)', color: 'white', padding: '2px 8px', borderRadius: '8px', fontWeight: 800 }}>{t('costly')}</span>}
-                          </div>
-                          
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                            {val.available ? (
-                              <>
-                                <span style={{ fontSize: '18px', fontWeight: 800, color: isCheap ? c.text : (isExpensive ? '#fca5a5' : 'white') }}>₹{val.price}</span>
-                                <a href={getStoreSearchUrl(platform, product.name)} target="_blank" rel="noreferrer" className="hover-lift" style={{
-                                  fontSize: '13px', background: isCheap ? c.bg : '#334155', color: 'white', padding: '8px 16px',
-                                  borderRadius: '10px', textDecoration: 'none', fontWeight: 700, display: 'inline-block'
-                                }}>{t('buy')}</a>
-                              </>
-                            ) : (
-                              <span style={{ fontSize: '14px', color: '#64748b', fontWeight: 500 }}>{t('unavailable')}</span>
-                            )}
-                          </div>
-                        </div>
-                      );
-                    })}
+                    <div className="skeleton-box" style={{ width: '100%', height: '40px', borderRadius: '12px' }}></div>
+                    <div className="skeleton-box" style={{ width: '100%', height: '40px', borderRadius: '12px' }}></div>
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <motion.div variants={containerVariants} initial="hidden" animate="visible" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '24px' }}>
+              {filtered.map((product) => {
+                const stats = getPriceStats(product.prices);
+                return (
+                  <motion.div variants={itemVariants} key={product.id} className="glass-panel hover-lift" style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ padding: '24px', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'flex-start', gap: '20px', position: 'relative' }}>
+                      <div style={{ fontSize: '32px', background: 'linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02))', borderRadius: '20px', padding: '16px', color: 'var(--text-color)', border: '1px solid var(--border-color)', boxShadow: 'inset 0 2px 4px rgba(255,255,255,0.05)' }}>
+                        {getIconForEmoji(product.image, 32)}
+                      </div>
+                      <div style={{ flex: 1 }}>
+                        <h3 style={{ fontSize: '20px', fontWeight: 700, margin: '0 0 8px 0', lineHeight: 1.2 }}>{product.name}</h3>
+                        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                          <span style={{ fontSize: '12px', background: 'rgba(139,92,246,0.2)', color: '#c4b5fd', padding: '4px 12px', borderRadius: '12px', fontWeight: 600 }}>{product.category}</span>
+                          {stats.savings > 0 && (
+                            <span style={{ fontSize: '12px', background: 'rgba(34,197,94,0.2)', color: '#86efac', padding: '4px 12px', borderRadius: '12px', fontWeight: 600 }}>
+                              {t('save')} ₹<CountUp end={stats.savings} duration={1} />
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                      <button onClick={() => shareProduct(product)} style={{ position: 'absolute', top: '24px', right: '24px', background: 'rgba(37, 211, 102, 0.2)', border: 'none', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.2s', color: '#25D366' }} className="hover-lift" title="Share on WhatsApp">
+                        <Share2 size={16} />
+                      </button>
+                    </div>
+                    
+                    <div style={{ padding: '20px', flex: 1, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                      {Object.entries(product.prices).map(([platform, data]) => {
+                        const val = data as any;
+                        const isCheap = platform === stats.cheapestPlatform;
+                        const isExpensive = val.available && val.price === stats.max && stats.max > stats.min;
+                        const c = (platformColors as any)[platform];
+                        
+                        return (
+                          <div key={platform} style={{
+                            display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                            padding: '12px 16px', borderRadius: '16px',
+                            background: isCheap ? c.light : 'rgba(10, 14, 26, 0.4)',
+                            border: `1px solid ${isCheap ? c.bg : (isExpensive ? 'rgba(239,68,68,0.3)' : 'transparent')}`,
+                            boxShadow: isCheap ? `0 0 12px ${c.bg}40` : 'none',
+                            transition: 'all 0.2s ease'
+                          }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                              <span style={{ color: c.text, display: 'flex', alignItems: 'center' }}>{getStoreIcon(platform, 18)}</span>
+                              <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text-color)' }}>{c.name}</span>
+                              {isCheap && <span style={{ fontSize: '10px', background: 'var(--success-color)', color: 'white', padding: '2px 8px', borderRadius: '8px', fontWeight: 800, letterSpacing: '0.5px' }}>{t('best')}</span>}
+                              {isExpensive && <span style={{ fontSize: '10px', background: 'rgba(239,68,68,0.8)', color: 'white', padding: '2px 8px', borderRadius: '8px', fontWeight: 800 }}>{t('costly')}</span>}
+                            </div>
+                            
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                              {val.available ? (
+                                <>
+                                  <span style={{ fontSize: '18px', fontWeight: 800, color: isCheap ? c.text : (isExpensive ? '#fca5a5' : 'white') }}>
+                                    ₹<CountUp end={val.price} duration={1.5} preserveValue />
+                                  </span>
+                                  <a href={getStoreSearchUrl(platform, product.name)} target="_blank" rel="noreferrer" className="hover-lift" style={{
+                                    fontSize: '13px', background: isCheap ? c.bg : 'var(--surface-color)', color: 'white', padding: '8px 16px',
+                                    border: `1px solid ${isCheap ? 'transparent' : 'var(--border-color)'}`,
+                                    borderRadius: '10px', textDecoration: 'none', fontWeight: 700, display: 'inline-block'
+                                  }}>{t('buy')}</a>
+                                </>
+                              ) : (
+                                <span style={{ fontSize: '14px', color: 'var(--muted-color)', fontWeight: 500 }}>{t('unavailable')}</span>
+                              )}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          )}
         </div>
 
         {/* Sidebar - Assistant & Planner */}
-        <div style={{ flex: '1 1 340px', maxWidth: '420px', display: 'flex', flexDirection: 'column', gap: '32px' }}>
+        <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }} style={{ flex: '1 1 340px', maxWidth: '420px', display: 'flex', flexDirection: 'column', gap: '32px' }}>
           
           <RecipeAssistant products={products} addToCart={handleAddToCart} />
           
@@ -510,13 +551,11 @@ export default function GroceryApp({ products }: { products: any[] }) {
 
           <PriceAlerts products={products} />
 
-          <div className="glass-panel" style={{ padding: '32px', borderTop: '2px solid rgba(108, 58, 232, 0.5)' }}>
+          <div className="glass-panel" style={{ padding: '32px', borderTop: '2px solid rgba(139, 92, 246, 0.5)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-              <div style={{ background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))', borderRadius: '16px', padding: '12px', fontSize: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))', borderRadius: '16px', padding: '12px', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div className={isAILoading ? 'pulse-anim' : ''} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2a2 2 0 0 1 2 2v2h3a2 2 0 0 1 2 2v2h1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-1v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H3a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h1V8a2 2 0 0 1 2-2h3V4a2 2 0 0 1 2-2zM9 11a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"></path>
-                  </svg>
+                  <Sparkles size={28} />
                 </div>
               </div>
               <div>
@@ -524,13 +563,13 @@ export default function GroceryApp({ products }: { products: any[] }) {
                 <span style={{ color: 'var(--secondary-color)', fontSize: '13px', fontWeight: 600 }}>{t('powered_by_ai')}</span>
               </div>
             </div>
-            <p style={{ color: '#94a3b8', fontSize: '15px', marginBottom: '24px', lineHeight: 1.6 }}>
+            <p style={{ color: 'var(--muted-color)', fontSize: '15px', marginBottom: '24px', lineHeight: 1.6 }}>
               {t('budget_desc')}
             </p>
             
             <div style={{ display: 'flex', gap: '12px', marginBottom: '24px' }}>
               <div style={{ position: 'relative', flex: 1 }} className="glow-effect">
-                <span style={{ position: 'absolute', margin: '16px 20px', color: '#94a3b8', fontSize: '18px', fontWeight: 700 }}>₹</span>
+                <span style={{ position: 'absolute', margin: '16px 20px', color: 'var(--muted-color)', fontSize: '18px', fontWeight: 700 }}>₹</span>
                 <input
                   type="number"
                   value={budget}
@@ -538,7 +577,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
                   placeholder="e.g. 500"
                   style={{
                     width: '100%', padding: '16px 16px 16px 44px', borderRadius: '16px',
-                    background: 'rgba(10, 14, 26, 0.6)', border: '1px solid var(--border-color)',
+                    background: 'var(--surface-color)', border: '1px solid var(--border-color)',
                     color: 'white', fontSize: '18px', outline: 'none', fontFamily: 'inherit', fontWeight: 600
                   }}
                 />
@@ -546,87 +585,95 @@ export default function GroceryApp({ products }: { products: any[] }) {
               <button 
                 onClick={handleBudgetAssistant}
                 disabled={isAILoading}
-                className="hover-lift"
+                className="pro-btn hover-lift"
                 style={{
                   background: 'var(--primary-color)', color: 'white', border: 'none',
                   padding: '0 24px', borderRadius: '16px', fontWeight: 700, cursor: 'pointer',
-                  fontFamily: 'inherit', fontSize: '16px', boxShadow: '0 4px 14px 0 rgba(108, 58, 232, 0.39)'
+                  fontFamily: 'inherit', fontSize: '16px', boxShadow: '0 4px 14px 0 rgba(139, 92, 246, 0.4)'
                 }}
               >
                 {isAILoading ? '...' : t('plan')}
               </button>
             </div>
 
-            {budgetResult && (
-              <div style={{ background: 'rgba(10, 14, 26, 0.4)', borderRadius: '20px', padding: '24px', marginTop: '16px', border: '1px solid rgba(255,255,255,0.08)', position: 'relative' }}>
-                <button onClick={shareBudget} style={{ position: 'absolute', top: '20px', right: '20px', background: 'rgba(37, 211, 102, 0.2)', border: 'none', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.2s', color: '#25D366' }} className="hover-lift" title="Share Plan on WhatsApp">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-                </button>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', paddingRight: '40px' }}>
-                  <h4 style={{ margin: 0, fontSize: '16px', color: '#f8fafc', fontWeight: 700 }}>{t('optimized_basket')}</h4>
-                  <span style={{ background: 'rgba(34,197,94,0.15)', color: '#4ade80', padding: '4px 10px', borderRadius: '12px', fontSize: '12px', fontWeight: 700 }}>{budgetResult.basket.length} {t('items')}</span>
-                </div>
-                
-                {/* Visual Chart Breakdown */}
-                <div style={{ marginBottom: '24px', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', padding: '16px' }}>
-                  <p style={{ fontSize: '12px', color: '#94a3b8', margin: '0 0 12px 0', fontWeight: 600, textTransform: 'uppercase' }}>{t('budget_utilization')}</p>
-                  <div style={{ height: '12px', background: 'rgba(255,255,255,0.1)', borderRadius: '6px', display: 'flex', overflow: 'hidden', marginBottom: '8px' }}>
-                    {budgetResult.basket.map((b: any, i: number) => {
-                      const percentage = (b.price / budgetResult.total) * 100;
-                      return (
-                        <div key={i} title={`${b.item.name}: ₹${b.price}`} style={{
-                          width: `${percentage}%`,
-                          background: (platformColors as any)[b.platform].bg,
-                          borderRight: '1px solid rgba(0,0,0,0.2)'
-                        }}></div>
-                      );
-                    })}
+            <AnimatePresence>
+              {budgetResult && (
+                <motion.div 
+                  initial={{ opacity: 0, height: 0, y: -20 }}
+                  animate={{ opacity: 1, height: 'auto', y: 0 }}
+                  exit={{ opacity: 0, height: 0 }}
+                  style={{ background: 'rgba(10, 14, 26, 0.4)', borderRadius: '20px', padding: '24px', marginTop: '16px', border: '1px solid rgba(255,255,255,0.08)', position: 'relative', overflow: 'hidden' }}
+                >
+                  <button onClick={shareBudget} style={{ position: 'absolute', top: '20px', right: '20px', background: 'rgba(37, 211, 102, 0.2)', border: 'none', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.2s', color: '#25D366' }} className="hover-lift" title="Share Plan on WhatsApp">
+                    <Share2 size={14} />
+                  </button>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', paddingRight: '40px' }}>
+                    <h4 style={{ margin: 0, fontSize: '16px', color: 'var(--text-color)', fontWeight: 700 }}>{t('optimized_basket')}</h4>
+                    <span style={{ background: 'rgba(34,197,94,0.15)', color: '#4ade80', padding: '4px 10px', borderRadius: '12px', fontSize: '12px', fontWeight: 700 }}>{budgetResult.basket.length} {t('items')}</span>
                   </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', color: '#94a3b8', fontWeight: 500 }}>
-                    <span>0</span>
-                    <span>{t('total')}: ₹{budgetResult.total}</span>
-                  </div>
-                </div>
-
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                  {budgetResult.basket.map((b: any, i: number) => (
-                    <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '12px', borderBottom: i !== budgetResult.basket.length - 1 ? '1px dashed rgba(255,255,255,0.1)' : 'none' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                        <div style={{ background: 'rgba(255,255,255,0.05)', padding: '8px', borderRadius: '10px', fontSize: '18px' }}>{b.item.image}</div>
-                        <div>
-                          <div style={{ fontSize: '15px', fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '130px' }}>{b.item.name}</div>
-                          <div style={{ fontSize: '12px', color: (platformColors as any)[b.platform].text, fontWeight: 600 }}>{t('from')} {b.platform}</div>
-                        </div>
-                      </div>
-                      <span style={{ fontSize: '16px', fontWeight: 800, color: 'white' }}>₹{b.price}</span>
+                  
+                  {/* Visual Chart Breakdown */}
+                  <div style={{ marginBottom: '24px', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', padding: '16px' }}>
+                    <p style={{ fontSize: '12px', color: 'var(--muted-color)', margin: '0 0 12px 0', fontWeight: 600, textTransform: 'uppercase' }}>{t('budget_utilization')}</p>
+                    <div style={{ height: '12px', background: 'rgba(255,255,255,0.1)', borderRadius: '6px', display: 'flex', overflow: 'hidden', marginBottom: '8px' }}>
+                      {budgetResult.basket.map((b: any, i: number) => {
+                        const percentage = (b.price / budgetResult.total) * 100;
+                        return (
+                          <motion.div initial={{ width: 0 }} animate={{ width: `${percentage}%` }} transition={{ duration: 1, delay: i * 0.1 }} key={i} title={`${b.item.name}: ₹${b.price}`} style={{
+                            background: (platformColors as any)[b.platform].bg,
+                            borderRight: '1px solid rgba(0,0,0,0.2)'
+                          }}></motion.div>
+                        );
+                      })}
                     </div>
-                  ))}
-                </div>
-                
-                <div style={{ marginTop: '24px', paddingTop: '20px', borderTop: '2px dashed rgba(255,255,255,0.1)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ color: '#94a3b8', fontSize: '16px', fontWeight: 600 }}>{t('used_budget')}</span>
-                    <span style={{ fontWeight: 800, color: 'var(--success-color)', fontSize: '24px' }}>₹{budgetResult.total}</span>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', color: 'var(--muted-color)', fontWeight: 500 }}>
+                      <span>0</span>
+                      <span>{t('total')}: ₹<CountUp end={budgetResult.total} duration={1} /></span>
+                    </div>
                   </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ color: '#94a3b8', fontSize: '16px', fontWeight: 600 }}>{t('remaining_budget')}</span>
-                    <span style={{ fontWeight: 800, color: '#38bdf8', fontSize: '20px' }}>₹{budgetResult.target - budgetResult.total}</span>
+
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                    {budgetResult.basket.map((b: any, i: number) => (
+                      <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 + i * 0.1 }} key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '12px', borderBottom: i !== budgetResult.basket.length - 1 ? '1px dashed rgba(255,255,255,0.1)' : 'none' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <div style={{ background: 'rgba(255,255,255,0.05)', padding: '10px', borderRadius: '12px', color: 'var(--text-color)', border: '1px solid var(--border-color)' }}>
+                            {getIconForEmoji(b.item.image, 20)}
+                          </div>
+                          <div>
+                            <div style={{ fontSize: '15px', fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '130px' }}>{b.item.name}</div>
+                            <div style={{ fontSize: '12px', color: (platformColors as any)[b.platform].text, fontWeight: 600 }}>{t('from')} {(platformColors as any)[b.platform].name}</div>
+                          </div>
+                        </div>
+                        <span style={{ fontSize: '16px', fontWeight: 800, color: 'white' }}>₹{b.price}</span>
+                      </motion.div>
+                    ))}
                   </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '8px', paddingTop: '12px', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-                    <span style={{ color: '#64748b', fontSize: '14px', fontWeight: 500 }}>{t('target_budget')}</span>
-                    <span style={{ color: '#64748b', fontSize: '14px', fontWeight: 500 }}>₹{budgetResult.target}</span>
+                  
+                  <div style={{ marginTop: '24px', paddingTop: '20px', borderTop: '2px dashed rgba(255,255,255,0.1)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ color: 'var(--muted-color)', fontSize: '16px', fontWeight: 600 }}>{t('used_budget')}</span>
+                      <span style={{ fontWeight: 800, color: 'var(--success-color)', fontSize: '24px' }}>₹<CountUp end={budgetResult.total} duration={1} /></span>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ color: 'var(--muted-color)', fontSize: '16px', fontWeight: 600 }}>{t('remaining_budget')}</span>
+                      <span style={{ fontWeight: 800, color: '#38bdf8', fontSize: '20px' }}>₹<CountUp end={budgetResult.target - budgetResult.total} duration={1} /></span>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '8px', paddingTop: '12px', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+                      <span style={{ color: '#64748b', fontSize: '14px', fontWeight: 500 }}>{t('target_budget')}</span>
+                      <span style={{ color: '#64748b', fontSize: '14px', fontWeight: 500 }}>₹{budgetResult.target}</span>
+                    </div>
                   </div>
-                </div>
-              </div>
-            )}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
-        </div>
+        </motion.div>
       </div>
       
       {/* Mobile Floating Action Button */}
       <button 
         onClick={() => setShowScanner(true)}
-        className="hover-lift"
+        className="hover-lift float-anim"
         style={{
           position: 'fixed',
           bottom: '24px',
@@ -634,11 +681,10 @@ export default function GroceryApp({ products }: { products: any[] }) {
           width: '64px',
           height: '64px',
           borderRadius: '32px',
-          background: 'linear-gradient(135deg, #10b981, #3b82f6)',
+          background: 'linear-gradient(135deg, var(--secondary-color), var(--primary-color))',
           color: 'white',
-          fontSize: '28px',
           border: 'none',
-          boxShadow: '0 8px 16px rgba(0,0,0,0.3), 0 0 20px rgba(16, 185, 129, 0.4)',
+          boxShadow: '0 8px 24px rgba(139, 92, 246, 0.4)',
           cursor: 'pointer',
           zIndex: 100,
           display: 'flex',
@@ -646,7 +692,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
           justifyContent: 'center',
         }}
       >
-        <svg className="svg-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <ScanLine size={28} />
       </button>
 
       {/* Footer */}
@@ -654,8 +700,9 @@ export default function GroceryApp({ products }: { products: any[] }) {
         padding: '24px',
         textAlign: 'center',
         borderTop: '1px solid var(--border-color)',
-        background: 'rgba(0,0,0,0.1)',
-        marginTop: '40px'
+        background: 'rgba(0,0,0,0.2)',
+        marginTop: '60px',
+        backdropFilter: 'blur(10px)'
       }}>
         <p style={{ fontSize: '14px', color: 'var(--muted-color)', margin: '0 0 8px' }}>
           Built with{' '}
@@ -666,7 +713,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
             style={{
               border: 'none', cursor: 'pointer', padding: 0,
               fontWeight: 700, fontSize: '14px', fontFamily: 'inherit',
-              background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))',
+              background: 'linear-gradient(135deg, var(--secondary-color), var(--primary-color))',
               WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
             } as any}
           >
@@ -674,9 +721,9 @@ export default function GroceryApp({ products }: { products: any[] }) {
           </button>
         </p>
         <p style={{ fontSize: '12px', color: 'var(--muted-color)', margin: 0, opacity: 0.7 }}>
-          GroceryCompare AI &nbsp;·&nbsp; © 2025 &nbsp;·&nbsp; Made in India
+          GroceryCompare AI &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp; Made in India
         </p>
       </footer>
-    </div>
+    </motion.div>
   );
 }
