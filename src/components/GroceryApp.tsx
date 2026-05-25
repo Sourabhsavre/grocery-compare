@@ -297,7 +297,8 @@ export default function GroceryApp({ products }: { products: any[] }) {
       {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} style={{ minHeight: '100vh', paddingBottom: '80px' }}>
       {/* Top Navbar */}
-      <div style={{ padding: '16px 24px', display: 'flex', justifyContent: 'flex-end', gap: '12px', background: 'linear-gradient(180deg, #0A0A0A 0%, #111111 100%)', borderBottom: '1px solid var(--border-color)', backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 50, boxShadow: '0 4px 24px rgba(255, 107, 0, 0.08)' }}>
+      <div style={{ background: 'linear-gradient(180deg, #0A0A0A 0%, #111111 100%)', borderBottom: '1px solid var(--border-color)', backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 50, boxShadow: '0 4px 24px rgba(255, 107, 0, 0.08)' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '16px 20px', display: 'flex', justifyContent: 'flex-end', gap: '12px' }}>
         <button onClick={() => setShowAbout(true)} className="pro-btn" style={{ background: 'var(--card-bg)', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '10px', fontSize: '14px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
           <Info size={16} />
           About
@@ -336,6 +337,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
             {t('login') || 'Login'}
           </button>
         )}
+        </div>
       </div>
 
       <AuthModal isOpen={showAuth} onClose={() => setShowAuth(false)} onLogin={(u) => { setUser(u); setShowAuth(false); }} />
@@ -344,7 +346,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
       <WishlistModal isOpen={showWishlistModal} onClose={() => setShowWishlistModal(false)} wishlist={wishlistItems} onRemove={(pid) => handleToggleWishlist({ id: pid }, null)} />
 
       {/* Header */}
-      <div className="glass-panel header-gradient" style={{ maxWidth: 1100, margin: '32px auto', padding: '40px', position: 'relative', overflow: 'hidden' }}>
+      <div className="glass-panel header-gradient" style={{ maxWidth: 1200, margin: '32px auto', padding: '40px', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: '-50%', left: '-20%', width: '100%', height: '200%', background: 'radial-gradient(circle, rgba(255,107,0,0.15) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
         
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '24px', position: 'relative', zIndex: 1 }}>
@@ -497,10 +499,10 @@ export default function GroceryApp({ products }: { products: any[] }) {
         </div>
       </div>
 
-      <div style={{ maxWidth: 1100, margin: '0 auto', display: 'flex', gap: '32px', flexWrap: 'wrap', padding: '0 20px' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: '32px', flexWrap: 'wrap', padding: '0 20px' }}>
         
         {/* Main Content */}
-        <div style={{ flex: '1 1 600px' }}>
+        <div style={{ flex: '2 1 700px' }}>
           <DealOfTheDay products={products} />
 
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
@@ -573,7 +575,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
         </div>
 
         {/* Sidebar - Assistant & Planner */}
-        <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }} style={{ flex: '1 1 340px', maxWidth: '420px', display: 'flex', flexDirection: 'column', gap: '32px' }}>
+        <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }} style={{ flex: '1 1 320px', maxWidth: '380px', display: 'flex', flexDirection: 'column', gap: '32px' }}>
           
           <RecipeAssistant products={products} addToCart={handleAddToCart} />
           
