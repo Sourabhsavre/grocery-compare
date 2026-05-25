@@ -25,8 +25,12 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
       } else {
         const { data, error } = await supabase.auth.signUp({ email, password });
         if (error) throw error;
-        alert('Signup successful! Please login.');
-        setIsLogin(true);
+        if (data.user) {
+          onLogin(data.user);
+        } else {
+          alert('Signup successful! Please login.');
+          setIsLogin(true);
+        }
       }
     } catch (error: any) {
       alert(error.message);
