@@ -111,8 +111,9 @@ export default function GroceryApp({ products }: { products: any[] }) {
         const newItem = await addToWishlist(user.id, product, stats);
         setWishlistItems(prev => [newItem, ...prev]);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error toggling wishlist:", error);
+      alert("Failed to update wishlist: " + (error.message || error.toString()));
       // Revert optimistic update on failure by re-fetching
       getWishlist(user.id).then(setWishlistItems).catch(console.error);
     }

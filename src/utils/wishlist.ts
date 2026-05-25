@@ -27,8 +27,10 @@ export async function addToWishlist(userId: string, product: any, stats: any) {
     .single();
 
   if (error) {
+    console.error("Supabase addToWishlist error:", error);
     throw error;
   }
+  console.log("addToWishlist success:", data);
   return data as WishlistItem;
 }
 
@@ -40,8 +42,10 @@ export async function removeFromWishlist(userId: string, productId: number) {
     .match({ user_id: userId, product_id: productId });
 
   if (error) {
+    console.error("Supabase removeFromWishlist error:", error);
     throw error;
   }
+  console.log("removeFromWishlist success for product:", productId);
   return true;
 }
 
@@ -54,7 +58,9 @@ export async function getWishlist(userId: string) {
     .order('created_at', { ascending: false });
 
   if (error) {
+    console.error("Supabase getWishlist error:", error);
     throw error;
   }
+  console.log("getWishlist success:", data);
   return data as WishlistItem[];
 }
