@@ -3,7 +3,7 @@
 import React, { memo } from "react";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
-import { Share2 } from "lucide-react";
+import { Share2, Heart } from "lucide-react";
 import { getIconForEmoji, getStoreIcon } from "@/utils/iconMap";
 
 const itemVariants = {
@@ -23,9 +23,12 @@ interface ProductCardProps {
   t: (key: string) => string;
   shareProduct: (product: any) => void;
   getStoreSearchUrl: (platform: string, productName: string) => string;
+  user?: any;
+  isWishlisted?: boolean;
+  onToggleWishlist?: (product: any, stats: any) => void;
 }
 
-const ProductCard = memo(({ product, stats, platformColors, t, shareProduct, getStoreSearchUrl }: ProductCardProps) => {
+const ProductCard = memo(({ product, stats, platformColors, t, shareProduct, getStoreSearchUrl, user, isWishlisted, onToggleWishlist }: ProductCardProps) => {
   return (
     <motion.div variants={itemVariants} className="glass-panel hover-lift" style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
       <div style={{ padding: '24px', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'flex-start', gap: '20px', position: 'relative' }}>
@@ -43,9 +46,21 @@ const ProductCard = memo(({ product, stats, platformColors, t, shareProduct, get
             )}
           </div>
         </div>
-        <button onClick={() => shareProduct(product)} style={{ position: 'absolute', top: '24px', right: '24px', background: 'rgba(37, 211, 102, 0.2)', border: 'none', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.2s', color: '#25D366' }} className="hover-lift" title="Share on WhatsApp">
-          <Share2 size={16} />
-        </button>
+        <div style={{ position: 'absolute', top: '24px', right: '24px', display: 'flex', gap: '8px' }}>
+          {user && onToggleWishlist && (
+            <button 
+              onClick={() => onToggleWishlist(product, stats)} 
+              style={{ background: isWishlisted ? 'rgba(255, 107, 0, 0.2)' : 'rgba(255, 255, 255, 0.1)', border: 'none', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.2s', color: isWishlisted ? 'var(--primary-color)' : 'var(--text-color)' }} 
+              className="hover-lift" 
+              title={isWishlisted ? "Remove from Wishlist" : "Add to Wishlist"}
+            >
+              <Heart size={16} fill={isWishlisted ? 'var(--primary-color)' : 'none'} />
+            </button>
+          )}
+          <button onClick={() => shareProduct(product)} style={{ background: 'rgba(37, 211, 102, 0.2)', border: 'none', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.2s', color: '#25D366' }} className="hover-lift" title="Share on WhatsApp">
+            <Share2 size={16} />
+          </button>
+        </div>
       </div>
       
       <div style={{ padding: '20px', flex: 1, display: 'flex', flexDirection: 'column', gap: '12px' }}>

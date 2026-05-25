@@ -14,9 +14,11 @@ const PriceAlerts = dynamic(() => import("./PriceAlerts"), { ssr: false });
 const ImageScannerModal = dynamic(() => import("./ImageScannerModal"), { ssr: false });
 const AboutModal = dynamic(() => import("./AboutModal"), { ssr: false });
 import CountUp from "react-countup";
-import { Search, Mic, Camera, ShoppingCart, Info, LogOut, Sparkles, Share2, Moon, Sun, Languages, ScanLine } from "lucide-react";
+import { Search, Mic, Camera, ShoppingCart, Info, LogOut, Sparkles, Share2, Moon, Sun, Languages, ScanLine, Heart } from "lucide-react";
 import { getIconForEmoji, getStoreIcon } from "@/utils/iconMap";
 import SplashScreen from "./SplashScreen";
+import WishlistModal from "./WishlistModal";
+import { WishlistItem, getWishlist, addToWishlist, removeFromWishlist } from "@/utils/wishlist";
 
 const platformColors: Record<string, { bg: string; light: string; text: string; name: string }> = {
   Zepto: { bg: "#8b5cf6", light: "rgba(139, 92, 246, 0.15)", text: "#c4b5fd", name: "Zepto" },
@@ -86,6 +88,35 @@ export default function GroceryApp({ products }: { products: any[] }) {
   const [isLoadingProducts, setIsLoadingProducts] = useState(true);
   const [visibleCount, setVisibleCount] = useState(20);
   const [showSplash, setShowSplash] = useState(true);
+  const [showWishlistModal, setShowWishlistModal] = useState(false);
+  const [wishlistItems, setWishlistItems] = useState<WishlistItem[]>([]);
+
+  useEffect(() => {
+    if (user) {
+      getWishlist(user.id).then(setWishlistItems).catch(console.error);
+    } else {
+      setWishlistItems([]);
+    }
+  }, [user]);
+
+  const handleToggleWishlist = useCallback(async (product: any, stats: any) => {
+    if (!user) return;
+    const isWishlisted = wishlistItems.some(item => item.product_id === product.id);
+    
+    try {
+      if (isWishlisted) {
+        setWishlistItems(prev => prev.filter(item => item.product_id !== product.id));
+        await removeFromWishlist(user.id, product.id);
+      } else {
+        const newItem = await addToWishlist(user.id, product, stats);
+        setWishlistItems(prev => [newItem, ...prev]);
+      }
+    } catch (error) {
+      console.error("Error toggling wishlist:", error);
+      // Revert optimistic update on failure by re-fetching
+      getWishlist(user.id).then(setWishlistItems).catch(console.error);
+    }
+  }, [user, wishlistItems]);
 
   const observerRef = useRef<IntersectionObserver | null>(null);
   const lastElementRef = useCallback((node: HTMLDivElement) => {
@@ -290,6 +321,10 @@ export default function GroceryApp({ products }: { products: any[] }) {
         {user ? (
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <span style={{ fontWeight: 600, color: 'var(--success-color)', fontSize: '14px' }}>{user.email}</span>
+            <button onClick={() => setShowWishlistModal(true)} className="pro-btn hover-lift" style={{ background: 'var(--card-bg)', border: '1px solid var(--border-color)', color: 'var(--text-color)', padding: '8px 16px', borderRadius: '10px', fontSize: '14px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Heart size={16} fill={wishlistItems.length > 0 ? 'var(--primary-color)' : 'none'} color={wishlistItems.length > 0 ? 'var(--primary-color)' : 'var(--text-color)'} />
+              Wishlist {wishlistItems.length > 0 && `(${wishlistItems.length})`}
+            </button>
             <button onClick={() => setUser(null)} className="pro-btn" style={{ background: 'var(--danger-color)', color: 'white', border: 'none', padding: '8px 20px', borderRadius: '10px', boxShadow: '0 2px 8px rgba(239,68,68,0.3)' }}>
               <LogOut size={16} />
               {t('logout') || 'Logout'}
@@ -306,6 +341,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
       <AuthModal isOpen={showAuth} onClose={() => setShowAuth(false)} onLogin={(u) => { setUser(u); setShowAuth(false); }} />
       <ImageScannerModal isOpen={showScanner} onClose={() => setShowScanner(false)} products={products} onScanComplete={handleAddToCart} />
       <AboutModal isOpen={showAbout} onClose={() => setShowAbout(false)} />
+      <WishlistModal isOpen={showWishlistModal} onClose={() => setShowWishlistModal(false)} wishlist={wishlistItems} onRemove={(pid) => handleToggleWishlist({ id: pid }, null)} />
 
       {/* Header */}
       <div className="glass-panel header-gradient" style={{ maxWidth: 1100, margin: '32px auto', padding: '40px', position: 'relative', overflow: 'hidden' }}>
@@ -505,6 +541,9 @@ export default function GroceryApp({ products }: { products: any[] }) {
                         t={t} 
                         shareProduct={shareProduct} 
                         getStoreSearchUrl={getStoreSearchUrl} 
+                        user={user}
+                        isWishlisted={wishlistItems.some(item => item.product_id === product.id)}
+                        onToggleWishlist={handleToggleWishlist}
                       />
                     </div>
                   );

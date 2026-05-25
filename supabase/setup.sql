@@ -118,3 +118,30 @@ INSERT INTO public.products (id, name, category, image, prices) VALUES
 (103, 'Parachute Coconut Oil 200ml', 'Oils', '🫙', '{"Zepto":{"price":95,"available":true,"url":"https://www.zeptonow.com"},"BigBasket":{"price":90,"available":true,"url":"https://www.bigbasket.com"},"Blinkit":{"price":92,"available":true,"url":"https://blinkit.com"}}'::jsonb),
 (104, 'Dabur Chyawanprash 500g', 'Health', '💊', '{"Zepto":{"price":265,"available":true,"url":"https://www.zeptonow.com"},"BigBasket":{"price":255,"available":true,"url":"https://www.bigbasket.com"},"Blinkit":{"price":260,"available":true,"url":"https://blinkit.com"}}'::jsonb),
 (105, 'Revital Multivitamin 30 tabs', 'Health', '💊', '{"Zepto":{"price":199,"available":true,"url":"https://www.zeptonow.com"},"BigBasket":{"price":190,"available":true,"url":"https://www.bigbasket.com"},"Blinkit":{"price":195,"available":false,"url":"https://blinkit.com"}}'::jsonb);
+
+-- Wishlists Table
+CREATE TABLE IF NOT EXISTS public.wishlists (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id uuid REFERENCES auth.users(id) ON DELETE CASCADE NOT NULL,
+  product_id integer REFERENCES public.products(id) ON DELETE CASCADE NOT NULL,
+  product_name text NOT NULL,
+  product_image text,
+  min_price numeric,
+  platform text,
+  created_at timestamptz DEFAULT now() NOT NULL,
+  UNIQUE(user_id, product_id)
+);
+
+ALTER TABLE public.wishlists ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Users can view their own wishlists" 
+ON public.wishlists FOR SELECT 
+USING (auth.uid() = user_id);
+
+CREATE POLICY "Users can insert into their own wishlists" 
+ON public.wishlists FOR INSERT 
+WITH CHECK (auth.uid() = user_id);
+
+CREATE POLICY "Users can delete their own wishlists" 
+ON public.wishlists FOR DELETE 
+USING (auth.uid() = user_id);
