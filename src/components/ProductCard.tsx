@@ -35,7 +35,7 @@ const ProductCard = memo(({ product, stats, platformColors, t, shareProduct, get
         <div style={{ fontSize: '32px', background: 'linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02))', borderRadius: '20px', padding: '16px', color: 'var(--text-color)', border: '1px solid var(--border-color)', boxShadow: 'inset 0 2px 4px rgba(255,255,255,0.05)' }}>
           {getIconForEmoji(product.image, 32)}
         </div>
-        <div style={{ flex: 1 }}>
+        <div style={{ flex: 1, paddingRight: '80px' }}>
           <h3 style={{ fontSize: '20px', fontWeight: 700, margin: '0 0 8px 0', lineHeight: 1.2 }}>{product.name}</h3>
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '12px', background: 'rgba(255,107,0,0.15)', color: 'var(--secondary-color)', padding: '4px 12px', borderRadius: '12px', fontWeight: 600, border: '1px solid rgba(255,107,0,0.25)' }}>{product.category}</span>
@@ -46,7 +46,7 @@ const ProductCard = memo(({ product, stats, platformColors, t, shareProduct, get
             )}
           </div>
         </div>
-        <div style={{ position: 'absolute', top: '24px', right: '24px', display: 'flex', gap: '8px' }}>
+        <div style={{ position: 'absolute', top: '12px', right: '12px', zIndex: 10, display: 'flex', gap: '8px' }}>
           {user && onToggleWishlist && (
             <button 
               onClick={() => onToggleWishlist(product, stats)} 
