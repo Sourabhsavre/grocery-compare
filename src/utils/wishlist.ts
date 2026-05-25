@@ -13,15 +13,19 @@ export interface WishlistItem {
 
 export async function addToWishlist(userId: string, product: any, stats: any) {
   const supabase = createClient();
+  const { data: { session } } = await supabase.auth.getSession();
+  
+  if (!session) throw new Error("Not authenticated");
+
   const { data, error } = await supabase
     .from('wishlists')
     .insert({
-      user_id: userId,
+      user_id: session.user.id,
       product_id: product.id,
       product_name: product.name,
-      product_image: product.image,
+      product_image: product.image || '',
       min_price: stats.min,
-      platform: stats.cheapestPlatform || 'Unknown',
+      platform: stats.cheapestPlatform || ''
     })
     .select()
     .single();
