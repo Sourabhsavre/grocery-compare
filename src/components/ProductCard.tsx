@@ -49,7 +49,11 @@ const ProductCard = memo(({ product, stats, platformColors, t, shareProduct, get
         <div style={{ position: 'absolute', top: '12px', right: '12px', zIndex: 10, display: 'flex', gap: '8px' }}>
           {user && onToggleWishlist && (
             <button 
-              onClick={() => onToggleWishlist(product, stats)} 
+              onClick={async (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                await onToggleWishlist(product, stats);
+              }} 
               style={{ background: isWishlisted ? 'rgba(255, 107, 0, 0.2)' : 'rgba(255, 255, 255, 0.1)', border: 'none', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.2s', color: isWishlisted ? 'var(--primary-color)' : 'var(--text-color)' }} 
               className="hover-lift" 
               title={isWishlisted ? "Remove from Wishlist" : "Add to Wishlist"}
