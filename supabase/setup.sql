@@ -145,3 +145,17 @@ WITH CHECK (auth.uid() = user_id);
 CREATE POLICY "Users can delete their own wishlists" 
 ON public.wishlists FOR DELETE 
 USING (auth.uid() = user_id);
+
+-- Admin Panel Migrations
+ALTER TABLE public.products ADD COLUMN IF NOT EXISTS created_at timestamp with time zone DEFAULT now();
+
+-- Note: In Postgres, you cannot directly ALTER an existing primary key to be an IDENTITY column if it has data.
+-- Since the user has hardcoded data with specific IDs, we'll create a sequence and attach it.
+CREATE SEQUENCE IF NOT EXISTS products_id_seq START 1000;
+ALTER TABLE public.products ALTER COLUMN id SET DEFAULT nextval('products_id_seq');
+
+-- Admin Panel RLS Policies (WARNING: These allow unauthenticated public inserts/updates/deletes for the Admin UI to work without Supabase Auth)
+CREATE POLICY "Allow public insert access to products" ON public.products FOR INSERT WITH CHECK (true);
+CREATE POLICY "Allow public update access to products" ON public.products FOR UPDATE USING (true) WITH CHECK (true);
+CREATE POLICY "Allow public delete access to products" ON public.products FOR DELETE USING (true);
+

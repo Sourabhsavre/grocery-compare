@@ -8,7 +8,10 @@ export default async function Page() {
   const supabase = createClient(cookieStore)
 
   // Fetch products from Supabase
-  const { data: products, error } = await supabase.from('products').select('*')
+  const { data: products, error } = await supabase
+    .from('products')
+    .select('*')
+    .order('created_at', { ascending: false, nullsFirst: false });
   
   // Fallback to local data if Supabase isn't seeded yet
   const finalProducts = (products && products.length > 0) ? products : groceryData;
