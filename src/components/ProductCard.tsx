@@ -73,6 +73,9 @@ const ProductCard = memo(({ product, stats, platformColors, t, shareProduct, get
           const isCheap = platform === stats.cheapestPlatform;
           const isExpensive = val.available && val.price === stats.max && stats.max > stats.min;
           const c = platformColors[platform];
+          const buyUrl = platform === "AmazonFresh" 
+            ? `https://www.amazon.in/s?k=${encodeURIComponent(product.name)}&tag=grocerycompar-21`
+            : getStoreSearchUrl(platform, product.name);
           
           return (
             <div key={platform} style={{
@@ -96,7 +99,7 @@ const ProductCard = memo(({ product, stats, platformColors, t, shareProduct, get
                     <span className={isCheap ? 'price-highlight' : ''} style={{ fontSize: '18px', fontWeight: 800, color: isCheap ? 'var(--primary-color)' : (isExpensive ? '#fca5a5' : 'white') }}>
                       ₹<CountUp end={val.price} duration={1.5} preserveValue />
                     </span>
-                    <a href={getStoreSearchUrl(platform, product.name)} target="_blank" rel="noreferrer" className={`hover-lift${isCheap ? ' btn-gradient' : ''}`} style={{
+                    <a href={buyUrl} target="_blank" rel="noreferrer" className={`hover-lift${isCheap ? ' btn-gradient' : ''}`} style={{
                       fontSize: '13px', background: isCheap ? undefined : 'var(--card-bg-elevated)', color: isCheap ? '#0A0A0A' : 'white', padding: '8px 16px',
                       border: `1px solid ${isCheap ? 'transparent' : 'var(--border-color)'}`,
                       borderRadius: '10px', textDecoration: 'none', fontWeight: 700, display: 'inline-block'
