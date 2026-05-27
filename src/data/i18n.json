@@ -25,7 +25,11 @@
     "target_budget": "Target Budget",
     "login": "Login",
     "logout": "Logout",
-    "profile": "Profile"
+    "profile": "Profile",
+    "recipe_assistant": "Recipe Assistant",
+    "get_ingredients": "Get Ingredients",
+    "deal_of_the_day": "Deal of the Day",
+    "recipe_placeholder": "e.g. Butter Chicken or Dal Tadka"
   },
   "hi": {
     "app_title": "ग्रोसरी कम्पेयर AI",
@@ -53,6 +57,10 @@
     "target_budget": "लक्ष्य बजट",
     "login": "लॉग इन",
     "logout": "लॉग आउट",
-    "profile": "प्रोफ़ाइल"
+    "profile": "प्रोफ़ाइल",
+    "recipe_assistant": "रेसिपी असिस्टेंट",
+    "get_ingredients": "सामग्री देखें",
+    "deal_of_the_day": "आज का सौदा",
+    "recipe_placeholder": "रेसिपी का नाम लिखें"
   }
 }

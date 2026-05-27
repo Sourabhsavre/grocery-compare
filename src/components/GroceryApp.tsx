@@ -18,6 +18,7 @@ import { Search, Mic, Camera, ShoppingCart, Info, LogOut, Sparkles, Share2, Moon
 import { getIconForEmoji, getStoreIcon } from "@/utils/iconMap";
 import SplashScreen from "./SplashScreen";
 import WishlistModal from "./WishlistModal";
+import CartModal from "./CartModal";
 import { WishlistItem, getWishlist, addToWishlist, removeFromWishlist } from "@/utils/wishlist";
 
 const platformColors: Record<string, { bg: string; light: string; text: string; name: string }> = {
@@ -89,6 +90,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
   const [visibleCount, setVisibleCount] = useState(20);
   const [showSplash, setShowSplash] = useState(true);
   const [showWishlistModal, setShowWishlistModal] = useState(false);
+  const [showCart, setShowCart] = useState(false);
   const [wishlistItems, setWishlistItems] = useState<WishlistItem[]>([]);
 
   useEffect(() => {
@@ -312,10 +314,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
           {theme === 'dark' ? <Moon size={18} /> : <Sun size={18} />}
         </button>
         {cart.length > 0 && (
-          <button onClick={() => {
-            const text = `My Grocery Cart:\n${cart.map(c => `- ${c.item.name} (₹${c.price})`).join('\n')}\nTotal: ₹${cartTotal}`;
-            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
-          }} className="pro-btn float-anim" style={{ background: '#25D366', color: 'white', border: 'none', padding: '8px 18px', borderRadius: '10px', boxShadow: '0 2px 12px rgba(37,211,102,0.35)' }}>
+          <button onClick={() => setShowCart(true)} className="pro-btn float-anim" style={{ background: '#25D366', color: 'white', border: 'none', padding: '8px 18px', borderRadius: '10px', boxShadow: '0 2px 12px rgba(37,211,102,0.35)' }}>
             <ShoppingCart size={18} />
             Cart ({cart.length})
           </button>
@@ -345,6 +344,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
       <ImageScannerModal isOpen={showScanner} onClose={() => setShowScanner(false)} products={products} onScanComplete={handleAddToCart} />
       <AboutModal isOpen={showAbout} onClose={() => setShowAbout(false)} />
       <WishlistModal isOpen={showWishlistModal} onClose={() => setShowWishlistModal(false)} wishlist={wishlistItems} onRemove={(pid) => handleToggleWishlist({ id: pid }, null)} />
+      <CartModal isOpen={showCart} onClose={() => setShowCart(false)} cart={cart} setCart={setCart} cartTotal={cartTotal} />
 
       {/* Header */}
       <div className="glass-panel header-gradient" style={{ maxWidth: 1200, margin: '32px auto', padding: '40px', position: 'relative', overflow: 'hidden' }}>

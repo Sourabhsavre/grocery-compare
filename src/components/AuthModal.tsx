@@ -10,6 +10,8 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
   const [isLogin, setIsLogin] = useState(true);
   const [isForgotPassword, setIsForgotPassword] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [formError, setFormError] = useState('');
+  const [formSuccess, setFormSuccess] = useState('');
   const supabase = createClient();
 
   if (!isOpen) return null;
@@ -17,6 +19,8 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
   const handleAuth = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setFormError('');
+    setFormSuccess('');
     try {
       if (isLogin) {
         console.log("Login attempt:", email);
@@ -32,13 +36,17 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
         if (data.user) {
           onLogin(data.user);
         } else {
-          alert('Signup successful! Please login.');
+          setFormSuccess('Signup successful! Please login.');
           setIsLogin(true);
         }
       }
     } catch (error: any) {
       console.log("Login error:", error);
-      alert(error.message || "An error occurred during authentication");
+      if (error.message === "Error sending confirmation email") {
+        setFormError("Account created, but confirmation email failed (SMTP limit). Please disable 'Confirm Email' in your Supabase Auth settings to login.");
+      } else {
+        setFormError(error.message || "An error occurred during authentication");
+      }
     } finally {
       setLoading(false);
     }
@@ -47,15 +55,17 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
   const handleForgotPassword = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setFormError('');
+    setFormSuccess('');
     try {
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
         redirectTo: 'https://grocery-compare-six.vercel.app/reset-password',
       });
       if (error) throw error;
-      alert("Password reset link sent! Check your email.");
+      setFormSuccess("Password reset link sent! Check your email.");
       setIsForgotPassword(false);
     } catch (error: any) {
-      alert(error.message);
+      setFormError(error.message);
     } finally {
       setLoading(false);
     }
@@ -96,9 +106,20 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
           <h2 style={{ fontSize: '28px', fontWeight: 800, marginBottom: '8px', textAlign: 'center', color: 'var(--text-color)' }}>
             {isForgotPassword ? 'Reset Password' : (isLogin ? 'Welcome Back' : 'Create Account')}
           </h2>
-          <p style={{ color: 'var(--muted-color)', textAlign: 'center', marginBottom: '32px' }}>
+          <p style={{ color: 'var(--muted-color)', textAlign: 'center', marginBottom: '24px' }}>
             {isForgotPassword ? "Enter your email to receive a reset link" : "India's Smartest Grocery App"}
           </p>
+
+          {formError && (
+            <div style={{ background: 'rgba(239, 68, 68, 0.1)', border: '1px solid rgba(239, 68, 68, 0.3)', color: '#ef4444', padding: '12px 16px', borderRadius: '12px', marginBottom: '24px', fontSize: '14px', lineHeight: '1.5' }}>
+              {formError}
+            </div>
+          )}
+          {formSuccess && (
+            <div style={{ background: 'rgba(34, 197, 94, 0.1)', border: '1px solid rgba(34, 197, 94, 0.3)', color: '#22c55e', padding: '12px 16px', borderRadius: '12px', marginBottom: '24px', fontSize: '14px', lineHeight: '1.5' }}>
+              {formSuccess}
+            </div>
+          )}
 
           {isForgotPassword ? (
             <form onSubmit={handleForgotPassword} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
