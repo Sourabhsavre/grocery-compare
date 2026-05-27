@@ -19,11 +19,15 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
     setLoading(true);
     try {
       if (isLogin) {
-        const { data, error } = await supabase.auth.signInWithPassword({ email, password });
-        if (error) throw error;
+        console.log("Login attempt:", email);
+        const { data, error } = await supabase.auth.signInWithPassword({ email: email.trim(), password });
+        if (error) {
+          console.log("Login error:", error);
+          throw error;
+        }
         onLogin(data.user);
       } else {
-        const { data, error } = await supabase.auth.signUp({ email, password });
+        const { data, error } = await supabase.auth.signUp({ email: email.trim(), password });
         if (error) throw error;
         if (data.user) {
           onLogin(data.user);
@@ -33,7 +37,8 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
         }
       }
     } catch (error: any) {
-      alert(error.message);
+      console.log("Login error:", error);
+      alert(error.message || "An error occurred during authentication");
     } finally {
       setLoading(false);
     }
