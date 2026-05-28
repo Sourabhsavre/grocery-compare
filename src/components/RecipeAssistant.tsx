@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import CountUp from 'react-countup';
 
 export default function RecipeAssistant({ products, addToCart }: { products: any[], addToCart: (items: any[]) => void }) {
-  const { t } = useAppContext();
+  const { t, language } = useAppContext();
   const [recipe, setRecipe] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
@@ -38,7 +38,7 @@ export default function RecipeAssistant({ products, addToCart }: { products: any
           {loading ? <Sparkles className="pulse-anim" size={28} /> : <ChefHat size={28} />}
         </div>
         <div>
-          <h2 style={{ fontSize: '24px', fontWeight: 800, margin: 0, color: 'white' }}>{t('recipe_assistant')}</h2>
+          <h2 style={{ fontSize: '24px', fontWeight: 800, margin: 0, color: 'white' }}>{language === 'hi' ? 'रेसिपी असिस्टेंट' : 'Recipe Assistant'}</h2>
           <span style={{ color: 'var(--secondary-color)', fontSize: '13px', fontWeight: 600 }}>{t('powered_by_ai')}</span>
         </div>
       </div>
@@ -67,7 +67,7 @@ export default function RecipeAssistant({ products, addToCart }: { products: any
             fontFamily: 'inherit', fontSize: '16px'
           }}
         >
-          {loading ? '...' : t('get_ingredients')}
+          {loading ? '...' : (language === 'hi' ? 'सामग्री देखें' : 'Get Ingredients')}
         </button>
       </div>
 
