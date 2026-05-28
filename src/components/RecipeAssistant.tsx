@@ -16,10 +16,11 @@ export default function RecipeAssistant({ products, addToCart }: { products: any
     if (!recipe.trim()) return;
     setLoading(true);
     try {
+      const prompt = `Find products from this list that are ingredients for: ${recipe}. Return only relevant matching products.`;
       const response = await fetch('/api/ai/recipe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ recipeName: recipe, products })
+        body: JSON.stringify({ recipeName: recipe, prompt, products })
       });
       const data = await response.json();
       setResult(data);
@@ -37,7 +38,7 @@ export default function RecipeAssistant({ products, addToCart }: { products: any
           {loading ? <Sparkles className="pulse-anim" size={28} /> : <ChefHat size={28} />}
         </div>
         <div>
-          <h2 style={{ fontSize: '24px', fontWeight: 800, margin: 0, color: 'white' }}>{t('recipe_assistant') || 'Recipe Assistant'}</h2>
+          <h2 style={{ fontSize: '24px', fontWeight: 800, margin: 0, color: 'white' }}>{t('recipe_assistant')}</h2>
           <span style={{ color: 'var(--secondary-color)', fontSize: '13px', fontWeight: 600 }}>{t('powered_by_ai')}</span>
         </div>
       </div>
@@ -48,7 +49,7 @@ export default function RecipeAssistant({ products, addToCart }: { products: any
             value={recipe}
             onChange={(e) => setRecipe(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-            placeholder={t('recipe_placeholder') || 'e.g. Butter Chicken or Dal Tadka'}
+            placeholder={t('recipe_placeholder')}
             style={{
               width: '100%', padding: '16px', borderRadius: '16px',
               background: 'var(--surface-color)', border: '1px solid var(--border-color)',
@@ -66,7 +67,7 @@ export default function RecipeAssistant({ products, addToCart }: { products: any
             fontFamily: 'inherit', fontSize: '16px'
           }}
         >
-          {loading ? '...' : (t('get_ingredients') || 'Get Ingredients')}
+          {loading ? '...' : t('get_ingredients')}
         </button>
       </div>
 

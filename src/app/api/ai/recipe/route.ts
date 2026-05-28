@@ -20,8 +20,11 @@ export async function POST(request: Request) {
     } else if (lower.includes('pancake')) {
       ingredients = ['Maida', 'Milk', 'Eggs', 'Butter', 'Sugar'];
     } else {
-      // Generic fallback - pick 5 random staples and veggies
-      ingredients = ['Normal Rice', 'Onion', 'Tomato', 'Salt', 'Refined Oil'];
+      // Generic fallback - Use the actual item entered (split by comma if multiple)
+      ingredients = recipeName.split(',').map((s: string) => s.trim()).filter(Boolean);
+      if (ingredients.length === 0) {
+        ingredients = [recipeName];
+      }
     }
 
     const basket = [];
