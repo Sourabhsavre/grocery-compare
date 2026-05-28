@@ -1,0 +1,258 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 0;
+  position: relative;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  z-index: 10;
+  max-width: 800px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 107, 0, 0.1);
+  border: 1px solid rgba(255, 107, 0, 0.2);
+  padding: 8px 16px;
+  border-radius: 50px;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  color: var(--muted-color);
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.ctaWrapper {
+  margin-top: 24px;
+}
+
+.ctaButton {
+  padding: 16px 32px;
+  font-size: 1.125rem;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+}
+
+.statsBar {
+  margin: -40px auto 80px;
+  position: relative;
+  z-index: 20;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-color);
+  background: linear-gradient(135deg, #fff, #a3a3a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: var(--muted-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.statDivider {
+  width: 1px;
+  height: 48px;
+  background: var(--border-color);
+}
+
+.features {
+  padding: 80px 0;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.featureCard {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.featureCard h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.featureCard p {
+  color: var(--muted-color);
+  line-height: 1.6;
+}
+
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 107, 0, 0.1);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.howItWorks {
+  padding: 80px 0 120px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  width: 250px;
+  position: relative;
+  z-index: 2;
+}
+
+.stepNumber {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--card-bg-elevated);
+  border: 2px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  box-shadow: 0 0 20px rgba(255, 107, 0, 0.2);
+}
+
+.step h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.step p {
+  color: var(--muted-color);
+  line-height: 1.5;
+}
+
+.stepLine {
+  flex-grow: 1;
+  height: 2px;
+  background: var(--border-color);
+  margin-top: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.stepLine::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  opacity: 0.5;
+  filter: blur(4px);
+}
+
+.footer {
+  border-top: 1px solid var(--border-color);
+  padding: 40px 0;
+  text-align: center;
+  color: var(--muted-color);
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.creator {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+  .stepLine {
+    width: 2px;
+    height: 48px;
+    margin: -24px 0;
+  }
+  .stepLine::after {
+    top: 0;
+    left: -3px;
+    width: 8px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--primary-color), transparent);
+  }
+  .statDivider {
+    display: none;
+  }
+  .statItem {
+    width: 45%;
+  }
+}
