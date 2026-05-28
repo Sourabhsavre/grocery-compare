@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ShoppingCart, Share2 } from 'lucide-react';
-import { getIconForEmoji } from '@/utils/icons';
+import { getIconForEmoji } from '@/utils/iconMap';
 
 export default function CartModal({ isOpen, onClose, cart, setCart, cartTotal }: { isOpen: boolean, onClose: () => void, cart: any[], setCart: any, cartTotal: number }) {
   if (!isOpen) return null;
