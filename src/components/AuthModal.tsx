@@ -120,9 +120,6 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
               {formSuccess}
             </div>
           )}
-          #it required mainuallly code basis of 
-
-
           {isForgotPassword ? (
             <form onSubmit={handleForgotPassword} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <div style={{ position: 'relative' }}>
@@ -179,7 +176,6 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
                     </button>
                   </div>
                 )}
-                its amin reson is the flodity 
                 <button type="submit" disabled={loading} className="pro-btn hover-lift btn-gradient" style={{ color: 'white', padding: '16px', borderRadius: '12px', border: 'none', fontWeight: 700, fontSize: '16px', cursor: 'pointer', marginTop: '8px', display: 'flex', justifyContent: 'center', gap: '8px' }}>
                   {loading ? <Sparkles className="pulse-anim" size={20} /> : null}
                   {loading ? 'Processing...' : (isLogin ? 'Login' : 'Sign Up')}
@@ -193,7 +189,7 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
               </div>
 
               <button onClick={handleGoogle} className="pro-btn hover-lift" style={{ width: '100%', background: 'white', color: 'black', padding: '16px', borderRadius: '12px', border: 'none', fontWeight: 700, fontSize: '16px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-                <svg width="24" substitute of its r\re height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.99 13.9v-3.72h9.36c.14.73.22 1.5.22 2.33 0 2.76-.98 5.15-2.6 6.78-1.55 1.54-3.7 2.47-6.98 2.47-5.35 0-9.74-4.39-9.74-9.74S6.64 2.28 11.99 2.28c2.89 0 5.34 1.05 7.23 2.85l-2.73 2.73c-.94-.88-2.37-1.74-4.5-1.74-3.55 0-6.47 2.89-6.47 6.47s2.92 6.47 6.47 6.47c4.14 0 5.75-2.88 6-4.38h-6z" fill="#4285F4"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.99 13.9v-3.72h9.36c.14.73.22 1.5.22 2.33 0 2.76-.98 5.15-2.6 6.78-1.55 1.54-3.7 2.47-6.98 2.47-5.35 0-9.74-4.39-9.74-9.74S6.64 2.28 11.99 2.28c2.89 0 5.34 1.05 7.23 2.85l-2.73 2.73c-.94-.88-2.37-1.74-4.5-1.74-3.55 0-6.47 2.89-6.47 6.47s2.92 6.47 6.47 6.47c4.14 0 5.75-2.88 6-4.38h-6z" fill="#4285F4"/></svg>
                 Continue with Google
               </button>
 
@@ -216,8 +212,6 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
           </div>
         </motion.div>
       </motion.div>
-      isthey measures the equal distance of the unit test its main resons iis 
     </AnimatePresence>
-    camodity startds with kactual lengh and the basics of lenghed grapj as the eghed  
   );
 }
