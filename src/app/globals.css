@@ -1,33 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --bg-color: #0A0A0A;
+  --bg-color: #0A0A0F;
   --text-color: #f8fafc;
-  --card-bg: #111111;
-  --card-bg-elevated: #1A1A1A;
-  --primary-color: #FF6B00;
-  --secondary-color: #FF8C00;
-  --border-color: rgba(255, 107, 0, 0.18);
-  --success-color: #22c55e;
-  --danger-color: #ef4444;
-  --gradient-overlay: rgba(255, 107, 0, 0.06);
-  --muted-color: #a3a3a3;
-  --surface-color: rgba(17, 17, 17, 0.95);
-  --accent-glow: rgba(255, 107, 0, 0.45);
-  --accent-glow-soft: rgba(255, 140, 0, 0.2);
+  --card-bg: rgba(15, 15, 25, 0.6);
+  --card-bg-elevated: rgba(25, 25, 40, 0.7);
+  --primary-color: #8B5CF6;
+  --secondary-color: #3B82F6;
+  --accent-gradient: linear-gradient(135deg, #10B981 0%, #3B82F6 100%);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-color-glow: rgba(139, 92, 246, 0.25);
+  --success-color: #10B981;
+  --danger-color: #EF4444;
+  --gradient-overlay: rgba(139, 92, 246, 0.05);
+  --muted-color: #94A3B8;
+  --surface-color: rgba(10, 10, 15, 0.9);
+  --accent-glow: rgba(139, 92, 246, 0.3);
+  --accent-glow-soft: rgba(59, 130, 246, 0.15);
 }
 
 [data-theme='light'] {
-  --bg-color: #fafafa;
-  --text-color: #1a1a1a;
-  --card-bg: #ffffff;
-  --card-bg-elevated: #f5f5f5;
-  --border-color: rgba(255, 107, 0, 0.2);
-  --gradient-overlay: rgba(255, 255, 255, 0.9);
-  --muted-color: #525252;
+  --bg-color: #FAF9FF;
+  --text-color: #0F172A;
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --card-bg-elevated: rgba(243, 244, 246, 0.85);
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-color-glow: rgba(139, 92, 246, 0.15);
+  --gradient-overlay: rgba(255, 255, 255, 0.95);
+  --muted-color: #475569;
   --surface-color: rgba(255, 255, 255, 0.95);
-  --primary-color: #FF6B00;
-  --secondary-color: #FF8C00;
 }
 
 * {
@@ -39,11 +40,12 @@
 body {
   background-color: var(--bg-color);
   background-image:
-    radial-gradient(circle at 15% 50%, rgba(255, 107, 0, 0.12), transparent 35%),
-    radial-gradient(circle at 85% 30%, rgba(255, 140, 0, 0.08), transparent 35%),
-    linear-gradient(rgba(255, 107, 0, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 107, 0, 0.03) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+    radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.08), transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.08), transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.03), transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
   background-attachment: fixed;
   color: var(--text-color);
   font-family: 'Inter', sans-serif;
@@ -69,17 +71,17 @@ body::before {
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-color);
   border-radius: 20px;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
 
 .glass-panel {
-  background: linear-gradient(135deg, var(--card-bg), var(--card-bg-elevated));
+  background: var(--card-bg);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid var(--border-color);
-  border-top: 1px solid rgba(255, 140, 0, 0.2);
-  border-left: 1px solid rgba(255, 107, 0, 0.12);
-  box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.4), 0 0 40px rgba(255, 107, 0, 0.04);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.3), 0 0 40px rgba(139, 92, 246, 0.05);
   border-radius: 24px;
 }
 
@@ -360,3 +362,107 @@ body::before {
 .price-highlight {
   color: var(--primary-color) !important;
 }
+
+/* Premium UI Styles */
+.mesh-gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mesh-circle-1 {
+  position: absolute;
+  top: -10%;
+  left: 10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);
+  filter: blur(80px);
+  animation: float-slow 20s infinite ease-in-out;
+}
+
+.mesh-circle-2 {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+  filter: blur(80px);
+  animation: float-slow-reverse 25s infinite ease-in-out;
+}
+
+.mesh-circle-3 {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  width: 35vw;
+  height: 35vw;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 60%);
+  filter: blur(60px);
+  animation: float-slow 30s infinite ease-in-out alternate;
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(5%, 8%) scale(1.1);
+  }
+}
+
+@keyframes float-slow-reverse {
+  0%, 100% {
+    transform: translate(0, 0) scale(1.1);
+  }
+  50% {
+    transform: translate(-6%, -5%) scale(0.95);
+  }
+}
+
+.dot-grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse at 50% 50%, black, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black, transparent 80%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.gradient-accent-text {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.border-accent-glow {
+  border-color: var(--border-color-glow) !important;
+}
+
+.float-delayed-1 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: -1.5s;
+}
+
+.float-delayed-2 {
+  animation: float 7s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+.float-delayed-3 {
+  animation: float 8s ease-in-out infinite;
+  animation-delay: -4.5s;
+}
+

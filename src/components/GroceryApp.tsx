@@ -20,6 +20,7 @@ import SplashScreen from "./SplashScreen";
 import WishlistModal from "./WishlistModal";
 import CartModal from "./CartModal";
 import { WishlistItem, getWishlist, addToWishlist, removeFromWishlist } from "@/utils/wishlist";
+import { createClient } from "@/utils/supabase/client";
 
 const platformColors: Record<string, { bg: string; light: string; text: string; name: string }> = {
   Zepto: { bg: "#8b5cf6", light: "rgba(139, 92, 246, 0.15)", text: "#c4b5fd", name: "Zepto" },
@@ -92,6 +93,23 @@ export default function GroceryApp({ products }: { products: any[] }) {
   const [showWishlistModal, setShowWishlistModal] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const [wishlistItems, setWishlistItems] = useState<WishlistItem[]>([]);
+  const supabase = useMemo(() => createClient(), []);
+
+  useEffect(() => {
+    // Check active session on mount
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(session?.user ?? null);
+    });
+
+    // Listen for auth state changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, [supabase]);
 
   useEffect(() => {
     if (user) {
@@ -326,7 +344,7 @@ export default function GroceryApp({ products }: { products: any[] }) {
               <Heart size={16} fill={wishlistItems.length > 0 ? 'var(--primary-color)' : 'none'} color={wishlistItems.length > 0 ? 'var(--primary-color)' : 'var(--text-color)'} />
               Wishlist {wishlistItems.length > 0 && `(${wishlistItems.length})`}
             </button>
-            <button onClick={() => setUser(null)} className="pro-btn" style={{ background: 'var(--danger-color)', color: 'white', border: 'none', padding: '8px 20px', borderRadius: '10px', boxShadow: '0 2px 8px rgba(239,68,68,0.3)' }}>
+            <button onClick={() => supabase.auth.signOut()} className="pro-btn" style={{ background: 'var(--danger-color)', color: 'white', border: 'none', padding: '8px 20px', borderRadius: '10px', boxShadow: '0 2px 8px rgba(239,68,68,0.3)' }}>
               <LogOut size={16} />
               {t('logout') || 'Logout'}
             </button>
