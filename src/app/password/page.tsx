@@ -10,7 +10,7 @@ export default function PasswordPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === 'Shagun@2026') {
+    if (password === 'Sourabh@2026') {
       document.cookie = `site_access=${password}; path=/; max-age=${7 * 24 * 60 * 60}`;
       router.push('/');
       router.refresh();
