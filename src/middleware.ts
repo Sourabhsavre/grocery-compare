@@ -12,7 +12,7 @@ export function middleware(request: NextRequest) {
   // Check for the site_access cookie
   const siteAccess = request.cookies.get('site_access')?.value;
 
-  if (siteAccess !== 'Sourabh@2026') {
+  if (siteAccess !== 'Shagun@2026') {
     const url = request.nextUrl.clone();
     url.pathname = '/password';
     return NextResponse.redirect(url);

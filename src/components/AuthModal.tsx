@@ -59,7 +59,7 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
     setFormSuccess('');
     try {
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: 'https://grocery-compare-six.vercel.app/reset-password',
+        redirectTo: `${window.location.origin}/reset-password`,
       });
       if (error) throw error;
       setFormSuccess("Password reset link sent! Check your email.");
@@ -76,7 +76,7 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
       await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: 'https://grocery-compare-six.vercel.app',
+          redirectTo: `${window.location.origin}/app`,
         },
       });
     } catch (error: any) {
@@ -191,6 +191,10 @@ export default function AuthModal({ isOpen, onClose, onLogin }: { isOpen: boolea
               <button onClick={handleGoogle} className="pro-btn hover-lift" style={{ width: '100%', background: 'white', color: 'black', padding: '16px', borderRadius: '12px', border: 'none', fontWeight: 700, fontSize: '16px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.99 13.9v-3.72h9.36c.14.73.22 1.5.22 2.33 0 2.76-.98 5.15-2.6 6.78-1.55 1.54-3.7 2.47-6.98 2.47-5.35 0-9.74-4.39-9.74-9.74S6.64 2.28 11.99 2.28c2.89 0 5.34 1.05 7.23 2.85l-2.73 2.73c-.94-.88-2.37-1.74-4.5-1.74-3.55 0-6.47 2.89-6.47 6.47s2.92 6.47 6.47 6.47c4.14 0 5.75-2.88 6-4.38h-6z" fill="#4285F4"/></svg>
                 Continue with Google
+              </button>
+
+              <button onClick={() => onLogin({ id: '00000000-0000-0000-0000-000000000000', email: 'guest@example.com' })} className="pro-btn hover-lift" style={{ width: '100%', background: 'rgba(255, 255, 255, 0.1)', color: 'white', padding: '16px', borderRadius: '12px', border: '1px solid var(--border-color)', fontWeight: 700, fontSize: '16px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', marginTop: '12px' }}>
+                Guest Login (Bypass Auth)
               </button>
 
               <p style={{ textAlign: 'center', marginTop: '24px', color: 'var(--muted-color)', fontSize: '14px' }}>
